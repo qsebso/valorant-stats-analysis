@@ -1,0 +1,20 @@
+# inputs.rules
+# Rules for reading and validating your config/events.yaml (or JSON).
+
+1. ALWAYS check with the user (Quinn) if a key or format is ambiguous.
+2. Expect a YAML file at `config/events.yaml` with this structure:
+   events:
+     - event_id: <integer or string>
+       event_name: <string>
+       match_urls:    # optional—either this or match_ids
+         - https://vlr.gg/match/<match_id>/scoreboard
+       match_ids:     # optional—either this or match_urls
+         - <match_id>
+3. event_id and event_name are REQUIRED for each entry.
+4. match_urls or match_ids is REQUIRED; if both are present, prioritize match_urls.
+5. Validate types:
+   - event_id: non-empty string or integer
+   - event_name: non-empty string
+   - match_urls: list of valid URLs matching `^https://www\.vlr\.gg/match/\d+/.*$`
+   - match_ids: list of digits
+6. On parsing errors, alert the user (Quinn) with details about which entry failed.

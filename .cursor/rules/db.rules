@@ -1,0 +1,37 @@
+# db.rules
+# Schema and migration strategy for your SQLite map_stats table.
+
+1. ALWAYS confirm with Quinn before altering schema.
+2. Single table: map_stats. Columns and types:
+   event_id            TEXT
+   event_name          TEXT
+   match_id            TEXT
+   match_date          DATE
+   phase               TEXT
+   map_name            TEXT
+   player_name         TEXT
+   team_name           TEXT
+   agent_played        TEXT
+   rounds_played       INTEGER
+   rating_2.0          REAL
+   game_score          REAL
+   ACS                 REAL
+   KDRatio             REAL
+   KAST_pct            REAL
+   ADR                 REAL
+   KPR                 REAL
+   APR                 REAL
+   FKPR                REAL
+   FDPR                REAL
+   HS_pct              REAL
+   CL_pct              REAL
+   CL_count            INTEGER
+   max_kills_in_round  INTEGER
+   total_kills         INTEGER
+   total_deaths        INTEGER
+   total_assists       INTEGER
+   total_first_kills   INTEGER
+   total_first_deaths  INTEGER
+3. Use `IF NOT EXISTS` in CREATE statements for idempotency.
+4. For schema changes, create a new migration script in `migrations/` with a timestamped filename.  
+5. Use transactions for batch inserts, and commit every 100 rows.

@@ -1,0 +1,23 @@
+# scheduling.rules
+# How to tag each match as “Regular Season” vs “Playoffs” and where to store that mapping.
+
+1. ALWAYS refer to Quinn if date ranges or bracket naming is unclear.
+2. Maintain a lookup file: `config/phases.yaml`:
+   phases:
+     - match_id: <match_id>
+       phase: "Regular Season"
+     - match_id: <match_id>
+       phase: "Playoffs – Upper Semis"
+   # Alternatively, allow date-based rules:
+   rules:
+     - from: 2025-01-10
+       to:   2025-01-20
+       phase: "Regular Season"
+     - from: 2025-01-21
+       to:   2025-01-25
+       phase: "Playoffs"
+3. scheduler.py should:
+   a. Load `phases.yaml`.
+   b. If a match_id exists in the lookup, use that phase.
+   c. Else, check date-based rules.
+   d. If still no match, log WARNING and default phase to “Unknown”—then ask Quinn.

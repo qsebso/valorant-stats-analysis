@@ -1,0 +1,31 @@
+| Column                    | Description                                                                                    |
+| ------------------------- | ---------------------------------------------------------------------------------------------- |
+| event\_id             | Identifier from the event URL (e.g. “2274”), ties row to a specific tournament/split.          |
+| event\_name           | Human-readable event name (e.g. “Champions Tour 2025: Americas Kickoff”).                      |
+| match\_id             | Identifier from the match URL (e.g. “13542”), uniquely identifies each match.                  |
+| match\_date           | Date of the match (scraped from the match header), lets you order and tag phases.              |
+| phase                 | Your label (“Regular Season”, “Playoffs – Upper Semis”, etc.), assigned via external schedule. |
+| map\_name             | Name of the map (e.g. “Ascent”, “Bind”), controls for map-specific effects.                    |
+| player\_name          | Exact in-game player name.                                                                     |
+| team\_name            | Team side the player was on.                                                                   |
+| agent\_played         | Agent they played on that map, for baseline comparisons.                                       |
+| rounds\_played        | Total rounds on that map (base for per-round averages).                                        |
+| rating\_2.0           | VLR.gg’s R2.0 composite rating—quick “how good was that” score.                                |
+| game\_score           | VLR.gg’s Game Score metric—alternative composite performance indicator.                        |
+| ACS                   | Average Combat Score per round.                                                                |
+| KDRatio               | Kills ÷ Deaths (frag efficiency).                                                              |
+| KAST\_pct             | % of rounds with a Kill, Assist, Survive, or Trade (round participation).                      |
+| ADR                   | Average Damage per Round.                                                                      |
+| KPR                   | Kills per round.                                                                               |
+| APR                   | Assists per round.                                                                             |
+| FKPR                  | First-kills per round (aggression/impact).                                                     |
+| FDPR                  | First-deaths per round (risk/exposure).                                                        |
+| HS\_pct               | Headshot percentage.                                                                           |
+| CL\_pct               | Clutch success rate.                                                                           |
+| CL\_count             | Total clutch rounds won.                                                                       |
+| max\_kills\_in\_round | Highest kills in any single round.                                                             |
+| total\_kills          | Total kills on that map.                                                                       |
+| total\_deaths         | Total deaths on that map.                                                                      |
+| total\_assists        | Total assists on that map.                                                                     |
+| total\_first\_kills   | Total first-kills on that map.                                                                 |
+| total\_first\_deaths  | Total first-deaths on that map.                                                                |

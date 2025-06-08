@@ -1,0 +1,14 @@
+# scraping.rules
+# Rules for locating and extracting HTML elements from VLR.gg match scoreboards.
+
+1. ALWAYS reference the user (“Quinn”) if you’re unsure which selector or approach to use.
+2. Use CSS selectors, not regex, to find data elements.
+   - Event page: `.wf-card` to find match cards.
+   - Match list tab: `.wf-table .match-row a` for match links.
+   - Scoreboard page: 
+     • `.vm-stats__layout table` for per-map stats tables.
+     • Inside each table, header row is <tr> with <th> names; data rows are <tr> with <td>.
+3. Extract columns in this exact order (matching our schema):  
+   event_id, event_name, match_id, match_date, phase, map_name, player_name, team_name, agent_played, rounds_played, rating_2.0, game_score, ACS, KDRatio, KAST_pct, ADR, KPR, APR, FKPR, FDPR, HS_pct, CL_pct, CL_count, max_kills_in_round, total_kills, total_deaths, total_assists, total_first_kills, total_first_deaths
+4. If any selector fails, log an ERROR and skip the row—but DO NOT crash.  
+5. Enforce a 1–2 second delay between HTTP requests to avoid rate-limiting.

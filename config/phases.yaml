@@ -1,0 +1,10 @@
+rules:
+  # Regular Season date range
+  - from: "YYYY-MM-DD"   # first day of regular split
+    to:   "YYYY-MM-DD"   # last day before playoffs begin
+    phase: "Regular Season"
+
+  # Playoffs date range
+  - from: "YYYY-MM-DD"   # first playoff match date
+    to:   "YYYY-MM-DD"   # final playoff match date
+    phase: "Playoffs" 

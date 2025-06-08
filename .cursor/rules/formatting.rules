@@ -1,0 +1,20 @@
+# formatting.rules
+# Code style, structure, and logging conventions.
+
+1. ALWAYS ask Quinn before making breaking style changes.
+2. Language: Python 3.8+.
+3. File layout:
+   - src/
+     • scraper.py        # orchestrates the run
+     • parser.py         # HTML → dict
+     • db.py             # SQLite functions
+     • scheduler.py      # phase lookup
+4. Follow PEP8:
+   - 4-space indents, max line length 88.
+   - snake_case for functions and variables.
+   - UPPER_SNAKE_CASE for constants.
+5. Docstrings on every function using Google style.
+6. Logging:
+   - Use Python’s `logging` module.
+   - Log levels: DEBUG for detailed flow, INFO for high-level progress, WARNING for recoverable issues, ERROR for failures.
+   - Always include match_id and map_name in log context.
