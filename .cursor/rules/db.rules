@@ -5,15 +5,21 @@
 2. Single table: map_stats. Columns and types:
    event_id            TEXT
    event_name          TEXT
+   bracket_stage       TEXT
    match_id            TEXT
-   match_date          DATE
-   phase               TEXT
+   match_datetime      DATETIME
+   patch               TEXT
    map_name            TEXT
+   team1_name          TEXT
+   team1_score         INTEGER
+   team2_name          TEXT
+   team2_score         INTEGER
    player_name         TEXT
-   team_name           TEXT
+   player_team         TEXT
+   player_country      TEXT
    agent_played        TEXT
    rounds_played       INTEGER
-   rating_2.0          REAL
+   rating_2_0          REAL
    game_score          REAL
    ACS                 REAL
    KDRatio             REAL
