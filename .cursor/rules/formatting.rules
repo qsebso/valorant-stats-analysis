@@ -18,3 +18,5 @@
    - Use Python’s `logging` module.
    - Log levels: DEBUG for detailed flow, INFO for high-level progress, WARNING for recoverable issues, ERROR for failures.
    - Always include match_id and map_name in log context.
+7. Comments:
+   - Always use comments to descibe code where it is not extremely obvious.
