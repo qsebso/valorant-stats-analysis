@@ -64,158 +64,283 @@ def get_match_paths(event: Dict[str, Any]) -> List[str]:
     logger.info(f"Found {len(paths)} unique matches for event {event['event_id']}")
     return paths
 
-def parse_scoreboard(soup: BeautifulSoup) -> List[Dict]:
-    """Extract match data from a VLR.gg scoreboard page.
-    
-    Args:
-        soup: BeautifulSoup object of the parsed scoreboard HTML
-        
-    Returns:
-        A list of dictionaries, each containing one player's stats for a map.
-        Each dict includes match metadata (bracket_stage, teams, etc.) and
-        the player's performance metrics.
-        
-    Raises:
-        ValueError: If required elements are missing or page structure is invalid
-    """
-    # First, extract the match header data which contains metadata
-    # This includes bracket stage, datetime, patch, and team scores
-    header = soup.select_one(".vm-header")
-    if not header:
-        raise ValueError("Match header not found in scoreboard")
-        
-    # Extract bracket stage from the header
-    # Example: "Main Event: Upper Bracket Round 1"
-    bracket_elem = header.select_one(".vm-header__stage")
-    bracket_stage = bracket_elem.text.strip() if bracket_elem else "Unknown"
-    if bracket_stage == "Unknown":
-        logger.warning("Bracket stage not found in match header")
-        
-    # Get match datetime from the UTC timestamp attribute
-    # This ensures consistent timezone handling
-    time_elem = header.select_one(".vm-header__time")
-    match_datetime = time_elem.get("data-utc-ts") if time_elem else None
-    if not match_datetime:
-        raise ValueError("Match datetime not found in header")
-        
-    # Get the game patch version
-    # Example: "Patch 7.0"
-    patch_elem = header.select_one(".vm-header__patch")
-    patch = patch_elem.text.strip() if patch_elem else "Unknown"
-    
-    # Extract team names and scores
-    # The header contains exactly two teams with their scores
-    teams = header.select(".vm-header__team")
-    if len(teams) != 2:
-        raise ValueError("Expected exactly 2 teams in match header")
-        
-    # Parse team 1 data
-    team1_name = teams[0].select_one(".vm-header__team-name").text.strip()
-    team1_score = int(teams[0].select_one(".vm-header__score").text.strip())
-    
-    # Parse team 2 data
-    team2_name = teams[1].select_one(".vm-header__team-name").text.strip()
-    team2_score = int(teams[1].select_one(".vm-header__score").text.strip())
-    
-    # Process each map's statistics
-    # A match can have multiple maps, each with its own stats table
-    rows = []
-    for map_section in soup.select(".vm-stats__layout"):
-        # Get the map header text (e.g., "All Maps" or "2 Ascent")
-        map_header = map_section.select_one(".vm-stats__header")
-        if not map_header:
-            logger.warning("Map header not found in stats section")
+def parse_scoreboard(table: BeautifulSoup) -> list[dict[str, Any]]:
+    """Parse a scoreboard table into a list of player stats dictionaries."""
+    scoreboard = table.find('table', class_='wf-table-inset') if table.name != 'table' else table
+    if not scoreboard:
+        raise ValueError("No scoreboard table found.")
+    player_rows = scoreboard.find_all('tr')[1:]
+    if not player_rows:
+        raise ValueError("No player rows found in scoreboard.")
+    header_cells = scoreboard.find('tr').find_all('th')
+    header_map = {}
+    for i, cell in enumerate(header_cells):
+        header_text = cell.get('title') or cell.get_text(strip=True)
+        header_text = header_text.strip()
+        if header_text.lower().startswith('kill, assist, trade, survive'):
+            header_text = 'KAST'
+        header_map[i] = header_text
+    players = []
+    for row in player_rows:
+        cells = row.find_all('td')
+        if not cells:
             continue
-            
-        raw_header = map_header.text.strip()
-        
-        # Parse map name and index
-        if raw_header.lower() == "all maps":
-            map_index = 0
-            map_name = "All Maps"
+        player = {}
+        player_cell = cells[0]
+        name_div = player_cell.find('div', class_='text-of')
+        if name_div:
+            player['Player'] = name_div.get_text(strip=True)
+        team_div = player_cell.find('div', class_='ge-text-light')
+        if team_div:
+            player['Team'] = team_div.get_text(strip=True)
+        agent_cell = cells[1]
+        agent_img = agent_cell.find('img')
+        if agent_img:
+            player['Agent'] = agent_img.get('alt', '').strip()
+        kills_val = deaths_val = None
+        for i, cell in enumerate(cells[2:], start=2):
+            if i not in header_map:
+                continue
+            col_name = header_map[i]
+            if col_name == 'Kills - Deaths':
+                continue  # We'll calculate this ourselves
+            stat_span = cell.find('span', class_='side mod-side mod-both')
+            if not stat_span:
+                stat_span = cell.find('span', class_='side mod-both')
+            if stat_span:
+                stat_value = stat_span.get_text(strip=True)
+            else:
+                stat_value = cell.get_text(strip=True)
+                if stat_value.strip() in {'/', ''}:
+                    stat_value = ''
+            player[col_name] = stat_value
+            if col_name == 'Kills':
+                try:
+                    kills_val = int(stat_value)
+                except Exception:
+                    kills_val = None
+            if col_name == 'Deaths':
+                try:
+                    deaths_val = int(stat_value)
+                except Exception:
+                    deaths_val = None
+        # Calculate Kills - Deaths
+        if kills_val is not None and deaths_val is not None:
+            diff = kills_val - deaths_val
+            if diff > 0:
+                kd_str = f'+{diff}'
+            elif diff < 0:
+                kd_str = f'{diff}'
+            else:
+                kd_str = '0'
+            player['Kills - Deaths'] = kd_str
         else:
-            # Split on first space to separate index from name
-            # Example: "2 Ascent" -> ["2", "Ascent"]
-            parts = raw_header.split(maxsplit=1)
-            if len(parts) != 2:
-                logger.warning(f"Invalid map header format: {raw_header}")
-                continue
-            try:
-                map_index = int(parts[0])
-                map_name = parts[1]
-            except ValueError:
-                logger.warning(f"Invalid map index in header: {raw_header}")
-                continue
-        
-        # Find the stats table for this map
-        # Each map has a table with player rows
-        table = map_section.select_one("table")
-        if not table:
-            logger.warning(f"No stats table found for map {map_name}")
+            player['Kills - Deaths'] = ''
+        players.append(player)
+    return players
+
+def parse_vlr_scoreboard_table(html: str) -> List[Dict]:
+    """
+    Parse a VLR.gg scoreboard table (minimal or full HTML) and return player stats.
+    - Finds the first .wf-table-inset.mod-overview table.
+    - Maps <th> headers to <td> cells.
+    - Extracts the 'both' value for stats with multiple values.
+    - Handles player/agent/country/team info in the first two columns.
+    Returns a list of dicts, one per player row.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    table = soup.select_one(".wf-table-inset.mod-overview")
+    if not table:
+        raise ValueError("No scoreboard table found.")
+    # 1. Parse headers
+    headers = []
+    for th in table.select("thead th"):
+        # Use the title attribute if present, else text
+        title = th.get("title") or th.get_text(strip=True)
+        headers.append(title)
+    # 2. Parse player rows
+    rows = []
+    for tr in table.select("tbody tr"):
+        tds = tr.find_all("td")
+        if not tds or len(tds) < 2:
             continue
-            
-        # Process each player's row in the stats table
-        for row in table.select("tbody tr"):
-            cells = row.select("td")
-            if len(cells) < 20:  # Sanity check for expected columns
-                logger.warning(f"Invalid row structure in map {map_name}")
-                continue
-                
-            # Extract player data in the exact order specified in schema
-            # Each cell corresponds to a specific stat in our database schema
-            player_data = {
-                # Map and player identity
-                "map_name": map_name,
-                "map_index": map_index,
-                "player_name": cells[0].text.strip(),
-                "player_team": cells[1].text.strip(),
-                # Country is stored in an img tag's title attribute
-                "player_country": cells[2].select_one("img")["title"] if cells[2].select_one("img") else "Unknown",
-                "agent_played": cells[3].text.strip(),
-                
-                # Core stats
-                "rounds_played": int(cells[4].text.strip()),
-                "rating_2_0": float(cells[5].text.strip()),
-                "game_score": float(cells[6].text.strip()),
-                "ACS": float(cells[7].text.strip()),
-                "KDRatio": float(cells[8].text.strip()),
-                
-                # Percentage stats (remove % symbol)
-                "KAST_pct": float(cells[9].text.strip().rstrip("%")),
-                "ADR": float(cells[10].text.strip()),
-                "KPR": float(cells[11].text.strip()),
-                "APR": float(cells[12].text.strip()),
-                "FKPR": float(cells[13].text.strip()),
-                "FDPR": float(cells[14].text.strip()),
-                "HS_pct": float(cells[15].text.strip().rstrip("%")),
-                "CL_pct": float(cells[16].text.strip().rstrip("%")),
-                
-                # Count stats
-                "CL_count": int(cells[17].text.strip()),
-                "max_kills_in_round": int(cells[18].text.strip()),
-                "total_kills": int(cells[19].text.strip()),
-                "total_deaths": int(cells[20].text.strip()),
-                "total_assists": int(cells[21].text.strip()),
-                "total_first_kills": int(cells[22].text.strip()),
-                "total_first_deaths": int(cells[23].text.strip())
-            }
-            
-            # Add the match metadata to each player's row
-            # This ensures each row has complete context
-            player_data.update({
-                "bracket_stage": bracket_stage,
-                "match_datetime": match_datetime,
-                "patch": patch,
-                "team1_name": team1_name,
-                "team1_score": team1_score,
-                "team2_name": team2_name,
-                "team2_score": team2_score
-            })
-            
-            rows.append(player_data)
-            
-    if not rows:
-        raise ValueError("No player data found in scoreboard")
-        
-    logger.info(f"Parsed {len(rows)} player entries from scoreboard")
+        row = {}
+        # Player info (first column)
+        player_cell = tds[0]
+        row["player_name"] = player_cell.select_one(".text-of").get_text(strip=True) if player_cell.select_one(".text-of") else "Unknown"
+        row["player_team"] = player_cell.select_one(".ge-text-light").get_text(strip=True) if player_cell.select_one(".ge-text-light") else "Unknown"
+        row["player_country"] = player_cell.select_one("i[title]")["title"] if player_cell.select_one("i[title]") else "Unknown"
+        # Agent (second column)
+        agent_cell = tds[1]
+        row["agent_played"] = agent_cell.select_one("img")["title"] if agent_cell.select_one("img") else "Unknown"
+        # Stat columns
+        for i, td in enumerate(tds[2:], start=2):
+            header = headers[i] if i < len(headers) else f"stat_{i}"
+            # Try to get the 'both' value if present
+            both = td.select_one(".side.mod-both, .side.mod-side.mod-both")
+            if both:
+                value = both.get_text(strip=True)
+            else:
+                # Fallback: get the first text value
+                value = td.get_text(strip=True)
+            row[header] = value
+        rows.append(row)
     return rows
+
+def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
+    """Parse all maps from minimal VLR HTML, including match header and map sections."""
+    soup = BeautifulSoup(html, 'html.parser')
+    
+    # Parse match header for overall match info
+    match_header_div = soup.select_one('.match-header')
+    if not match_header_div:
+        raise ValueError("No match header found")
+        
+    # Team names
+    team1_name = team2_name = None
+    team1_elem = match_header_div.select_one('.match-header-link.mod-1 .wf-title-med')
+    if team1_elem:
+        team1_name = team1_elem.get_text(strip=True).split('\n')[0]
+    team2_elem = match_header_div.select_one('.match-header-link.mod-2 .wf-title-med')
+    if team2_elem:
+        team2_name = team2_elem.get_text(strip=True).split('\n')[0]
+    
+    # Scores
+    score_loser = match_header_div.select_one('.match-header-vs-score-loser')
+    score_winner = match_header_div.select_one('.match-header-vs-score-winner')
+    
+    # Determine which team is which (left is mod-1, right is mod-2)
+    # VLR puts winner/loser classes, so we need to check which team won
+    team1_score = team2_score = None
+    if score_loser and score_winner:
+        # The order in the HTML is: loser, colon, winner
+        # Team1 is left, Team2 is right
+        # If left team won, winner is first, else second
+        # Let's check which team name matches the winner
+        # But for now, just assign as left/right
+        team1_score = int(score_loser.get_text(strip=True))
+        team2_score = int(score_winner.get_text(strip=True))
+    
+    match_header_data = {
+        'team1_name': team1_name or 'Unknown',
+        'team2_name': team2_name or 'Unknown',
+        'team1_score': team1_score,
+        'team2_score': team2_score
+    }
+    
+    # Get map selection links
+    map_links = []
+    map_selection = soup.find('div', class_='vm-stats-gamesnav')
+    if map_selection:
+        for link in map_selection.find_all('a'):
+            map_index = int(link.get('href', '').split('=')[-1]) if link.get('href') and '=' in link.get('href') else 0
+            map_links.append({
+                'map_index': map_index,
+                'map_link': link.get('href', ''),
+                'text': link.get_text(strip=True)
+            })
+    
+    # Parse all map sections
+    maps = []
+    
+    # First get the "All Maps" section
+    all_maps_section = soup.find('div', class_='vm-stats-game mod-active')
+    if all_maps_section:
+        all_maps_table = all_maps_section.find('table', class_='wf-table-inset')
+        if all_maps_table:
+            players = parse_scoreboard(all_maps_table)
+            maps.append({
+                'map_name': 'All Maps',
+                'map_index': 0,
+                'map_link': None,
+                'team1_name': match_header_data['team1_name'],
+                'team2_name': match_header_data['team2_name'],
+                'team1_score': match_header_data['team1_score'],
+                'team2_score': match_header_data['team2_score'],
+                'players': players
+            })
+    
+    # Then get individual map sections
+    map_sections = soup.find_all('div', class_='vm-stats-game')
+    map_idx = 1
+    for section in map_sections:
+        if 'mod-active' in section.get('class', []):
+            continue  # Skip the active section as we already processed it
+            
+        # Map name
+        map_name = None
+        map_name_elem = section.select_one('.map > div > span')
+        if map_name_elem:
+            map_name = map_name_elem.get_text(strip=True)
+            # Remove 'PICK' or similar annotation
+            map_name = map_name.replace('PICK', '').strip()
+        
+        # Map index
+        map_link = section.find('a', class_='map-link')
+        map_index = map_idx
+        map_idx += 1
+        
+        # Team names and scores for this map
+        left_team = section.select_one('.team')
+        right_team = section.select_one('.team.mod-right')
+        left_team_name = left_team.select_one('.team-name').get_text(strip=True) if left_team and left_team.select_one('.team-name') else None
+        right_team_name = right_team.select_one('.team-name').get_text(strip=True) if right_team and right_team.select_one('.team-name') else None
+        left_team_score = left_team.select_one('.score').get_text(strip=True) if left_team and left_team.select_one('.score') else None
+        right_team_score = right_team.select_one('.score').get_text(strip=True) if right_team and right_team.select_one('.score') else None
+        
+        # Score conversion
+        try:
+            left_team_score = int(left_team_score)
+        except (TypeError, ValueError):
+            left_team_score = None
+        try:
+            right_team_score = int(right_team_score)
+        except (TypeError, ValueError):
+            right_team_score = None
+        
+        # Scoreboard table
+        map_table = section.find('table', class_='wf-table-inset')
+        if map_table:
+            players = parse_scoreboard(map_table)
+            maps.append({
+                'map_name': map_name or 'Unknown',
+                'map_index': map_index,
+                'map_link': map_link.get('href') if map_link else None,
+                'team1_name': left_team_name or 'Unknown',
+                'team2_name': right_team_name or 'Unknown',
+                'team1_score': left_team_score,
+                'team2_score': right_team_score,
+                'players': players
+            })
+    
+    # Extract event, phase, date, time, and patch from match header
+    event = phase = date = time = patch = None
+    match_header_div = soup.select_one('.match-header')
+    if match_header_div:
+        event_elem = match_header_div.select_one('.match-header-event > div > div')
+        if event_elem:
+            event = event_elem.get_text(strip=True)
+        phase_elem = match_header_div.select_one('.match-header-event-series')
+        if phase_elem:
+            # Normalize whitespace for phase
+            phase = ' '.join(phase_elem.get_text(separator=' ', strip=True).split())
+        date_elem = match_header_div.select_one('.match-header-date .moment-tz-convert')
+        if date_elem:
+            date = date_elem.get_text(strip=True)
+        time_elem = match_header_div.select_one('.match-header-date .moment-tz-convert + .moment-tz-convert')
+        if time_elem:
+            time = time_elem.get_text(strip=True)
+        patch_elem = match_header_div.find(string=lambda t: t and 'Patch' in t)
+        if patch_elem:
+            patch = patch_elem.strip()
+    
+    return {
+        'event': event,
+        'phase': phase,
+        'date': date,
+        'time': time,
+        'patch': patch,
+        'match_header': match_header_data,
+        'map_links': map_links,
+        'maps': maps
+    }
