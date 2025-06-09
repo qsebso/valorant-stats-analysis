@@ -7,55 +7,62 @@ This module handles the extraction of match data from VLR.gg HTML pages:
 """
 
 import logging
-from typing import Dict, List
+import re
 import requests
+from typing import Dict, List, Any, Optional
 from bs4 import BeautifulSoup
+
+from .utils import rate_limit
 
 # Set up module-level logger for consistent logging across functions
 logger = logging.getLogger(__name__)
 
-def get_match_ids(event_id: str) -> List[str]:
-    """Extract all match IDs from an event's match list page.
+def get_match_paths(event: Dict[str, Any]) -> List[str]:
+    """
+    Get all match URL paths for an event.
     
     Args:
-        event_id: The VLR.gg event identifier (e.g., "12345")
+        event: Event configuration dict containing event_id and optional match_urls
         
     Returns:
-        A list of match ID strings found in the event's match list
+        List of match URL paths (e.g. ['/19071/...', '/19072/...'])
         
     Raises:
-        requests.RequestException: If the HTTP request fails
-        ValueError: If the page structure is invalid or no matches found
+        ValueError: If no matches found and no manual URLs provided
     """
-    # Construct the event matches URL
-    url = f"https://www.vlr.gg/event/matches/{event_id}/"
-    logger.info(f"Fetching match list from {url}")
-    
-    # Fetch the page and ensure the request succeeded
-    response = requests.get(url)
-    response.raise_for_status()
-    
-    # Parse the HTML and find all match links
-    # Using the selector from scraping.rules: ".wf-table .match-row a"
-    soup = BeautifulSoup(response.text, "html.parser")
-    match_links = soup.select(".wf-table .match-row a")
-    
-    if not match_links:
-        raise ValueError(f"No match links found for event {event_id}")
+    # Check for manual override only if non-empty
+    if event.get("match_urls") and len(event["match_urls"]) > 0:
+        logger.info(f"Using manual match URLs for event {event['event_id']}")
+        return event["match_urls"]
         
-    # Extract match IDs from href attributes
-    # Example href: "/12345/team1-vs-team2" -> extract "12345"
-    match_ids = []
-    for link in match_links:
-        href = link.get("href", "")
-        if href.startswith("/"):
-            match_id = href.split("/")[1]
-            # Only add if it's a valid numeric ID
-            if match_id.isdigit():
-                match_ids.append(match_id)
-                
-    logger.info(f"Found {len(match_ids)} matches for event {event_id}")
-    return match_ids
+    # Otherwise scrape from event page
+    event_url = f"https://www.vlr.gg/event/{event['event_id']}"
+    logger.info(f"Scraping match list from {event_url}")
+    
+    # Rate limit before request
+    rate_limit()
+    
+    # Fetch event page
+    resp = requests.get(event_url)
+    resp.raise_for_status()
+    
+    # Parse HTML and find match links
+    soup = BeautifulSoup(resp.text, "html.parser")
+    # Find all anchors whose href begins with /<digits>/
+    links = soup.find_all("a", href=re.compile(r"^/\d+/"))
+    
+    if not links:
+        raise ValueError(f"No match links found for event {event['event_id']}")
+        
+    # Extract and dedupe the hrefs
+    paths = []
+    for a in links:
+        href = a["href"].strip()
+        if href not in paths:
+            paths.append(href)
+            
+    logger.info(f"Found {len(paths)} unique matches for event {event['event_id']}")
+    return paths
 
 def parse_scoreboard(soup: BeautifulSoup) -> List[Dict]:
     """Extract match data from a VLR.gg scoreboard page.

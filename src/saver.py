@@ -9,7 +9,7 @@ details from the rest of the application.
 
 import logging
 from typing import Dict
-from db import insert_map_stats
+from .db import insert_map_stats
 
 # Set up module-level logger
 logger = logging.getLogger(__name__)
