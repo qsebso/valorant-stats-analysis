@@ -69,7 +69,10 @@ def parse_scoreboard(table: BeautifulSoup) -> list[dict[str, Any]]:
     scoreboard = table.find('table', class_='wf-table-inset') if table.name != 'table' else table
     if not scoreboard:
         raise ValueError("No scoreboard table found.")
-    player_rows = scoreboard.find_all('tr')[1:]
+    # Collect all player rows from all <tbody> elements (both teams)
+    player_rows = []
+    for tbody in scoreboard.find_all('tbody'):
+        player_rows.extend(tbody.find_all('tr'))
     if not player_rows:
         raise ValueError("No player rows found in scoreboard.")
     header_cells = scoreboard.find('tr').find_all('th')
@@ -90,9 +93,15 @@ def parse_scoreboard(table: BeautifulSoup) -> list[dict[str, Any]]:
         name_div = player_cell.find('div', class_='text-of')
         if name_div:
             player['Player'] = name_div.get_text(strip=True)
+        else:
+            player['Player'] = 'Unknown'
+            print('[DEBUG] Missing player name in row:', row)
         team_div = player_cell.find('div', class_='ge-text-light')
         if team_div:
             player['Team'] = team_div.get_text(strip=True)
+        else:
+            player['Team'] = 'Unknown'
+            print('[DEBUG] Missing team in row:', row)
         agent_cell = cells[1]
         agent_img = agent_cell.find('img')
         if agent_img:
@@ -246,19 +255,20 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
     # First get the "All Maps" section
     all_maps_section = soup.find('div', class_='vm-stats-game mod-active')
     if all_maps_section:
-        all_maps_table = all_maps_section.find('table', class_='wf-table-inset')
-        if all_maps_table:
-            players = parse_scoreboard(all_maps_table)
-            maps.append({
-                'map_name': 'All Maps',
-                'map_index': 0,
-                'map_link': None,
-                'team1_name': match_header_data['team1_name'],
-                'team2_name': match_header_data['team2_name'],
-                'team1_score': match_header_data['team1_score'],
-                'team2_score': match_header_data['team2_score'],
-                'players': players
-            })
+        all_tables = all_maps_section.find_all('table', class_='wf-table-inset')
+        all_players = []
+        for table in all_tables:
+            all_players.extend(parse_scoreboard(table))
+        maps.append({
+            'map_name': 'All Maps',
+            'map_index': 0,
+            'map_link': None,
+            'team1_name': match_header_data['team1_name'],
+            'team2_name': match_header_data['team2_name'],
+            'team1_score': match_header_data['team1_score'],
+            'team2_score': match_header_data['team2_score'],
+            'players': all_players
+        })
     
     # Then get individual map sections
     map_sections = soup.find_all('div', class_='vm-stats-game')
@@ -298,20 +308,21 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
         except (TypeError, ValueError):
             right_team_score = None
         
-        # Scoreboard table
-        map_table = section.find('table', class_='wf-table-inset')
-        if map_table:
-            players = parse_scoreboard(map_table)
-            maps.append({
-                'map_name': map_name or 'Unknown',
-                'map_index': map_index,
-                'map_link': map_link.get('href') if map_link else None,
-                'team1_name': left_team_name or 'Unknown',
-                'team2_name': right_team_name or 'Unknown',
-                'team1_score': left_team_score,
-                'team2_score': right_team_score,
-                'players': players
-            })
+        # Find all tables for both teams in this map section
+        all_tables = section.find_all('table', class_='wf-table-inset')
+        all_players = []
+        for table in all_tables:
+            all_players.extend(parse_scoreboard(table))
+        maps.append({
+            'map_name': map_name or 'Unknown',
+            'map_index': map_index,
+            'map_link': map_link.get('href') if map_link else None,
+            'team1_name': left_team_name or 'Unknown',
+            'team2_name': right_team_name or 'Unknown',
+            'team1_score': left_team_score,
+            'team2_score': right_team_score,
+            'players': all_players
+        })
     
     # Extract event, phase, date, time, and patch from match header
     event = phase = date = time = patch = None
