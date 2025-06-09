@@ -10,6 +10,7 @@
    match_datetime      DATETIME
    patch               TEXT
    map_name            TEXT
+   map_index           INTEGER
    team1_name          TEXT
    team1_score         INTEGER
    team2_name          TEXT

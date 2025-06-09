@@ -9,6 +9,6 @@
      • `.vm-stats__layout table` for per-map stats tables.
      • Inside each table, header row is <tr> with <th> names; data rows are <tr> with <td>.
 3. Extract columns in this exact order (matching our schema):  
-   bracket_stage, match_datetime, patch, team1_name, team1_score, team2_name, team2_score, event_id, event_name, match_id, map_name, player_name, player_team, player_country, agent_played, rounds_played, rating_2_0, game_score, ACS, KDRatio, KAST_pct, ADR, KPR, APR, FKPR, FDPR, HS_pct, CL_pct, CL_count, max_kills_in_round, total_kills, total_deaths, total_assists, total_first_kills, total_first_deaths
+   bracket_stage, match_datetime, patch, team1_name, team1_score, team2_name, team2_score, event_id, event_name, match_id, map_name, map_index, player_name, player_team, player_country, agent_played, rounds_played, rating_2_0, game_score, ACS, KDRatio, KAST_pct, ADR, KPR, APR, FKPR, FDPR, HS_pct, CL_pct, CL_count, max_kills_in_round, total_kills, total_deaths, total_assists, total_first_kills, total_first_deaths
 4. If any selector fails, log an ERROR and skip the row—but DO NOT crash.  
 5. Enforce a 1–2 second delay between HTTP requests to avoid rate-limiting.
