@@ -121,8 +121,31 @@ def parse_scoreboard(soup: BeautifulSoup) -> List[Dict]:
     # A match can have multiple maps, each with its own stats table
     rows = []
     for map_section in soup.select(".vm-stats__layout"):
-        # Get the map name (e.g., "Ascent", "Haven")
-        map_name = map_section.select_one(".vm-stats__header").text.strip()
+        # Get the map header text (e.g., "All Maps" or "2 Ascent")
+        map_header = map_section.select_one(".vm-stats__header")
+        if not map_header:
+            logger.warning("Map header not found in stats section")
+            continue
+            
+        raw_header = map_header.text.strip()
+        
+        # Parse map name and index
+        if raw_header.lower() == "all maps":
+            map_index = 0
+            map_name = "All Maps"
+        else:
+            # Split on first space to separate index from name
+            # Example: "2 Ascent" -> ["2", "Ascent"]
+            parts = raw_header.split(maxsplit=1)
+            if len(parts) != 2:
+                logger.warning(f"Invalid map header format: {raw_header}")
+                continue
+            try:
+                map_index = int(parts[0])
+                map_name = parts[1]
+            except ValueError:
+                logger.warning(f"Invalid map index in header: {raw_header}")
+                continue
         
         # Find the stats table for this map
         # Each map has a table with player rows
@@ -143,6 +166,7 @@ def parse_scoreboard(soup: BeautifulSoup) -> List[Dict]:
             player_data = {
                 # Map and player identity
                 "map_name": map_name,
+                "map_index": map_index,
                 "player_name": cells[0].text.strip(),
                 "player_team": cells[1].text.strip(),
                 # Country is stored in an img tag's title attribute

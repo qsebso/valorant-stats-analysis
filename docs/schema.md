@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS map_stats (
   match_datetime      DATETIME,
   patch               TEXT,
   map_name            TEXT,
+  map_index           INTEGER,
   team1_name          TEXT,
   team1_score         INTEGER,
   team2_name          TEXT,
@@ -52,7 +53,8 @@ CREATE TABLE IF NOT EXISTS map_stats (
 - `match_id`: Unique identifier for the match
 - `match_datetime`: Date and time when the match was played
 - `patch`: Game version/patch number
-- `map_name`: Name of the map played
+- `map_name`: Name of the map played ("All Maps", "Bind", "Haven", etc.)
+- `map_index`: Ordinal index of the map (0 for "All Maps", 1 for first map, etc.)
 - `team1_name`: Name of the first team
 - `team1_score`: Final score of the first team
 - `team2_name`: Name of the second team

@@ -68,7 +68,8 @@ def init_db() -> None:
     patch               TEXT,      -- Game version
 
     -- Map and teams
-    map_name            TEXT,      -- Map name
+    map_name            TEXT,      -- Map name ("All Maps", "Bind", "Haven", etc.)
+    map_index           INTEGER,   -- 0 for "All Maps", 1 for first map, etc.
     team1_name          TEXT,      -- Team 1
     team1_score         INTEGER,   -- Team 1 score
     team2_name          TEXT,      -- Team 2
