@@ -1,5 +1,5 @@
 events:
-  - event_id: "PUT_EVENT_ID_HERE"
-    event_name: "PUT_EVENT_NAME_HERE"
-    match_urls: []
-    match_ids: [] 
+  - event_id: "353"
+    event_name: "Valorant Champions Tour Stage 2: Masters Reykjavík"
+    match_urls: []   # leave blank to auto–scrape all matches
+    match_ids: []    # optional override if you ever want to target specific matches
