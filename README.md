@@ -16,8 +16,7 @@ A long-term data collection project for analyzing VALORANT player performance ac
 │   ├── db.py         # Database operations
 │   └── scheduler.py  # Automated scheduling
 ├── docs/             # Documentation
-│   ├── schema.md     # Database schema
-│   └── schedule.md   # Phase tracking guidelines
+│   └── schema.md     # Database schema
 ├── migrations/       # Database migrations
 ├── requirements.txt  # Python dependencies
 └── README.md        # This file
@@ -37,10 +36,8 @@ A long-term data collection project for analyzing VALORANT player performance ac
    - Install dependencies: `pip install -r requirements.txt`
    - Verify Python 3.8+ is installed
 
-4. **Phase Configuration**
-   - Prepare phase definitions in `config/phases.yaml`
-   - Define regular season vs playoff criteria
-   - Populate `config/phases.yaml` with date-range rules as documented in `docs/schedule.md`
+4. **First Steps for Quinn**
+   - Scraper will use the `bracket_stage` field from each match header as the phase; no manual phase file needed.
 
 5. **Run the Scraper**
    - Initial data collection can begin after configuration
