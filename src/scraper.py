@@ -5,10 +5,8 @@ Handles fetching and parsing match data from VLR.gg.
 
 import logging
 import requests
-from bs4 import BeautifulSoup
 from typing import Dict, Any
-
-from .parser import get_match_paths, parse_scoreboard
+from .parser import get_match_paths, parse_vlr_minimal_all_maps
 from .loader import load_events
 from .utils import rate_limit
 from .saver import save_match
@@ -18,44 +16,37 @@ logger = logging.getLogger(__name__)
 
 def scrape_match(match_path: str, event: Dict[str, Any]) -> None:
     """
-    Scrape a single match from VLR.gg.
-    
-    Args:
-        match_path: URL path to the match (e.g. '/match/12345/team1-vs-team2')
-        event: Event configuration dict containing metadata
+    Scrape a single match from VLR.gg, process all maps and all players.
     """
-    # Construct full match URL
     match_url = f"https://www.vlr.gg{match_path}"
     logger.info(f"Scraping match: {match_url}")
-    
-    # Rate limit before request
     rate_limit()
-    
-    # Fetch match page
     response = requests.get(match_url)
     response.raise_for_status()
-    
-    # Parse HTML
-    soup = BeautifulSoup(response.text, "html.parser")
-    
-    # Extract match data
-    match_data = parse_scoreboard(soup)
-    if not match_data:
+    html = response.text
+    # Use the new parser
+    match_result = parse_vlr_minimal_all_maps(html)
+    if not match_result or not match_result.get('maps'):
         logger.error(f"Failed to parse match data from {match_url}")
         return
-        
-    # Add event context to each player's data
-    for player_data in match_data:
-        player_data.update({
-            "event_id": event["event_id"],
-            "event_name": event["event_name"],
-            "bracket_stage": event.get("bracket_stage", "Unknown"),
-            "match_id": match_path.split("/")[-2],  # Extract ID from path
-            "match_datetime": event.get("match_datetime", None)
-        })
-        
-        # Save to database
-        save_match(player_data)
+    # For each map, for each player, save to DB
+    for map_info in match_result['maps']:
+        for player_data in map_info['players']:
+            # Add event and match context
+            player_data.update({
+                "event_id": event["event_id"],
+                "event_name": event["event_name"],
+                "bracket_stage": event.get("bracket_stage", match_result.get("phase", "Unknown")),
+                "match_id": match_path.split("/")[-2],
+                "match_datetime": event.get("match_datetime", match_result.get("date", None)),
+                "map_index": map_info["map_index"],
+                "map_name": map_info["map_name"],
+                "team1_name": map_info["team1_name"],
+                "team2_name": map_info["team2_name"],
+                "team1_score": map_info["team1_score"],
+                "team2_score": map_info["team2_score"]
+            })
+            save_match(player_data)
 
 def main() -> None:
     """Main entry point for the scraper."""

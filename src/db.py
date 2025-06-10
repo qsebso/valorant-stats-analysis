@@ -55,58 +55,60 @@ def init_db() -> None:
     conn = get_connection()
     cursor = conn.cursor()
     
+    # Drop the existing table to recreate with new schema
+    cursor.execute("DROP TABLE IF EXISTS map_stats")
+    
     # Create the table with all columns from our schema
-    # Using IF NOT EXISTS for idempotency
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS map_stats (
-    -- Match metadata
-    event_id            TEXT,      -- Tournament ID
-    event_name          TEXT,      -- Tournament name
-    bracket_stage       TEXT,      -- Stage (e.g. Playoffs)
-    match_id            TEXT,      -- Unique match ID
-    match_datetime      DATETIME,  -- Match timestamp
-    patch               TEXT,      -- Game version
+        -- Match metadata
+        event_id            TEXT,      -- Tournament ID
+        event_name          TEXT,      -- Tournament name
+        bracket_stage       TEXT,      -- Stage (e.g. Playoffs)
+        match_id            TEXT,      -- Unique match ID
+        match_datetime      DATETIME,  -- Match timestamp
+        patch               TEXT,      -- Game version
 
-    -- Map and teams
-    map_name            TEXT,      -- Map name ("All Maps", "Bind", "Haven", etc.)
-    map_index           INTEGER,   -- 0 for "All Maps", 1 for first map, etc.
-    team1_name          TEXT,      -- Team 1
-    team1_score         INTEGER,   -- Team 1 score
-    team2_name          TEXT,      -- Team 2
-    team2_score         INTEGER,   -- Team 2 score
+        -- Map and teams
+        map_name            TEXT,      -- Map name ("All Maps", "Bind", "Haven", etc.)
+        map_index           INTEGER,   -- 0 for "All Maps", 1 for first map, etc.
+        team1_name          TEXT,      -- Team 1
+        team1_score         INTEGER,   -- Team 1 score
+        team2_name          TEXT,      -- Team 2
+        team2_score         INTEGER,   -- Team 2 score
+        winner              TEXT,      -- Winner of the map
+        rounds_played       INTEGER,   -- Total rounds (team1_score + team2_score)
 
-    -- Player info
-    player_name         TEXT,      -- Player name
-    player_team         TEXT,      -- Player's team
-    player_country      TEXT,      -- Country
-    agent_played        TEXT,      -- Agent
+        -- Player info
+        player_name         TEXT,      -- Player name
+        player_team         TEXT,      -- Player's team
+        player_country      TEXT,      -- Country
+        agent_played        TEXT,      -- Agent
 
-    -- Core stats
-    rounds_played       INTEGER,   -- Rounds played
-    rating_2_0          REAL,      -- VLR rating
-    game_score          REAL,      -- Game score
-    ACS                 REAL,      -- Combat score
-    KDRatio             REAL,      -- K/D ratio
-    KAST_pct            REAL,      -- KAST %
+        -- Core stats
+        rating_2_0          REAL,      -- VLR rating
+        ACS                 REAL,      -- Combat score
+        KDRatio            REAL,      -- K/D ratio
+        KDARatio           REAL,      -- (Kills+Assists)/Deaths
+        KAST_pct           REAL,      -- KAST %
 
-    -- Advanced stats
-    ADR                 REAL,      -- Damage/round
-    KPR                 REAL,      -- Kills/round
-    APR                 REAL,      -- Assists/round
-    FKPR                REAL,      -- First kills/round
-    FDPR                REAL,      -- First deaths/round
-    HS_pct              REAL,      -- Headshot %
-    CL_pct              REAL,      -- Clutch %
-    CL_count            INTEGER,   -- Clutches won
+        -- Advanced stats
+        ADR                 REAL,      -- Damage/round
+        KPR                 REAL,      -- Kills/round (calculated)
+        APR                 REAL,      -- Assists/round (calculated)
+        FKPR                REAL,      -- First kills/round (calculated)
+        FDPR                REAL,      -- First deaths/round (calculated)
+        HS_pct              REAL,      -- Headshot %
 
-    -- Raw stats
-    max_kills_in_round  INTEGER,   -- Max kills in any round
-    total_kills         INTEGER,   -- Total kills
-    total_deaths        INTEGER,   -- Total deaths
-    total_assists       INTEGER,   -- Total assists
-    total_first_kills   INTEGER,   -- First kills
-    total_first_deaths  INTEGER    -- First deaths
-    );
+        -- Raw stats
+        total_kills         INTEGER,   -- Total kills
+        total_deaths        INTEGER,   -- Total deaths
+        total_assists       INTEGER,   -- Total assists
+        total_first_kills   INTEGER,   -- First kills
+        total_first_deaths  INTEGER,   -- First deaths
+
+        PRIMARY KEY (match_id, map_name, player_name)
+    )
     """)
     
     # Commit the table creation

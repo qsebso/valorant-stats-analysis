@@ -102,6 +102,13 @@ def parse_scoreboard(table: BeautifulSoup) -> list[dict[str, Any]]:
         else:
             player['Team'] = 'Unknown'
             print('[DEBUG] Missing team in row:', row)
+        # Extract country from the flag icon's title attribute
+        country_icon = player_cell.find('i', attrs={'title': True})
+        if country_icon:
+            player['Country'] = country_icon['title']
+        else:
+            player['Country'] = 'Unknown'
+            print('[DEBUG] Missing country in row:', row)
         agent_cell = cells[1]
         agent_img = agent_cell.find('img')
         if agent_img:
@@ -218,18 +225,21 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
     score_loser = match_header_div.select_one('.match-header-vs-score-loser')
     score_winner = match_header_div.select_one('.match-header-vs-score-winner')
     
-    # Determine which team is which (left is mod-1, right is mod-2)
-    # VLR puts winner/loser classes, so we need to check which team won
     team1_score = team2_score = None
     if score_loser and score_winner:
-        # The order in the HTML is: loser, colon, winner
-        # Team1 is left, Team2 is right
-        # If left team won, winner is first, else second
-        # Let's check which team name matches the winner
-        # But for now, just assign as left/right
         team1_score = int(score_loser.get_text(strip=True))
         team2_score = int(score_winner.get_text(strip=True))
-    
+
+    # Determine winner for All Maps
+    winner = None
+    if team1_score is not None and team2_score is not None:
+        if team1_score > team2_score:
+            winner = team1_name
+        elif team2_score > team1_score:
+            winner = team2_name
+        else:
+            winner = None
+
     match_header_data = {
         'team1_name': team1_name or 'Unknown',
         'team2_name': team2_name or 'Unknown',
@@ -267,6 +277,7 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
             'team2_name': match_header_data['team2_name'],
             'team1_score': match_header_data['team1_score'],
             'team2_score': match_header_data['team2_score'],
+            'winner': winner,
             'players': all_players
         })
     
@@ -308,6 +319,16 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
         except (TypeError, ValueError):
             right_team_score = None
         
+        # Determine winner for this map
+        map_winner = None
+        if left_team_score is not None and right_team_score is not None:
+            if left_team_score > right_team_score:
+                map_winner = left_team_name
+            elif right_team_score > left_team_score:
+                map_winner = right_team_name
+            else:
+                map_winner = None
+        
         # Find all tables for both teams in this map section
         all_tables = section.find_all('table', class_='wf-table-inset')
         all_players = []
@@ -321,6 +342,7 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
             'team2_name': right_team_name or 'Unknown',
             'team1_score': left_team_score,
             'team2_score': right_team_score,
+            'winner': map_winner,
             'players': all_players
         })
     
@@ -341,7 +363,13 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
         time_elem = match_header_div.select_one('.match-header-date .moment-tz-convert + .moment-tz-convert')
         if time_elem:
             time = time_elem.get_text(strip=True)
+        # Improved patch extraction
         patch_elem = match_header_div.find(string=lambda t: t and 'Patch' in t)
+        if not patch_elem:
+            # Try to find a div with font-style: italic containing 'Patch'
+            patch_div = match_header_div.find('div', style=lambda s: s and 'italic' in s)
+            if patch_div and 'Patch' in patch_div.get_text():
+                patch_elem = patch_div.get_text(strip=True)
         if patch_elem:
             patch = patch_elem.strip()
     
