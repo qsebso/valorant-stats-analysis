@@ -18,6 +18,11 @@ CREATE TABLE IF NOT EXISTS map_stats (
   team1_score         INTEGER,
   team2_name          TEXT,
   team2_score         INTEGER,
+  team1_attacker_rounds INTEGER,
+  team1_defender_rounds INTEGER,
+  team2_attacker_rounds INTEGER,
+  team2_defender_rounds INTEGER,
+  map_duration        TEXT,
   player_name         TEXT,
   player_team         TEXT,
   player_country      TEXT,
@@ -59,6 +64,11 @@ CREATE TABLE IF NOT EXISTS map_stats (
 - `team1_score`: Final score of the first team
 - `team2_name`: Name of the second team
 - `team2_score`: Final score of the second team
+- `team1_attacker_rounds`: Rounds won by team 1 as attacker (T)
+- `team1_defender_rounds`: Rounds won by team 1 as defender (CT)
+- `team2_attacker_rounds`: Rounds won by team 2 as attacker (T)
+- `team2_defender_rounds`: Rounds won by team 2 as defender (CT)
+- `map_duration`: Duration of the map (MM:SS)
 - `player_name`: Player's in-game name
 - `player_team`: Team the player belongs to
 - `player_country`: Player's country of origin

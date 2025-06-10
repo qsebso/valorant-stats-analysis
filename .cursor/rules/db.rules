@@ -39,6 +39,11 @@
    total_assists       INTEGER
    total_first_kills   INTEGER
    total_first_deaths  INTEGER
+   team1_attacker_rounds INTEGER
+   team1_defender_rounds INTEGER
+   team2_attacker_rounds INTEGER
+   team2_defender_rounds INTEGER
+   map_duration        TEXT
 3. Use `IF NOT EXISTS` in CREATE statements for idempotency.
 4. For schema changes, create a new migration script in `migrations/` with a timestamped filename.  
 5. Use transactions for batch inserts, and commit every 100 rows.

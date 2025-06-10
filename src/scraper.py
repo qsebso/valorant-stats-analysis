@@ -6,7 +6,7 @@ Handles fetching and parsing match data from VLR.gg.
 import logging
 import requests
 from typing import Dict, Any
-from .parser import get_match_paths, parse_vlr_minimal_all_maps
+from .parser import get_match_paths, parse_vlr_match
 from .loader import load_events
 from .utils import rate_limit
 from .saver import save_match
@@ -25,7 +25,7 @@ def scrape_match(match_path: str, event: Dict[str, Any]) -> None:
     response.raise_for_status()
     html = response.text
     # Use the new parser
-    match_result = parse_vlr_minimal_all_maps(html)
+    match_result = parse_vlr_match(html)
     if not match_result or not match_result.get('maps'):
         logger.error(f"Failed to parse match data from {match_url}")
         return
@@ -36,9 +36,9 @@ def scrape_match(match_path: str, event: Dict[str, Any]) -> None:
             player_data.update({
                 "event_id": event["event_id"],
                 "event_name": event["event_name"],
-                "bracket_stage": event.get("bracket_stage", match_result.get("phase", "Unknown")),
+                "bracket_stage": match_result.get("bracket_stage") or event.get("bracket_stage") or "Unknown",
                 "match_id": match_path.split("/")[-2],
-                "match_datetime": event.get("match_datetime", match_result.get("date", None)),
+                "match_datetime": match_result.get("date") or event.get("match_datetime"),
                 "map_index": map_info["map_index"],
                 "map_name": map_info["map_name"],
                 "team1_name": map_info["team1_name"],
@@ -47,6 +47,12 @@ def scrape_match(match_path: str, event: Dict[str, Any]) -> None:
                 "team2_score": map_info["team2_score"],
                 "patch": match_result.get("patch"),
                 "winner": map_info.get("winner"),
+                # New fields for round sides and duration
+                "team1_attacker_rounds": map_info.get("team1_attacker_rounds"),
+                "team1_defender_rounds": map_info.get("team1_defender_rounds"),
+                "team2_attacker_rounds": map_info.get("team2_attacker_rounds"),
+                "team2_defender_rounds": map_info.get("team2_defender_rounds"),
+                "map_duration": map_info.get("map_duration"),
             })
             save_match(player_data)
 
