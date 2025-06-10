@@ -76,6 +76,11 @@ def init_db() -> None:
         team1_score         INTEGER,   -- Team 1 score
         team2_name          TEXT,      -- Team 2
         team2_score         INTEGER,   -- Team 2 score
+        team1_attacker_rounds INTEGER, -- Team 1 rounds as attacker
+        team1_defender_rounds INTEGER, -- Team 1 rounds as defender
+        team2_attacker_rounds INTEGER, -- Team 2 rounds as attacker
+        team2_defender_rounds INTEGER, -- Team 2 rounds as defender
+        map_duration        TEXT,      -- Map duration (MM:SS)
         winner              TEXT,      -- Winner of the map
         rounds_played       INTEGER,   -- Total rounds (team1_score + team2_score)
 

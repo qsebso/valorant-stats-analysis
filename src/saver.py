@@ -48,7 +48,11 @@ MAP_STATS_COLUMNS = [
     'rating_2_0', 'ACS', 'KDRatio', 'KDARatio', 'KAST_pct',
     'ADR', 'KPR', 'APR', 'FKPR', 'FDPR', 'HS_pct',  # KPR, APR, FKPR, FDPR are calculated
     'total_kills', 'total_deaths', 'total_assists',
-    'total_first_kills', 'total_first_deaths'
+    'total_first_kills', 'total_first_deaths',
+    # New columns for round sides and duration
+    'team1_attacker_rounds', 'team1_defender_rounds',
+    'team2_attacker_rounds', 'team2_defender_rounds',
+    'map_duration'
 ]
 
 def calculate_per_round_stats(row: Dict[str, Any]) -> Dict[str, Optional[float]]:

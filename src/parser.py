@@ -281,7 +281,12 @@ def parse_vlr_match(html: str) -> dict[str, Any]:
             'team1_score': match_header_data['team1_score'],
             'team2_score': match_header_data['team2_score'],
             'winner': winner,
-            'players': all_players
+            'players': all_players,
+            'team1_attacker_rounds': None,
+            'team1_defender_rounds': None,
+            'team2_attacker_rounds': None,
+            'team2_defender_rounds': None,
+            'map_duration': None
         })
     
     # Then get individual map sections
@@ -331,6 +336,26 @@ def parse_vlr_match(html: str) -> dict[str, Any]:
                 map_winner = right_team_name
             else:
                 map_winner = None
+
+        # --- New logic for round sides and map duration ---
+        # Extract round sides (e.g., 8 / 5 for left, 4 / 5 for right)
+        team1_attacker_rounds = team1_defender_rounds = team2_attacker_rounds = team2_defender_rounds = None
+        map_duration = None
+        if left_team:
+            t_span = left_team.select_one('span.mod-t')
+            ct_span = left_team.select_one('span.mod-ct')
+            team1_attacker_rounds = int(t_span.get_text(strip=True)) if t_span else None
+            team1_defender_rounds = int(ct_span.get_text(strip=True)) if ct_span else None
+        if right_team:
+            t_span = right_team.select_one('span.mod-t')
+            ct_span = right_team.select_one('span.mod-ct')
+            team2_attacker_rounds = int(t_span.get_text(strip=True)) if t_span else None
+            team2_defender_rounds = int(ct_span.get_text(strip=True)) if ct_span else None
+        # Extract map duration
+        map_duration_div = section.select_one('.map-duration')
+        if map_duration_div:
+            map_duration = map_duration_div.get_text(strip=True)
+        # --- End new logic ---
         
         # Find all tables for both teams in this map section
         all_tables = section.find_all('table', class_='wf-table-inset')
@@ -346,35 +371,59 @@ def parse_vlr_match(html: str) -> dict[str, Any]:
             'team1_score': left_team_score,
             'team2_score': right_team_score,
             'winner': map_winner,
-            'players': all_players
+            'players': all_players,
+            'team1_attacker_rounds': team1_attacker_rounds,
+            'team1_defender_rounds': team1_defender_rounds,
+            'team2_attacker_rounds': team2_attacker_rounds,
+            'team2_defender_rounds': team2_defender_rounds,
+            'map_duration': map_duration
         })
     
     # Extract event, phase, date, time, and patch from match header
-    event = phase = date = time = patch = None
+    event = phase = date = time = patch = bracket_stage = None
     match_header_div = soup.select_one('.match-header')
     if match_header_div:
         event_elem = match_header_div.select_one('.match-header-event a')
         if event_elem:
             event = event_elem.get_text(strip=True)
-        phase_elem = match_header_div.select_one('.match-header-event .mod-live, .match-header-event .mod-completed')
-        if phase_elem:
-            phase = phase_elem.get_text(strip=True)
+        # Bracket stage extraction
+        bracket_stage_elem = match_header_div.select_one('.match-header-event-series')
+        if bracket_stage_elem:
+            bracket_stage = bracket_stage_elem.get_text(strip=True)
+        # Date/time extraction
         date_elem = match_header_div.select_one('.match-header-date')
+        match_datetime = None
         if date_elem:
-            date = date_elem.get_text(strip=True)
-        time_elem = match_header_div.select_one('.match-header-time')
-        if time_elem:
-            time = time_elem.get_text(strip=True)
-        patch_elem = match_header_div.select_one('.match-header-patch')
-        if patch_elem:
-            patch = patch_elem.get_text(strip=True)
-    
+            dt_spans = date_elem.select('span.moment-tz-convert, div.moment-tz-convert')
+            if dt_spans and len(dt_spans) >= 2:
+                date = dt_spans[0].get_text(strip=True)
+                time = dt_spans[1].get_text(strip=True)
+                match_datetime = f"{date} {time}"
+            else:
+                match_datetime = None
+        else:
+            match_datetime = None
+        # Patch extraction: search for any div containing 'Patch' and extract only the patch version
+        patch = None
+        for div in match_header_div.find_all('div'):
+            text = div.get_text(strip=True)
+            if 'patch' in text.lower():
+                m = re.search(r'Patch\s*([\w\.]+)', text, re.IGNORECASE)
+                if m:
+                    patch = f"Patch {m.group(1)}"
+                else:
+                    patch = text
+                break
+    else:
+        match_datetime = None
+
     return {
         'event': event,
         'phase': phase,
-        'date': date,
+        'date': match_datetime,
         'time': time,
         'patch': patch,
+        'bracket_stage': bracket_stage,
         'match_header': match_header_data,
         'map_links': map_links,
         'maps': maps
