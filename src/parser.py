@@ -203,8 +203,8 @@ def parse_vlr_scoreboard_table(html: str) -> List[Dict]:
         rows.append(row)
     return rows
 
-def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
-    """Parse all maps from minimal VLR HTML, including match header and map sections."""
+def parse_vlr_match(html: str) -> dict[str, Any]:
+    """Parse a full VLR match (header and all map sections) from minimal HTML."""
     soup = BeautifulSoup(html, 'html.parser')
     
     # Parse match header for overall match info
@@ -213,22 +213,25 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
         raise ValueError("No match header found")
         
     # Team names
-    team1_name = team2_name = None
     team1_elem = match_header_div.select_one('.match-header-link.mod-1 .wf-title-med')
-    if team1_elem:
-        team1_name = team1_elem.get_text(strip=True).split('\n')[0]
     team2_elem = match_header_div.select_one('.match-header-link.mod-2 .wf-title-med')
-    if team2_elem:
-        team2_name = team2_elem.get_text(strip=True).split('\n')[0]
-    
-    # Scores
-    score_loser = match_header_div.select_one('.match-header-vs-score-loser')
-    score_winner = match_header_div.select_one('.match-header-vs-score-winner')
-    
-    team1_score = team2_score = None
-    if score_loser and score_winner:
-        team1_score = int(score_loser.get_text(strip=True))
-        team2_score = int(score_winner.get_text(strip=True))
+    team1_name = team1_elem.get_text(strip=True).split('\n')[0] if team1_elem else None
+    team2_name = team2_elem.get_text(strip=True).split('\n')[0] if team2_elem else None
+
+    # Scores: robustly extract left/right from spans inside .match-header-vs
+    vs_div = match_header_div.select_one('.match-header-vs')
+    score_spans = vs_div.select('span.match-header-vs-score-winner, span.match-header-vs-score-loser') if vs_div else []
+    if len(score_spans) == 2:
+        try:
+            team1_score = int(score_spans[0].get_text(strip=True))
+        except Exception:
+            team1_score = None
+        try:
+            team2_score = int(score_spans[1].get_text(strip=True))
+        except Exception:
+            team2_score = None
+    else:
+        team1_score = team2_score = None
 
     # Determine winner for All Maps
     winner = None
@@ -350,28 +353,21 @@ def parse_vlr_minimal_all_maps(html: str) -> dict[str, Any]:
     event = phase = date = time = patch = None
     match_header_div = soup.select_one('.match-header')
     if match_header_div:
-        event_elem = match_header_div.select_one('.match-header-event > div > div')
+        event_elem = match_header_div.select_one('.match-header-event a')
         if event_elem:
             event = event_elem.get_text(strip=True)
-        phase_elem = match_header_div.select_one('.match-header-event-series')
+        phase_elem = match_header_div.select_one('.match-header-event .mod-live, .match-header-event .mod-completed')
         if phase_elem:
-            # Normalize whitespace for phase
-            phase = ' '.join(phase_elem.get_text(separator=' ', strip=True).split())
-        date_elem = match_header_div.select_one('.match-header-date .moment-tz-convert')
+            phase = phase_elem.get_text(strip=True)
+        date_elem = match_header_div.select_one('.match-header-date')
         if date_elem:
             date = date_elem.get_text(strip=True)
-        time_elem = match_header_div.select_one('.match-header-date .moment-tz-convert + .moment-tz-convert')
+        time_elem = match_header_div.select_one('.match-header-time')
         if time_elem:
             time = time_elem.get_text(strip=True)
-        # Improved patch extraction
-        patch_elem = match_header_div.find(string=lambda t: t and 'Patch' in t)
-        if not patch_elem:
-            # Try to find a div with font-style: italic containing 'Patch'
-            patch_div = match_header_div.find('div', style=lambda s: s and 'italic' in s)
-            if patch_div and 'Patch' in patch_div.get_text():
-                patch_elem = patch_div.get_text(strip=True)
+        patch_elem = match_header_div.select_one('.match-header-patch')
         if patch_elem:
-            patch = patch_elem.strip()
+            patch = patch_elem.get_text(strip=True)
     
     return {
         'event': event,

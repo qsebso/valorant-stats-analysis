@@ -44,7 +44,9 @@ def scrape_match(match_path: str, event: Dict[str, Any]) -> None:
                 "team1_name": map_info["team1_name"],
                 "team2_name": map_info["team2_name"],
                 "team1_score": map_info["team1_score"],
-                "team2_score": map_info["team2_score"]
+                "team2_score": map_info["team2_score"],
+                "patch": match_result.get("patch"),
+                "winner": map_info.get("winner"),
             })
             save_match(player_data)
 
