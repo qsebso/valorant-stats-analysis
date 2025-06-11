@@ -3,3 +3,19 @@ events:
     event_name: "Valorant Champions Tour Stage 2: Masters Reykjavík"
     match_urls: []   # leave blank to auto–scrape all matches
     match_ids: []    # optional override if you ever want to target specific matches
+
+  - event_id: "354"
+    event_name: "Valorant Champions Tour Stage 3: Masters Berlin"
+    match_urls: []
+    match_ids: []
+
+  - event_id: "355"
+    event_name: "Valorant Champions Tour Stage 3: Challengers Playoffs"
+    match_urls: []
+    match_ids: []
+
+  # Add more events following the same structure:
+  # - event_id: "XXX"
+  #   event_name: "Event Name"
+  #   match_urls: []
+  #   match_ids: []
