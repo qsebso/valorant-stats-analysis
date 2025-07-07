@@ -32,7 +32,8 @@ def load_events() -> List[Dict]:
     try:
         # Open and parse the YAML file
         # Using safe_load to prevent code execution from YAML
-        with open("config/events.yaml") as f:
+        # Specify UTF-8 encoding to handle special characters
+        with open("config/events.yaml", encoding='utf-8') as f:
             data = yaml.safe_load(f)
             
         # Extract the events list, defaulting to empty list if missing
