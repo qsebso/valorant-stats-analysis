@@ -1,10 +1,4 @@
 event_name,bracket_stage,match_id,match_datetime,map_name,team1_name,team1_score,team2_name,team2_score,player_name,player_team,agent_played,rating_2_0,ACS,KDRatio,KAST_pct,ADR,total_kills,total_deaths,total_assists,game_type
-Sentinels-Tarik Showmatch,"Main Event: 
-						Showmatch",286226,"Wednesday, November 15th 6:15 PM PST",Fracture,Sentinels,13.0,Tarik's Allstars,11.0,TenZ,SEN,iso,1.21,281.0,1.158,,179.0,22.0,19.0,5.0,Regular Season
-Sentinels-Tarik Showmatch,"Main Event: 
-						Showmatch",286226,"Wednesday, November 15th 6:15 PM PST",Pearl,Sentinels,13.0,Tarik's Allstars,3.0,TenZ,SEN,reyna,2.11,392.0,5.0,,226.0,25.0,5.0,0.0,Regular Season
-Sentinels-Tarik Showmatch,"Main Event: 
-						Showmatch",286226,"Wednesday, November 15th 6:15 PM PST",Icebox,Sentinels,13.0,Tarik's Allstars,15.0,TenZ,SEN,yoru,0.82,196.0,0.76,,127.0,19.0,25.0,8.0,Regular Season
 LeStream x BMW: The 2 Gran Coupé,"Tournament: 
 						Grand Final",603,"Wednesday, May 27th 11:30 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,,,0.0,,,,0.0,0.0,0.0,Playoffs
 LeStream x BMW: The 2 Gran Coupé,"Tournament: 
@@ -63,12 +57,6 @@ Champions Tour North America Stage 3: Challengers Playoffs,"Main Event:
 						Upper Quarterfinals",29391,"Wednesday, August 11th 12:00 PM PDT",Ascent,Sentinels,7.0,Rise,13.0,TenZ,SEN,jett,0.59,132.0,0.625,,73.0,10.0,16.0,3.0,Playoffs
 Champions Tour North America Stage 3: Challengers Playoffs,"Main Event: 
 						Upper Quarterfinals",29391,"Wednesday, August 11th 12:00 PM PDT",Bind,Sentinels,13.0,Rise,4.0,TenZ,SEN,reyna,1.93,339.0,2.333,,211.0,21.0,9.0,8.0,Playoffs
-Sentinels Showmatch 2024,"Sentinels vs. TenZ: 
-						Showmatch",416194,"Tuesday, October 22nd 6:30 PM PDT",Unknown,Unknown,,Unknown,,TenZ,TenZ,iso,1.55,331.0,,,217.0,65.0,43.0,10.0,Regular Season
-Sentinels Showmatch 2024,"Sentinels vs. TenZ: 
-						Showmatch",416194,"Tuesday, October 22nd 6:30 PM PDT",Bind,Sentinels,13.0,TenZ and Friends,2.0,TenZ,TenZ,yoru,1.44,335.0,1.308,,216.0,17.0,13.0,2.0,Regular Season
-Sentinels Showmatch 2024,"Sentinels vs. TenZ: 
-						Showmatch",416194,"Tuesday, October 22nd 6:30 PM PDT",Split,Sentinels,13.0,TenZ and Friends,11.0,TenZ,TenZ,iso,1.63,326.0,1.75,,197.0,28.0,16.0,4.0,Regular Season
 Challengers League Japan: Split 2,"Playoffs: 
 						Lower Round 1",207168,"Tuesday, May 9th 8:30 PM PDT",Ascent,FENNEL,15.0,CREST GAMING Zst,13.0,MrTenzouEz,CGZ,sova,0.82,144.0,0.778,,97.0,14.0,18.0,6.0,Playoffs
 Challengers League Japan: Split 2,"Playoffs: 
@@ -104,9 +92,9 @@ Challengers 2025: Japan Split 3,"Main Stage:
 Challengers 2025: Japan Split 3,"Main Stage: 
 						Week 2",510421,"Tuesday, July 22nd 12:00 AM PDT",TBD,FENNEL,0.0,ZETA DIVISION Academy,0.0,MrTenzouEz,FL,,,,,,,,,,Regular Season
 Champions Tour 2023: Americas Last Chance Qualifier,"Main Event: 
-						Lower Round 1",232736,"Tuesday, July 18th 4:05 PM PDT",Fracture,Sentinels,8.0,LEVIATÁN,13.0,TenZ,SEN,kayo,1.15,240.0,1.133,,152.0,17.0,15.0,8.0,Regular Season
+						Lower Round 1",232736,"Tuesday, July 18th 4:05 PM PDT",Fracture,Sentinels,8.0,LEVIATÁN,13.0,TenZ,SEN,kayo,1.15,240.0,1.133,,152.0,17.0,15.0,8.0,Playoffs
 Champions Tour 2023: Americas Last Chance Qualifier,"Main Event: 
-						Lower Round 1",232736,"Tuesday, July 18th 4:05 PM PDT",Split,Sentinels,4.0,LEVIATÁN,13.0,TenZ,SEN,jett,0.83,177.0,0.667,,118.0,10.0,15.0,3.0,Regular Season
+						Lower Round 1",232736,"Tuesday, July 18th 4:05 PM PDT",Split,Sentinels,4.0,LEVIATÁN,13.0,TenZ,SEN,jett,0.83,177.0,0.667,,118.0,10.0,15.0,3.0,Playoffs
 Challengers 2025: Japan Split 1,"Main Stage: 
 						Upper Quarterfinals",438168,"Tuesday, February 4th 11:00 PM PST",Abyss,IGZIST,4.0,FENNEL,13.0,MrTenzouEz,FL,sova,1.03,196.0,1.3,,148.0,13.0,10.0,1.0,Playoffs
 Challengers 2025: Japan Split 1,"Main Stage: 
@@ -121,12 +109,6 @@ Occitanie Esports 2020,"Main Event:
 						Upper Final",3026,"Thursday, September 24th 11:00 AM PDT",Ascent,FeaFeaFea,4.0,Opportunists,13.0,Ex6TenZ,Fea,omen,,120.0,0.538,,88.0,7.0,13.0,2.0,Playoffs
 Occitanie Esports 2020,"Main Event: 
 						Upper Final",3026,"Thursday, September 24th 11:00 AM PDT",Haven,FeaFeaFea,13.0,Opportunists,15.0,Ex6TenZ,Fea,omen,,181.0,0.75,,156.0,18.0,24.0,8.0,Playoffs
-G2-Sentinels Showmatch,"Main Event: 
-						Showmatch",281551,"Thursday, October 26th 1:00 PM PDT",Sunset,G2 Esports,11.0,Sentinels,13.0,TenZ,SEN,breach,1.07,204.0,1.0,,132.0,18.0,18.0,9.0,Regular Season
-G2-Sentinels Showmatch,"Main Event: 
-						Showmatch",281551,"Thursday, October 26th 1:00 PM PDT",Bind,G2 Esports,7.0,Sentinels,13.0,TenZ,SEN,yoru,0.86,155.0,0.917,,112.0,11.0,12.0,6.0,Regular Season
-G2-Sentinels Showmatch,"Main Event: 
-						Showmatch",281551,"Thursday, October 26th 1:00 PM PDT",Ascent,G2 Esports,13.0,Sentinels,7.0,TenZ,SEN,kayo,1.23,209.0,1.0,,139.0,14.0,14.0,11.0,Regular Season
 Red Bull Home Ground #4,"Main Event: 
 						Round 1",283090,"Thursday, November 2nd 10:50 PM PDT",Unknown,Unknown,,Unknown,,MrTenzouEz,SZ,skye,0.98,197.0,,,119.0,17.0,17.0,2.0,Regular Season
 Champions Tour 2024: Masters Madrid,"Playoffs: 
@@ -156,11 +138,11 @@ Champions Tour Japan Stage 3: Challengers 2,"Main Event:
 Champions Tour Japan Stage 3: Challengers 2,"Main Event: 
 						Group A",28721,"Thursday, July 22nd 1:00 AM PDT",Split,Feeling,13.0,Gaming Team SELECTOR,1.0,MrTenzouEz,GTS,skye,0.2,104.0,0.286,,59.0,4.0,14.0,1.0,Regular Season
 Challengers 2025: Japan Split 1,"Main Stage: 
-						Upper Round 1",438164,"Thursday, January 30th 1:20 AM PST",Haven,Sengoku Gaming,10.0,FENNEL,13.0,MrTenzouEz,FL,sova,0.85,163.0,0.938,,107.0,15.0,16.0,5.0,Regular Season
+						Upper Round 1",438164,"Thursday, January 30th 1:20 AM PST",Haven,Sengoku Gaming,10.0,FENNEL,13.0,MrTenzouEz,FL,sova,0.85,163.0,0.938,,107.0,15.0,16.0,5.0,Playoffs
 Challengers 2025: Japan Split 1,"Main Stage: 
-						Upper Round 1",438164,"Thursday, January 30th 1:20 AM PST",Split,Sengoku Gaming,13.0,FENNEL,10.0,MrTenzouEz,FL,tejo,0.83,165.0,0.765,,108.0,13.0,17.0,6.0,Regular Season
+						Upper Round 1",438164,"Thursday, January 30th 1:20 AM PST",Split,Sengoku Gaming,13.0,FENNEL,10.0,MrTenzouEz,FL,tejo,0.83,165.0,0.765,,108.0,13.0,17.0,6.0,Playoffs
 Challengers 2025: Japan Split 1,"Main Stage: 
-						Upper Round 1",438164,"Thursday, January 30th 1:20 AM PST",Abyss,Sengoku Gaming,7.0,FENNEL,13.0,MrTenzouEz,FL,sova,1.65,233.0,2.111,,153.0,19.0,9.0,6.0,Regular Season
+						Upper Round 1",438164,"Thursday, January 30th 1:20 AM PST",Abyss,Sengoku Gaming,7.0,FENNEL,13.0,MrTenzouEz,FL,sova,1.65,233.0,2.111,,153.0,19.0,9.0,6.0,Playoffs
 Red Bull Home Ground,"Main Event: 
 						Quarterfinals",9105,"Thursday, January 28th 4:00 AM PST",Split,Ninjas in Pyjamas,9.0,FUT Esports,13.0,Ex6TenZ,NIP,breach,,143.0,0.8,,94.0,12.0,15.0,5.0,Playoffs
 Red Bull Home Ground,"Main Event: 
@@ -180,11 +162,11 @@ Pop Flash Invitational,"Tournament:
 Pop Flash Invitational,"Tournament: 
 						Winner's (A)",2071,"Thursday, August 27th 3:20 PM PDT",Ascent,Dignitas,7.0,Cloud9,13.0,TenZ,C9,reyna,,194.0,0.812,,162.0,13.0,16.0,6.0,Regular Season
 Champions Tour North America: Last Chance Qualifier,"Main Event: 
-						Lower Round 2",123332,"Thursday, August 11th 1:00 PM PDT",Fracture,100 Thieves,15.0,Sentinels,17.0,TenZ,SEN,chamber,1.27,267.0,1.261,,172.0,29.0,23.0,3.0,Regular Season
+						Lower Round 2",123332,"Thursday, August 11th 1:00 PM PDT",Fracture,100 Thieves,15.0,Sentinels,17.0,TenZ,SEN,chamber,1.27,267.0,1.261,,172.0,29.0,23.0,3.0,Playoffs
 Champions Tour North America: Last Chance Qualifier,"Main Event: 
-						Lower Round 2",123332,"Thursday, August 11th 1:00 PM PDT",Breeze,100 Thieves,13.0,Sentinels,7.0,TenZ,SEN,chamber,1.16,245.0,1.385,,166.0,18.0,13.0,3.0,Regular Season
+						Lower Round 2",123332,"Thursday, August 11th 1:00 PM PDT",Breeze,100 Thieves,13.0,Sentinels,7.0,TenZ,SEN,chamber,1.16,245.0,1.385,,166.0,18.0,13.0,3.0,Playoffs
 Champions Tour North America: Last Chance Qualifier,"Main Event: 
-						Lower Round 2",123332,"Thursday, August 11th 1:00 PM PDT",Haven,100 Thieves,13.0,Sentinels,11.0,TenZ,SEN,chamber,1.45,310.0,1.529,,188.0,26.0,17.0,3.0,Regular Season
+						Lower Round 2",123332,"Thursday, August 11th 1:00 PM PDT",Haven,100 Thieves,13.0,Sentinels,11.0,TenZ,SEN,chamber,1.45,310.0,1.529,,188.0,26.0,17.0,3.0,Playoffs
 Champions Tour Europe Stage 2: Challengers 1,"Main Event: 
 						Semifinals",14837,"Thursday, April 8th 8:00 AM PDT",Haven,Ninjas in Pyjamas,13.0,Guild Esports,6.0,Ex6TenZ,NIP,skye,0.87,131.0,0.818,,84.0,9.0,11.0,5.0,Playoffs
 Champions Tour Europe Stage 2: Challengers 1,"Main Event: 
@@ -222,7 +204,7 @@ Occitanie Esports 2020,"Main Event:
 Occitanie Esports 2020,"Main Event: 
 						Upper Quarterfinals",3021,"Sunday, September 20th 8:00 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,Fea,brimstone,,259.0,,,139.0,17.0,10.0,1.0,Playoffs
 Occitanie Esports 2020,"Main Event: 
-						Upper Round of 16",3014,"Sunday, September 20th 6:00 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,Fea,omen,,169.0,,,119.0,11.0,6.0,4.0,Regular Season
+						Upper Round of 16",3014,"Sunday, September 20th 6:00 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,Fea,omen,,169.0,,,119.0,11.0,6.0,4.0,Playoffs
 Renegades x NSG Invitational,"Main Event: 
 						Consolation Final",4106,"Sunday, October 18th 4:05 PM PDT",Haven,Moon Raccoons,11.0,Cloud9,13.0,TenZ,C9,phoenix,,255.0,1.714,,150.0,24.0,14.0,2.0,Playoffs
 Renegades x NSG Invitational,"Main Event: 
@@ -280,11 +262,11 @@ Champions Tour North America Stage 1: Masters,"Main Event:
 Champions Tour North America Stage 1: Masters,"Main Event: 
 						Grand Final",12557,"Sunday, March 21st 1:00 PM PDT",Haven,Sentinels,13.0,FaZe Clan,4.0,TenZ,SEN,jett,,235.0,2.429,,124.0,17.0,7.0,1.0,Playoffs
 Champions Tour North America Stage 1: Challengers,"Main Event: 
-						Lower Round 1",77794,"Sunday, March 20th 3:30 PM PDT",Haven,Version1,7.0,Sentinels,13.0,TenZ,SEN,jett,2.22,413.0,3.444,,259.0,31.0,9.0,2.0,Regular Season
+						Lower Round 1",77794,"Sunday, March 20th 3:30 PM PDT",Haven,Version1,7.0,Sentinels,13.0,TenZ,SEN,jett,2.22,413.0,3.444,,259.0,31.0,9.0,2.0,Playoffs
 Champions Tour North America Stage 1: Challengers,"Main Event: 
-						Lower Round 1",77794,"Sunday, March 20th 3:30 PM PDT",Ascent,Version1,13.0,Sentinels,9.0,TenZ,SEN,jett,0.71,196.0,0.778,,126.0,14.0,18.0,6.0,Regular Season
+						Lower Round 1",77794,"Sunday, March 20th 3:30 PM PDT",Ascent,Version1,13.0,Sentinels,9.0,TenZ,SEN,jett,0.71,196.0,0.778,,126.0,14.0,18.0,6.0,Playoffs
 Champions Tour North America Stage 1: Challengers,"Main Event: 
-						Lower Round 1",77794,"Sunday, March 20th 3:30 PM PDT",Fracture,Version1,13.0,Sentinels,8.0,TenZ,SEN,raze,1.07,284.0,1.0,,187.0,19.0,19.0,8.0,Regular Season
+						Lower Round 1",77794,"Sunday, March 20th 3:30 PM PDT",Fracture,Version1,13.0,Sentinels,8.0,TenZ,SEN,raze,1.07,284.0,1.0,,187.0,19.0,19.0,8.0,Playoffs
 Champions Tour North America Stage 1: Masters,"Main Event: 
 						Upper Bracket Semifinals",12555,"Sunday, March 14th 2:15 PM PDT",Ascent,Sentinels,13.0,100 Thieves,2.0,TenZ,SEN,jett,,285.0,1.5,,149.0,15.0,10.0,5.0,Playoffs
 Champions Tour North America Stage 1: Masters,"Main Event: 
@@ -340,9 +322,9 @@ Ludwig x Tarik Invitational,"Main Event:
 Ludwig x Tarik Invitational,"Main Event: 
 						Lower Final",166335,"Sunday, January 15th 10:00 AM PST",Icebox,Sentinels,6.0,TSM,13.0,TenZ,SEN,kayo,0.85,220.0,0.765,,152.0,13.0,17.0,13.0,Playoffs
 Challengers 2025: Japan Split 1,"Main Stage: 
-						Lower Round 4",438182,"Sunday, February 16th 1:25 AM PST",Haven,NOEZ FOXX,13.0,FENNEL,9.0,MrTenzouEz,FL,sova,0.83,185.0,0.824,,124.0,14.0,17.0,2.0,Regular Season
+						Lower Round 4",438182,"Sunday, February 16th 1:25 AM PST",Haven,NOEZ FOXX,13.0,FENNEL,9.0,MrTenzouEz,FL,sova,0.83,185.0,0.824,,124.0,14.0,17.0,2.0,Playoffs
 Challengers 2025: Japan Split 1,"Main Stage: 
-						Lower Round 4",438182,"Sunday, February 16th 1:25 AM PST",Lotus,NOEZ FOXX,13.0,FENNEL,9.0,MrTenzouEz,FL,fade,1.41,303.0,1.5,,188.0,24.0,16.0,7.0,Regular Season
+						Lower Round 4",438182,"Sunday, February 16th 1:25 AM PST",Lotus,NOEZ FOXX,13.0,FENNEL,9.0,MrTenzouEz,FL,fade,1.41,303.0,1.5,,188.0,24.0,16.0,7.0,Playoffs
 AfreecaTV Valorant League,"Playoffs: 
 						Grand Final",286660,"Sunday, December 10th 1:25 AM PST",Split,Sentinels,13.0,Paper Rex,7.0,TenZ,SEN,omen,0.94,163.0,0.786,,103.0,11.0,14.0,10.0,Playoffs
 AfreecaTV Valorant League,"Playoffs: 
@@ -384,9 +366,9 @@ Champions Tour North America Stage 2: Challengers 2,"Main Event:
 Champions Tour North America Stage 2: Challengers 2,"Main Event: 
 						Grand Finals",16997,"Sunday, April 25th 12:00 PM PDT",Split,Cloud9,12.0,Sentinels,14.0,TenZ,SEN,reyna,1.0,232.0,1.0,,152.0,20.0,20.0,8.0,Playoffs
 Renegades x NSG Invitational,"Main Event: 
-						Group B (Decider)",3687,"Saturday, October 17th 1:30 PM PDT",Ascent,Complexity,4.0,Cloud9,13.0,TenZ,C9,jett,,240.0,1.0,,132.0,13.0,13.0,6.0,Playoffs
+						Group B (Decider)",3687,"Saturday, October 17th 1:30 PM PDT",Ascent,Complexity,4.0,Cloud9,13.0,TenZ,C9,jett,,240.0,1.0,,132.0,13.0,13.0,6.0,Regular Season
 Renegades x NSG Invitational,"Main Event: 
-						Group B (Decider)",3687,"Saturday, October 17th 1:30 PM PDT",Haven,Complexity,7.0,Cloud9,13.0,TenZ,C9,reyna,,306.0,1.833,,178.0,22.0,12.0,6.0,Playoffs
+						Group B (Decider)",3687,"Saturday, October 17th 1:30 PM PDT",Haven,Complexity,7.0,Cloud9,13.0,TenZ,C9,reyna,,306.0,1.833,,178.0,22.0,12.0,6.0,Regular Season
 Renegades x NSG Invitational,"Main Event: 
 						Group B (Elimination)",3679,"Saturday, October 17th 11:00 AM PDT",Unknown,Unknown,,Unknown,,TenZ,C9,reyna,,420.0,,,234.0,27.0,12.0,5.0,Playoffs
 Renegades x NSG Invitational,"Main Event: 
@@ -460,9 +442,9 @@ Champions Tour North America Stage 3: Challengers 1,"Main Event:
 Champions Tour North America Stage 3: Challengers 1,"Main Event: 
 						Lower Final",25206,"Saturday, July 10th 5:15 PM PDT",Breeze,100 Thieves,8.0,Sentinels,13.0,TenZ,SEN,jett,1.33,285.0,1.429,,165.0,20.0,14.0,8.0,Playoffs
 Champions Tour North America Stage 3: Challengers 1,"Main Event: 
-						Lower Round 3",25205,"Saturday, July 10th 3:20 PM PDT",Breeze,Sentinels,13.0,ENVY,8.0,TenZ,SEN,jett,0.69,160.0,0.812,,90.0,13.0,16.0,1.0,Regular Season
+						Lower Round 3",25205,"Saturday, July 10th 3:20 PM PDT",Breeze,Sentinels,13.0,ENVY,8.0,TenZ,SEN,jett,0.69,160.0,0.812,,90.0,13.0,16.0,1.0,Playoffs
 Champions Tour North America Stage 3: Challengers 1,"Main Event: 
-						Lower Round 3",25205,"Saturday, July 10th 3:20 PM PDT",Bind,Sentinels,13.0,ENVY,7.0,TenZ,SEN,reyna,1.72,347.0,2.083,,205.0,25.0,12.0,6.0,Regular Season
+						Lower Round 3",25205,"Saturday, July 10th 3:20 PM PDT",Bind,Sentinels,13.0,ENVY,7.0,TenZ,SEN,reyna,1.72,347.0,2.083,,205.0,25.0,12.0,6.0,Playoffs
 Red Bull Home Ground,"Main Event: 
 						Semifinals",9310,"Saturday, January 30th 4:00 AM PST",Icebox,Ninjas in Pyjamas,10.0,G2 Esports,13.0,Ex6TenZ,NIP,breach,,316.0,1.263,,224.0,24.0,19.0,8.0,Playoffs
 Red Bull Home Ground,"Main Event: 
@@ -488,9 +470,9 @@ Champions Tour Europe Stage 1: Challengers 2,"Main Event:
 Champions Tour Europe Stage 1: Challengers 2,"Main Event: 
 						Quarterfinals",11122,"Saturday, February 20th 10:20 AM PST",Haven,Ninjas in Pyjamas,13.0,G2 Esports,10.0,Ex6TenZ,NIP,breach,,129.0,0.846,,76.0,11.0,13.0,8.0,Playoffs
 Challengers 2025: Japan Split 1,"Main Stage: 
-						Lower Round 3",438181,"Saturday, February 15th 2:55 AM PST",Haven,FENNEL,13.0,Sengoku Gaming,2.0,MrTenzouEz,FL,sova,1.76,319.0,2.667,,218.0,16.0,6.0,6.0,Regular Season
+						Lower Round 3",438181,"Saturday, February 15th 2:55 AM PST",Haven,FENNEL,13.0,Sengoku Gaming,2.0,MrTenzouEz,FL,sova,1.76,319.0,2.667,,218.0,16.0,6.0,6.0,Playoffs
 Challengers 2025: Japan Split 1,"Main Stage: 
-						Lower Round 3",438181,"Saturday, February 15th 2:55 AM PST",Fracture,FENNEL,13.0,Sengoku Gaming,8.0,MrTenzouEz,FL,tejo,1.25,204.0,1.7,,134.0,17.0,10.0,3.0,Regular Season
+						Lower Round 3",438181,"Saturday, February 15th 2:55 AM PST",Fracture,FENNEL,13.0,Sengoku Gaming,8.0,MrTenzouEz,FL,tejo,1.25,204.0,1.7,,134.0,17.0,10.0,3.0,Playoffs
 AfreecaTV Valorant League,"Playoffs: 
 						Semifinals",286658,"Saturday, December 9th 12:00 AM PST",Split,Sentinels,13.0,Team Liquid,8.0,TenZ,SEN,omen,1.45,227.0,1.5,,158.0,18.0,12.0,12.0,Playoffs
 AfreecaTV Valorant League,"Playoffs: 
@@ -506,9 +488,9 @@ FaZe Clan Invitational,"Playoffs:
 FaZe Clan Invitational,"Playoffs: 
 						Lower Round 2",1630,"Saturday, August 8th 4:15 PM PDT",Haven,Immortals,13.0,Cloud9,10.0,TenZ,C9,jett,,307.0,1.688,,162.0,27.0,16.0,0.0,Playoffs
 Champions Tour North America: Last Chance Qualifier,"Main Event: 
-						Lower Round 1",123330,"Saturday, August 6th 3:30 PM PDT",Breeze,Sentinels,13.0,Shopify Rebellion Black,8.0,TenZ,SEN,chamber,1.15,191.0,1.333,,125.0,16.0,12.0,5.0,Regular Season
+						Lower Round 1",123330,"Saturday, August 6th 3:30 PM PDT",Breeze,Sentinels,13.0,Shopify Rebellion Black,8.0,TenZ,SEN,chamber,1.15,191.0,1.333,,125.0,16.0,12.0,5.0,Playoffs
 Champions Tour North America: Last Chance Qualifier,"Main Event: 
-						Lower Round 1",123330,"Saturday, August 6th 3:30 PM PDT",Fracture,Sentinels,17.0,Shopify Rebellion Black,15.0,TenZ,SEN,chamber,1.03,210.0,1.316,,134.0,25.0,19.0,1.0,Regular Season
+						Lower Round 1",123330,"Saturday, August 6th 3:30 PM PDT",Fracture,Sentinels,17.0,Shopify Rebellion Black,15.0,TenZ,SEN,chamber,1.03,210.0,1.316,,134.0,25.0,19.0,1.0,Playoffs
 Pop Flash Invitational,"Tournament: 
 						Upper Final",2134,"Saturday, August 29th 5:55 PM PDT",Split,Cloud9,13.0,Sentinels,11.0,TenZ,C9,raze,,271.0,1.533,,157.0,23.0,15.0,8.0,Playoffs
 Pop Flash Invitational,"Tournament: 
@@ -528,11 +510,11 @@ Valorant Champions 2024,"Playoffs:
 Valorant Champions 2024,"Playoffs: 
 						Upper Semifinals",378826,"Saturday, August 17th 1:00 AM PDT",Sunset,Sentinels,6.0,EDward Gaming,13.0,TenZ,SEN,omen,1.28,307.0,1.235,,196.0,21.0,17.0,7.0,Playoffs
 MilkTeaBoards All-Stars,"Playoffs: 
-						Round of 12",469136,"Saturday, April 5th 1:00 PM PDT",Lotus,Team surelynotsierra,6.0,Team DocRespawn,13.0,tenzin,DOC,deadlock,1.47,249.0,2.625,,161.0,21.0,8.0,5.0,Playoffs
+						Round of 12",469136,"Saturday, April 5th 1:00 PM PDT",Lotus,Team surelynotsierra,6.0,Team DocRespawn,13.0,tenzin,DOC,deadlock,1.47,249.0,2.625,,161.0,21.0,8.0,5.0,Regular Season
 MilkTeaBoards All-Stars,"Playoffs: 
-						Round of 12",469136,"Saturday, April 5th 1:00 PM PDT",Haven,Team surelynotsierra,13.0,Team DocRespawn,9.0,tenzin,DOC,tejo,1.06,237.0,0.941,,143.0,16.0,17.0,5.0,Playoffs
+						Round of 12",469136,"Saturday, April 5th 1:00 PM PDT",Haven,Team surelynotsierra,13.0,Team DocRespawn,9.0,tenzin,DOC,tejo,1.06,237.0,0.941,,143.0,16.0,17.0,5.0,Regular Season
 MilkTeaBoards All-Stars,"Playoffs: 
-						Round of 12",469136,"Saturday, April 5th 1:00 PM PDT",Fracture,Team surelynotsierra,13.0,Team DocRespawn,11.0,tenzin,DOC,breach,1.02,196.0,0.882,,134.0,15.0,17.0,12.0,Playoffs
+						Round of 12",469136,"Saturday, April 5th 1:00 PM PDT",Fracture,Team surelynotsierra,13.0,Team DocRespawn,11.0,tenzin,DOC,breach,1.02,196.0,0.882,,134.0,15.0,17.0,12.0,Regular Season
 Champions Tour North America Stage 2: Challengers 2,"Main Event: 
 						Lower Bracket Final",16996,"Saturday, April 24th 4:15 PM PDT",Split,NRG,7.0,Sentinels,13.0,TenZ,SEN,reyna,1.29,251.0,1.636,,163.0,18.0,11.0,5.0,Playoffs
 Champions Tour North America Stage 2: Challengers 2,"Main Event: 
@@ -547,18 +529,12 @@ Hype Up Tour Japan,"Main Event:
 						Nagoya Qualifier",277833,"Monday, October 2nd 2:30 AM PDT",Sunset,BLUE TEAM,12.0,GREEN TEAM,13.0,MrTenzouEz,BLUE,raze,1.0,251.0,1.105,,181.0,21.0,19.0,7.0,Regular Season
 Hype Up Tour Japan,"Main Event: 
 						Nagoya Qualifier",277833,"Monday, October 2nd 2:30 AM PDT",Ascent,BLUE TEAM,12.0,GREEN TEAM,13.0,MrTenzouEz,BLUE,kayo,1.14,241.0,1.1,,176.0,22.0,20.0,11.0,Regular Season
-Sentinels Off-Season,"Showmatch: 
-						Showmatch",280952,"Monday, October 23rd 5:30 PM PDT",Bind,Sentinels,13.0,Moist x Shopify,2.0,TenZ,SEN,yoru,1.34,278.0,1.875,,191.0,15.0,8.0,4.0,Regular Season
-Sentinels Off-Season,"Showmatch: 
-						Showmatch",280952,"Monday, October 23rd 5:30 PM PDT",Ascent,Sentinels,8.0,Moist x Shopify,13.0,TenZ,SEN,kayo,1.06,249.0,1.0,,161.0,17.0,17.0,11.0,Regular Season
-Sentinels Off-Season,"Showmatch: 
-						Showmatch",280952,"Monday, October 23rd 5:30 PM PDT",Haven,Sentinels,5.0,Moist x Shopify,13.0,TenZ,SEN,harbor,1.07,227.0,1.071,,172.0,15.0,14.0,6.0,Regular Season
 KJC Updraft: Season One,"Week 6: 
 						Quarterfinals",83058,"Monday, May 9th 6:00 AM PDT",Unknown,Unknown,,Unknown,,Intenzzz,FTR,jett,1.49,335.0,,,201.0,28.0,16.0,5.0,Playoffs
 Rise of Titans,"Invite Stage: 
-						Round of 16",896,"Monday, June 29th 9:30 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,brimstone,,222.0,,,,17.0,12.0,5.0,Regular Season
+						Round of 16",896,"Monday, June 29th 9:30 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,brimstone,,222.0,,,,17.0,12.0,5.0,Playoffs
 Rise of Titans,"Invite Stage: 
-						Round of 32",886,"Monday, June 29th 8:00 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,brimstone,,307.0,,,,19.0,5.0,3.0,Regular Season
+						Round of 32",886,"Monday, June 29th 8:00 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,brimstone,,307.0,,,,19.0,5.0,3.0,Playoffs
 Rise of Titans,"Invite Stage: 
 						Quarterfinals",900,"Monday, June 29th 11:00 AM PDT",Split,2G4L,3.0,StartedFromCS,13.0,Ex6TenZ,SFCS,brimstone,,218.0,1.444,,,13.0,9.0,2.0,Playoffs
 Rise of Titans,"Invite Stage: 
@@ -612,7 +588,7 @@ Hype Up Tour Japan,"Main Event:
 Fnatic Proving Grounds,"Tournament: 
 						Quarterfinals",53,"Friday, May 8th 7:00 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,,,0.0,,,,0.0,0.0,0.0,Playoffs
 Fnatic Proving Grounds,"Tournament: 
-						Round of 16",46,"Friday, May 8th 5:30 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,,,0.0,,,,0.0,0.0,0.0,Regular Season
+						Round of 16",46,"Friday, May 8th 5:30 AM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,,,0.0,,,,0.0,0.0,0.0,Playoffs
 Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
 						Upper Final",19080,"Friday, May 28th 12:30 PM PDT",Bind,Sentinels,13.0,NUTURN,5.0,TenZ,SEN,reyna,1.37,273.0,1.583,,148.0,19.0,12.0,7.0,Playoffs
 Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
@@ -628,9 +604,9 @@ Champions Tour 2024: Masters Madrid,"Playoffs:
 Champions Tour 2024: Masters Madrid,"Playoffs: 
 						Upper Final",312778,"Friday, March 22nd 8:00 AM PDT",Breeze,Gen.G,13.0,Sentinels,3.0,TenZ,SEN,kayo,0.19,87.0,0.25,,53.0,4.0,16.0,9.0,Playoffs
 Champions Tour Europe Stage 1: Masters,"Main Event: 
-						Decider (A)",12919,"Friday, March 19th 9:00 AM PDT",Bind,Ninjas in Pyjamas,9.0,Acend,13.0,Ex6TenZ,NIP,breach,,70.0,0.222,,51.0,4.0,18.0,6.0,Playoffs
+						Decider (A)",12919,"Friday, March 19th 9:00 AM PDT",Bind,Ninjas in Pyjamas,9.0,Acend,13.0,Ex6TenZ,NIP,breach,,70.0,0.222,,51.0,4.0,18.0,6.0,Regular Season
 Champions Tour Europe Stage 1: Masters,"Main Event: 
-						Decider (A)",12919,"Friday, March 19th 9:00 AM PDT",Icebox,Ninjas in Pyjamas,4.0,Acend,13.0,Ex6TenZ,NIP,breach,,195.0,0.588,,115.0,10.0,17.0,2.0,Playoffs
+						Decider (A)",12919,"Friday, March 19th 9:00 AM PDT",Icebox,Ninjas in Pyjamas,4.0,Acend,13.0,Ex6TenZ,NIP,breach,,195.0,0.588,,115.0,10.0,17.0,2.0,Regular Season
 Champions Tour North America Stage 1: Masters,"Main Event: 
 						Upper Bracket Final",12556,"Friday, March 19th 5:30 PM PDT",Icebox,FaZe Clan,5.0,Sentinels,13.0,TenZ,SEN,reyna,,337.0,2.1,,183.0,21.0,10.0,4.0,Playoffs
 Champions Tour North America Stage 1: Masters,"Main Event: 
@@ -666,9 +642,9 @@ T1 x Nerd Street Gamers Showdown,"Tournament:
 T1 x Nerd Street Gamers Showdown,"Tournament: 
 						Group A",804,"Friday, June 26th 2:00 PM PDT",Split,Cloud9,9.0,together we are terrific,13.0,TenZ,C9,viper,,207.0,0.889,,,16.0,18.0,4.0,Regular Season
 Champions Tour North America Stage 3: Challengers 1,"Main Event: 
-						Lower Round 2",25203,"Friday, July 9th 5:15 PM PDT",Haven,Sentinels,13.0,Pioneers,9.0,TenZ,SEN,jett,1.6,325.0,1.733,,207.0,26.0,15.0,1.0,Regular Season
+						Lower Round 2",25203,"Friday, July 9th 5:15 PM PDT",Haven,Sentinels,13.0,Pioneers,9.0,TenZ,SEN,jett,1.6,325.0,1.733,,207.0,26.0,15.0,1.0,Playoffs
 Champions Tour North America Stage 3: Challengers 1,"Main Event: 
-						Lower Round 2",25203,"Friday, July 9th 5:15 PM PDT",Bind,Sentinels,13.0,Pioneers,5.0,TenZ,SEN,reyna,1.69,331.0,2.1,,211.0,21.0,10.0,7.0,Regular Season
+						Lower Round 2",25203,"Friday, July 9th 5:15 PM PDT",Bind,Sentinels,13.0,Pioneers,5.0,TenZ,SEN,reyna,1.69,331.0,2.1,,211.0,21.0,10.0,7.0,Playoffs
 Champions Tour North America Stage 3: Challengers 1,"Main Event: 
 						Upper Semifinals",25198,"Friday, July 9th 2:00 PM PDT",Haven,XSET,13.0,Sentinels,9.0,TenZ,SEN,jett,0.97,233.0,1.188,,140.0,19.0,16.0,0.0,Playoffs
 Champions Tour North America Stage 3: Challengers 1,"Main Event: 
@@ -676,7 +652,7 @@ Champions Tour North America Stage 3: Challengers 1,"Main Event:
 Champions Tour North America Stage 3: Challengers 1,"Main Event: 
 						Upper Semifinals",25198,"Friday, July 9th 2:00 PM PDT",Split,XSET,13.0,Sentinels,8.0,TenZ,SEN,raze,1.05,239.0,1.062,,137.0,17.0,16.0,3.0,Playoffs
 Mandatory.gg Cup #2,"Tournament: 
-						Round of 32",1454,"Friday, July 31st 1:00 PM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,omen,,143.0,,,93.0,9.0,15.0,5.0,Regular Season
+						Round of 32",1454,"Friday, July 31st 1:00 PM PDT",Unknown,Unknown,,Unknown,,Ex6TenZ,SFCS,omen,,143.0,,,93.0,9.0,15.0,5.0,Playoffs
 PAX Arena Invitational,"Tournament: 
 						Quarterfinals",1276,"Friday, July 24th 7:30 PM PDT",Ascent,Immortals,9.0,Cloud9,13.0,TenZ,C9,jett,,303.0,1.615,,,21.0,13.0,8.0,Playoffs
 PAX Arena Invitational,"Tournament: 
@@ -686,7 +662,7 @@ Challengers 2025: Japan Split 3,"Main Stage:
 Challengers 2025: Japan Split 3,"Main Stage: 
 						Week 1",510408,"Friday, July 11th 12:00 AM PDT",TBD,Delight,0.0,FENNEL,0.0,MrTenzouEz,FL,,,,,,,,,,Regular Season
 Logitech G Invitational,"Tournament: 
-						Upper Round of 16",7367,"Friday, December 11th 9:00 AM PST",Unknown,Unknown,,Unknown,,Ex6TenZ,Fear,omen,,380.0,,,200.0,20.0,2.0,4.0,Regular Season
+						Upper Round of 16",7367,"Friday, December 11th 9:00 AM PST",Unknown,Unknown,,Unknown,,Ex6TenZ,Fear,omen,,380.0,,,200.0,20.0,2.0,4.0,Playoffs
 Logitech G Invitational,"Tournament: 
 						Lower Final",7423,"Friday, December 11th 2:30 PM PST",Unknown,Unknown,,Unknown,,Ex6TenZ,Fear,omen,,205.0,,,136.0,16.0,19.0,2.0,Playoffs
 Logitech G Invitational,"Tournament: 

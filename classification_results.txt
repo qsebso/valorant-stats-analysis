@@ -1,0 +1,51 @@
+NEW CLASSIFICATION SYSTEM RESULTS
+============================================================
+Total unique (event, bracket) pairs: 11876
+Classified as Playoffs: 10874 (91.6%)
+Classified as Regular Season: 1002 (8.4%)
+
+EXAMPLES OF PLAYOFF CLASSIFICATIONS:
+----------------------------------------
+Event:  | Stage: Main Event: 
+						Grand Final
+Event:  | Stage: Main Event: 
+						Lower Final
+Event:  | Stage: Main Event: 
+						Lower Round 1
+Event:  | Stage: Main Event: 
+						Lower Round 2
+Event:  | Stage: Main Event: 
+						Lower Round 3
+Event:  | Stage: Main Event: 
+						Upper Final
+Event:  | Stage: Main Event: 
+						Upper Quarterfinals
+Event:  | Stage: Main Event: 
+						Upper Semifinals
+Event:  | Stage: Playoffs: 
+						Consolation Final
+Event:  | Stage: Playoffs: 
+						Grand Final
+
+EXAMPLES OF REGULAR SEASON CLASSIFICATIONS:
+----------------------------------------
+Event: 100T x Cashapp Gamers for Equality | Stage: Tournament: 
+						Group A
+Event: 100T x Cashapp Gamers for Equality | Stage: Tournament: 
+						Group B
+Event: 32nd Southeast Asian Games | Stage: Playoffs: 
+						Bronze Medal Match
+Event: 32nd Southeast Asian Games | Stage: Playoffs: 
+						Gold Medal Match
+Event: A1 eSports League | Stage: Main Event: 
+						Group A
+Event: A1 eSports League | Stage: Main Event: 
+						Group B
+Event: A1 eSports VALORANT Cup | Stage: Tournament: 
+						Group B
+Event: A1 eSports VALORANT Cup #4 | Stage: Group Stage: 
+						Round 1
+Event: A1 eSports VALORANT Cup #4 | Stage: Group Stage: 
+						Round 2
+Event: A1 eSports VALORANT Cup #4 | Stage: Group Stage: 
+						Round 3

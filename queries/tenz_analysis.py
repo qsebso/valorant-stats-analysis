@@ -13,7 +13,7 @@ DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "map_
 
 def get_tenz_games() -> pd.DataFrame:
     """
-    Get all TenZ games from the database, excluding "All Maps" entries.
+    Get all TenZ games from the database, excluding "All Maps" entries and showmatches.
     Returns a DataFrame with TenZ's individual map performances.
     """
     conn = sqlite3.connect(DB_PATH)
@@ -43,6 +43,8 @@ def get_tenz_games() -> pd.DataFrame:
     FROM map_stats 
     WHERE player_name LIKE '%TenZ%' 
     AND map_name != 'All Maps'
+    AND bracket_stage NOT LIKE '%Showmatch%'
+    AND bracket_stage NOT LIKE '%showmatch%'
     ORDER BY match_datetime DESC
     """
     
@@ -68,11 +70,17 @@ def classify_playoff_games(df: pd.DataFrame) -> pd.DataFrame:
     """
     # Keywords that indicate playoff games
     playoff_keywords = [
-        'playoff', 'playoffs', 'final', 'finals', 'semifinal', 'semifinals',
-        'quarterfinal', 'quarterfinals', 'elimination', 'knockout', 'bracket',
-        'championship', 'grand final', 'upper bracket', 'lower bracket',
-        'decider', 'consolation'
-    ]
+            'grand final', 'grand finals', 'final', 'finals',
+            'semifinal', 'semifinals', 'quarterfinal', 'quarterfinals',
+            'upper bracket', 'lower bracket', 'upper final', 'lower final',
+            'upper semifinal', 'lower semifinal', 'upper quarterfinal', 'lower quarterfinal',
+            'upper round', 'lower round', 'upper bracket final', 'lower bracket final',
+            'upper bracket semifinal', 'lower bracket semifinal',
+            'upper bracket quarterfinal', 'lower bracket quarterfinal',
+            'consolation final', 'bronze final', '3rd place match', 'bronze match',
+            'round of 16', 'round of 32', 'round of 8', 'round of 4',
+            'elimination', 'knockout', 'championship'
+        ]
     
     def is_playoff(stage: str) -> bool:
         if pd.isna(stage) or stage is None:
@@ -271,6 +279,38 @@ def create_visualizations(df: pd.DataFrame):
     plt.savefig('tenz_performance_analysis.png', dpi=300, bbox_inches='tight')
     plt.show()
 
+def check_play_ins_classification(df: pd.DataFrame):
+    """
+    Check how Play-Ins stages are being classified and provide recommendations.
+    """
+    play_ins_matches = df[df['bracket_stage'].str.contains('Play-Ins', case=False, na=False)]
+    
+    if not play_ins_matches.empty:
+        print("\n" + "="*50)
+        print("PLAY-INS CLASSIFICATION ANALYSIS")
+        print("="*50)
+        print(f"Found {len(play_ins_matches)} Play-Ins matches")
+        
+        # Apply our classification to see how they're being classified
+        play_ins_matches['classification'] = play_ins_matches['bracket_stage'].apply(
+            lambda x: 'Playoffs' if classify_playoff_games(pd.DataFrame({'bracket_stage': [x]}))['game_type'].iloc[0] == 'Playoffs' else 'Regular Season'
+        )
+        
+        playoff_count = len(play_ins_matches[play_ins_matches['classification'] == 'Playoffs'])
+        regular_count = len(play_ins_matches[play_ins_matches['classification'] == 'Regular Season'])
+        
+        print(f"Currently classified as Playoffs: {playoff_count}")
+        print(f"Currently classified as Regular Season: {regular_count}")
+        
+        print("\nPlay-Ins matches found:")
+        for _, match in play_ins_matches.iterrows():
+            print(f"  {match['bracket_stage']} - {match['event_name']} ({match['classification']})")
+        
+        print("\nRECOMMENDATION: Play-Ins should typically be classified as Regular Season")
+        print("(They are qualifying matches, not elimination playoffs)")
+    else:
+        print("\nNo Play-Ins matches found in TenZ's data.")
+
 def main():
     """
     Main function to run the TenZ analysis.
@@ -282,7 +322,10 @@ def main():
         print("No TenZ games found in the database!")
         return
     
-    print(f"Found {len(df)} TenZ games")
+    print(f"Found {len(df)} TenZ games (excluding showmatches)")
+    
+    # Check Play-Ins classification
+    check_play_ins_classification(df)
     
     # Classify games as playoffs or regular season
     df = classify_playoff_games(df)
