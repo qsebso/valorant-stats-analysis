@@ -25,10 +25,10 @@ DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "map_
 # Output directory
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "query_results")
 
-def get_tenz_games() -> pd.DataFrame:
+def get_boaster_games() -> pd.DataFrame:
     """
-    Get all TenZ games from the database, excluding "All Maps" entries and showmatches.
-    Returns a DataFrame with TenZ's individual map performances.
+    Get all Boaster games from the database, excluding "All Maps" entries and showmatches.
+    Returns a DataFrame with Boaster's individual map performances.
     """
     conn = sqlite3.connect(DB_PATH)
     
@@ -58,7 +58,7 @@ def get_tenz_games() -> pd.DataFrame:
         total_deaths,
         total_assists
     FROM map_stats 
-    WHERE player_name LIKE '%TenZ%' 
+    WHERE player_name LIKE '%Boaster%' 
     {exclusion_filters}
     ORDER BY match_datetime DESC
     """
@@ -91,9 +91,9 @@ def classify_playoff_games(df: pd.DataFrame) -> pd.DataFrame:
     
     return df
 
-def analyze_tenz_performance(df: pd.DataFrame) -> Dict:
+def analyze_boaster_performance(df: pd.DataFrame) -> Dict:
     """
-    Analyze TenZ's performance statistics for both playoffs and regular season.
+    Analyze Boaster's performance statistics for both playoffs and regular season.
     """
     analysis = {}
     
@@ -138,10 +138,10 @@ def analyze_tenz_performance(df: pd.DataFrame) -> Dict:
 
 def print_analysis(analysis: Dict, df: pd.DataFrame):
     """
-    Print a formatted analysis of TenZ's performance.
+    Print a formatted analysis of Boaster's performance.
     """
     print("=" * 60)
-    print("TENZ PERFORMANCE ANALYSIS (Enhanced Classification)")
+    print("BOASTER PERFORMANCE ANALYSIS (Enhanced Classification)")
     print("=" * 60)
     
     print(f"\nTotal Games Analyzed: {analysis['total_games']}")
@@ -231,16 +231,16 @@ def check_play_ins_classification(df: pd.DataFrame):
         print("\nRECOMMENDATION: Play-Ins should typically be classified as Regular Season")
         print("(They are qualifying matches, not elimination playoffs)")
     else:
-        print("\nNo Play-Ins matches found in TenZ's data.")
+        print("\nNo Play-Ins matches found in Boaster's data.")
 
 def create_visualizations(df: pd.DataFrame):
     """
-    Create visualizations comparing TenZ's playoff vs regular season performance.
+    Create visualizations comparing Boaster's playoff vs regular season performance.
     """
     # Set up the plotting style
     plt.style.use('seaborn-v0_8')
     fig, axes = plt.subplots(2, 2, figsize=(15, 12))
-    fig.suptitle('TenZ Performance: Playoffs vs Regular Season (Enhanced Classification)', fontsize=16, fontweight='bold')
+    fig.suptitle('Boaster Performance: Playoffs vs Regular Season (Enhanced Classification)', fontsize=16, fontweight='bold')
     
     # Filter out any NaN values for plotting
     plot_df = df.dropna(subset=['rating_2_0', 'ACS', 'KDRatio', 'ADR'])
@@ -315,22 +315,22 @@ def create_visualizations(df: pd.DataFrame):
     plt.tight_layout()
     
     # Save to query_results folder
-    output_path = os.path.join(OUTPUT_DIR, 'tenz_performance_analysis.png')
+    output_path = os.path.join(OUTPUT_DIR, 'boaster_performance_analysis.png')
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     plt.show()
 
 def main():
     """
-    Main function to run the TenZ analysis with enhanced classification.
+    Main function to run the Boaster analysis with enhanced classification.
     """
-    print("Loading TenZ's game data...")
-    df = get_tenz_games()
+    print("Loading Boaster's game data...")
+    df = get_boaster_games()
     
     if df.empty:
-        print("No TenZ games found in the database!")
+        print("No Boaster games found in the database!")
         return
     
-    print(f"Found {len(df)} TenZ games (excluding showmatches)")
+    print(f"Found {len(df)} Boaster games (excluding showmatches)")
     
     # Check Play-Ins classification
     check_play_ins_classification(df)
@@ -339,7 +339,7 @@ def main():
     df = classify_playoff_games(df)
     
     # Analyze performance
-    analysis = analyze_tenz_performance(df)
+    analysis = analyze_boaster_performance(df)
     
     # Print results
     print_analysis(analysis, df)
@@ -349,14 +349,14 @@ def main():
     create_visualizations(df)
     
     # Save detailed results to CSV in query_results folder
-    output_file = os.path.join(OUTPUT_DIR, 'tenz_games_analysis.csv')
+    output_file = os.path.join(OUTPUT_DIR, 'boaster_games_analysis.csv')
     df.to_csv(output_file, index=False)
     print(f"\nDetailed results saved to: {output_file}")
     
     # Save analysis summary
-    summary_file = os.path.join(OUTPUT_DIR, 'tenz_analysis_summary.txt')
+    summary_file = os.path.join(OUTPUT_DIR, 'boaster_analysis_summary.txt')
     with open(summary_file, 'w') as f:
-        f.write("TENZ PERFORMANCE ANALYSIS SUMMARY\n")
+        f.write("BOASTER PERFORMANCE ANALYSIS SUMMARY\n")
         f.write("=" * 50 + "\n\n")
         f.write(f"Total Games: {analysis['total_games']}\n")
         f.write(f"Playoff Games: {analysis['playoff_games']}\n")

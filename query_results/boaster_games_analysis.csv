@@ -1,0 +1,643 @@
+event_name,bracket_stage,match_id,match_datetime,map_name,team1_name,team1_score,team2_name,team2_score,player_name,player_team,agent_played,rating_2_0,ACS,KDRatio,KAST_pct,ADR,total_kills,total_deaths,total_assists,game_type
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Knockout Round",341816,"Wednesday, May 8th 8:00 AM PDT",Ascent,FNATIC,13.0,Team Liquid,11.0,Boaster,FNC,omen,0.23,80.0,0.273,,55.0,6.0,22.0,10.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Knockout Round",341816,"Wednesday, May 8th 8:00 AM PDT",Icebox,FNATIC,12.0,Team Liquid,14.0,Boaster,FNC,viper,1.2,208.0,1.267,,126.0,19.0,15.0,10.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Knockout Round",341816,"Wednesday, May 8th 8:00 AM PDT",Lotus,FNATIC,13.0,Team Liquid,5.0,Boaster,FNC,omen,0.8,132.0,0.583,,78.0,7.0,12.0,10.0,Playoffs
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Upper Semifinals",213195,"Wednesday, May 24th 8:00 AM PDT",Bind,FNATIC,9.0,FUT Esports,13.0,Boaster,FNC,brimstone,0.77,133.0,0.6,,90.0,9.0,15.0,13.0,Playoffs
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Upper Semifinals",213195,"Wednesday, May 24th 8:00 AM PDT",Split,FNATIC,13.0,FUT Esports,2.0,Boaster,FNC,omen,1.26,136.0,2.0,,105.0,8.0,4.0,8.0,Playoffs
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Upper Semifinals",213195,"Wednesday, May 24th 8:00 AM PDT",Lotus,FNATIC,13.0,FUT Esports,1.0,Boaster,FNC,astra,0.93,114.0,1.0,,72.0,6.0,6.0,6.0,Playoffs
+Champions Tour Stage 1: EMEA Challengers,"Playoffs: 
+						Upper Semifinals",79075,"Wednesday, March 23rd 8:00 AM PDT",Fracture,FNATIC,13.0,M3 Champions,11.0,Boaster,FNC,viper,1.23,232.0,1.125,,154.0,18.0,16.0,10.0,Playoffs
+Champions Tour Stage 1: EMEA Challengers,"Playoffs: 
+						Upper Semifinals",79075,"Wednesday, March 23rd 8:00 AM PDT",Bind,FNATIC,8.0,M3 Champions,13.0,Boaster,FNC,skye,0.68,148.0,0.647,,98.0,11.0,17.0,3.0,Playoffs
+Champions Tour Stage 1: EMEA Challengers,"Playoffs: 
+						Upper Semifinals",79075,"Wednesday, March 23rd 8:00 AM PDT",Split,FNATIC,23.0,M3 Champions,21.0,Boaster,FNC,kayo,0.49,119.0,0.472,,75.0,17.0,36.0,17.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 1,"Main Event: 
+						Upper Quarterfinals",24949,"Wednesday, July 7th 5:00 AM PDT",Breeze,Team Liquid,11.0,FNATIC,13.0,Boaster,FNC,astra,1.18,232.0,1.333,,136.0,20.0,15.0,3.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 1,"Main Event: 
+						Upper Quarterfinals",24949,"Wednesday, July 7th 5:00 AM PDT",Bind,Team Liquid,13.0,FNATIC,9.0,Boaster,FNC,astra,0.71,168.0,0.579,,115.0,11.0,19.0,6.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 1,"Main Event: 
+						Upper Quarterfinals",24949,"Wednesday, July 7th 5:00 AM PDT",Haven,Team Liquid,10.0,FNATIC,13.0,Boaster,FNC,sova,,,1.286,,,18.0,14.0,11.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Upper Quarterfinals",28909,"Wednesday, July 28th 8:30 AM PDT",Haven,FNATIC,14.0,Alliance,12.0,Boaster,FNC,sova,0.7,143.0,0.526,,109.0,10.0,19.0,14.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Upper Quarterfinals",28909,"Wednesday, July 28th 8:30 AM PDT",Icebox,FNATIC,13.0,Alliance,7.0,Boaster,FNC,sova,0.73,151.0,0.714,,99.0,10.0,14.0,7.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Upper Final",371282,"Wednesday, July 17th 9:00 AM PDT",Lotus,Team Vitality,11.0,FNATIC,13.0,Boaster,FNC,omen,0.74,164.0,0.706,,104.0,12.0,17.0,10.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Upper Final",371282,"Wednesday, July 17th 9:00 AM PDT",Sunset,Team Vitality,6.0,FNATIC,13.0,Boaster,FNC,astra,1.14,208.0,1.083,,153.0,13.0,12.0,9.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Upper Quarterfinals",248270,"Wednesday, August 16th 12:00 PM PDT",Ascent,FNATIC,11.0,LOUD,13.0,Boaster,FNC,omen,0.68,132.0,0.588,,86.0,10.0,17.0,10.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Upper Quarterfinals",248270,"Wednesday, August 16th 12:00 PM PDT",Lotus,FNATIC,6.0,LOUD,13.0,Boaster,FNC,astra,1.09,192.0,0.846,,126.0,11.0,13.0,8.0,Playoffs
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 5",511576,"Wednesday, August 13th 11:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,FNC,,,,,,,,,,Regular Season
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 5",511576,"Wednesday, August 13th 11:00 AM PDT",TBD,Apeks,0.0,FNATIC,0.0,Boaster,FNC,,,,,,,,,,Regular Season
+Valorant Champions 2022,"Playoffs: 
+						Lower Round 2",130689,"Tuesday, September 13th 7:00 AM PDT",Icebox,DRX,7.0,FNATIC,13.0,Boaster,FNC,viper,1.15,171.0,1.375,,99.0,11.0,8.0,10.0,Playoffs
+Valorant Champions 2022,"Playoffs: 
+						Lower Round 2",130689,"Tuesday, September 13th 7:00 AM PDT",Ascent,DRX,14.0,FNATIC,12.0,Boaster,FNC,omen,1.07,199.0,1.056,,133.0,19.0,18.0,5.0,Playoffs
+Valorant Champions 2022,"Playoffs: 
+						Lower Round 2",130689,"Tuesday, September 13th 7:00 AM PDT",Fracture,DRX,13.0,FNATIC,9.0,Boaster,FNC,brimstone,0.99,200.0,0.647,,150.0,11.0,17.0,15.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Upper Quarterfinals",19073,"Tuesday, May 25th 3:05 PM PDT",Icebox,Sentinels,13.0,FNATIC,11.0,Boaster,FNC,sova,0.92,205.0,0.889,,136.0,16.0,18.0,6.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Upper Quarterfinals",19073,"Tuesday, May 25th 3:05 PM PDT",Haven,Sentinels,13.0,FNATIC,10.0,Boaster,FNC,astra,1.0,220.0,1.0,,145.0,16.0,16.0,6.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Upper Final",220447,"Tuesday, June 20th 8:00 PM PDT",Lotus,FNATIC,13.0,Evil Geniuses,3.0,Boaster,FNC,astra,1.15,175.0,1.125,,105.0,9.0,8.0,13.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Upper Final",220447,"Tuesday, June 20th 8:00 PM PDT",Fracture,FNATIC,9.0,Evil Geniuses,13.0,Boaster,FNC,brimstone,0.9,164.0,0.8,,101.0,12.0,15.0,9.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Upper Final",220447,"Tuesday, June 20th 8:00 PM PDT",Split,FNATIC,13.0,Evil Geniuses,11.0,Boaster,FNC,omen,1.11,188.0,0.933,,120.0,14.0,15.0,15.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Round 2",498632,"Tuesday, June 17th 12:35 PM PDT",Sunset,Sentinels,13.0,FNATIC,9.0,Boaster,FNC,omen,0.53,113.0,0.412,,71.0,7.0,17.0,9.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Round 2",498632,"Tuesday, June 17th 12:35 PM PDT",Ascent,Sentinels,7.0,FNATIC,13.0,Boaster,FNC,omen,1.05,162.0,1.0,,97.0,10.0,10.0,11.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Round 2",498632,"Tuesday, June 17th 12:35 PM PDT",Icebox,Sentinels,9.0,FNATIC,13.0,Boaster,FNC,viper,0.76,133.0,0.714,,88.0,10.0,14.0,4.0,Playoffs
+Esports World Cup 2025,"Group Stage: 
+						Opening (D)",510143,"Tuesday, July 8th 5:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,FNC,,,,,,,,,,Regular Season
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Upper Semifinals",371281,"Tuesday, July 16th 12:45 PM PDT",Sunset,FUT Esports,13.0,FNATIC,15.0,Boaster,FNC,astra,0.74,137.0,0.619,,97.0,13.0,21.0,5.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Upper Semifinals",371281,"Tuesday, July 16th 12:45 PM PDT",Haven,FUT Esports,5.0,FNATIC,13.0,Boaster,FNC,omen,1.21,224.0,1.3,,157.0,13.0,10.0,10.0,Playoffs
+GLX Elite Series,"Main Event: 
+						Group D - Winners' Match",3115,"Thursday, October 8th 8:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,140.0,,,146.0,12.0,13.0,14.0,Regular Season
+GLX Elite Series,"Main Event: 
+						Group D - Opening Matches",3113,"Thursday, October 8th 7:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,134.0,,,54.0,10.0,9.0,10.0,Regular Season
+GLX Elite Series,"Main Event: 
+						Group D - Grand Final",3118,"Thursday, October 8th 10:00 AM PDT",TBD,SUMN FC,0.0,Lankräm,0.0,Boaster,SUMN,,,,,,,,,,Regular Season
+GLX Elite Series,"Main Event: 
+						Group D - Grand Final",3118,"Thursday, October 8th 10:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,122.0,,,83.0,9.0,13.0,10.0,Regular Season
+BLAST Spike Nations #2,"Main Event: 
+						Opening (B)",43840,"Thursday, October 7th 8:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,UK,sova,1.24,239.0,,,167.0,13.0,12.0,5.0,Regular Season
+BLAST Spike Nations #2,"Main Event: 
+						Elimination (B)",43843,"Thursday, October 7th 11:15 AM PDT",Unknown,Unknown,,Unknown,,Boaster,UK,jett,0.7,158.0,,,123.0,10.0,15.0,3.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Round 1",283091,"Thursday, November 2nd 11:55 PM PDT",Unknown,Unknown,,Unknown,,Boaster,FNC,omen,0.92,160.0,,,102.0,12.0,15.0,15.0,Regular Season
+Red Bull Home Ground #5,"Main Event: 
+						Round 1",423621,"Thursday, November 21st 6:20 AM PST",Unknown,Unknown,,Unknown,,Boaster,FNC,omen,0.78,126.0,,,76.0,11.0,15.0,6.0,Regular Season
+Red Bull Home Ground #5,"Main Event: 
+						Round 2",423974,"Thursday, November 21st 1:15 PM PST",Unknown,Unknown,,Unknown,,Boaster,FNC,omen,0.51,54.0,,,37.0,4.0,9.0,3.0,Regular Season
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Upper Semifinals",341818,"Thursday, May 9th 8:00 AM PDT",Breeze,Karmine Corp,11.0,FNATIC,13.0,Boaster,FNC,viper,0.66,97.0,0.429,,71.0,6.0,14.0,12.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Upper Semifinals",341818,"Thursday, May 9th 8:00 AM PDT",Bind,Karmine Corp,9.0,FNATIC,13.0,Boaster,FNC,brimstone,0.85,148.0,0.833,,97.0,10.0,12.0,9.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Upper Round 1",482504,"Thursday, May 8th 11:00 AM PDT",Split,FNATIC,13.0,FUT Esports,8.0,Boaster,FNC,astra,0.81,130.0,0.667,,91.0,8.0,12.0,11.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Upper Round 1",482504,"Thursday, May 8th 11:00 AM PDT",Lotus,FNATIC,13.0,FUT Esports,6.0,Boaster,FNC,omen,0.98,157.0,0.818,,101.0,9.0,11.0,10.0,Playoffs
+Champions Tour 2024: Masters Shanghai,"Playoffs: 
+						Upper Quarterfinals",348466,"Thursday, May 30th 3:00 AM PDT",Lotus,FNATIC,13.0,Gen.G,10.0,Boaster,FNC,omen,,111.0,0.562,,90.0,9.0,16.0,7.0,Playoffs
+Champions Tour 2024: Masters Shanghai,"Playoffs: 
+						Upper Quarterfinals",348466,"Thursday, May 30th 3:00 AM PDT",Bind,FNATIC,10.0,Gen.G,13.0,Boaster,FNC,brimstone,,125.0,0.529,,77.0,9.0,17.0,7.0,Playoffs
+Champions Tour 2024: Masters Shanghai,"Playoffs: 
+						Upper Quarterfinals",348466,"Thursday, May 30th 3:00 AM PDT",Breeze,FNATIC,11.0,Gen.G,13.0,Boaster,FNC,viper,,198.0,1.0,,126.0,17.0,17.0,5.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Round 2",19083,"Thursday, May 27th 11:40 AM PDT",Icebox,FNATIC,13.0,X10 Esports,4.0,Boaster,FNC,sova,1.15,222.0,1.5,,133.0,15.0,10.0,7.0,Regular Season
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Round 2",19083,"Thursday, May 27th 11:40 AM PDT",Haven,FNATIC,13.0,X10 Esports,9.0,Boaster,FNC,astra,0.83,178.0,0.812,,119.0,13.0,16.0,5.0,Regular Season
+Champions Tour Europe Stage 3: Challengers 1,"Main Event: 
+						Upper Semifinals",24953,"Thursday, July 8th 8:00 AM PDT",Ascent,FNATIC,13.0,Guild Esports,11.0,Boaster,FNC,astra,0.9,177.0,0.938,,125.0,15.0,16.0,5.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 1,"Main Event: 
+						Upper Semifinals",24953,"Thursday, July 8th 8:00 AM PDT",Icebox,FNATIC,6.0,Guild Esports,13.0,Boaster,FNC,sova,0.6,163.0,0.5,,109.0,9.0,18.0,10.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 1,"Main Event: 
+						Upper Semifinals",24953,"Thursday, July 8th 8:00 AM PDT",Haven,FNATIC,9.0,Guild Esports,13.0,Boaster,FNC,sova,0.52,98.0,0.412,,80.0,7.0,17.0,9.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 1,"Main Event: 
+						Lower Round 2",24959,"Thursday, July 8th 11:30 AM PDT",Icebox,FNATIC,9.0,G2 Esports,13.0,Boaster,FNC,sova,1.25,252.0,1.267,,161.0,19.0,15.0,3.0,Regular Season
+Champions Tour Europe Stage 3: Challengers 1,"Main Event: 
+						Lower Round 2",24959,"Thursday, July 8th 11:30 AM PDT",Haven,FNATIC,15.0,G2 Esports,17.0,Boaster,FNC,sova,1.01,198.0,0.952,,136.0,20.0,21.0,11.0,Regular Season
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Upper Semifinals",28911,"Thursday, July 29th 8:00 AM PDT",Icebox,Giants Gaming,4.0,FNATIC,13.0,Boaster,FNC,sova,1.3,240.0,1.75,,165.0,14.0,8.0,9.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Upper Semifinals",28911,"Thursday, July 29th 8:00 AM PDT",Bind,Giants Gaming,13.0,FNATIC,7.0,Boaster,FNC,astra,0.74,159.0,0.588,,119.0,10.0,17.0,7.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Upper Semifinals",28911,"Thursday, July 29th 8:00 AM PDT",Ascent,Giants Gaming,18.0,FNATIC,16.0,Boaster,FNC,sova,0.7,107.0,0.571,,65.0,12.0,21.0,9.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Round 2",28916,"Thursday, July 29th 11:35 AM PDT",Haven,FNATIC,14.0,Team BDS,12.0,Boaster,FNC,sova,0.94,148.0,0.857,,106.0,12.0,14.0,13.0,Regular Season
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Round 2",28916,"Thursday, July 29th 11:35 AM PDT",Bind,FNATIC,13.0,Team BDS,11.0,Boaster,FNC,astra,1.05,201.0,1.2,,136.0,18.0,15.0,4.0,Regular Season
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Round 2",28916,"Thursday, July 29th 11:35 AM PDT",Icebox,FNATIC,7.0,Team BDS,13.0,Boaster,FNC,sova,1.31,254.0,1.067,,171.0,16.0,15.0,10.0,Regular Season
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Upper Quarterfinals",112321,"Thursday, July 14th 10:35 AM PDT",Icebox,FNATIC,13.0,FunPlus Phoenix,10.0,Boaster,FNC,viper,1.41,252.0,1.538,,162.0,20.0,13.0,9.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Upper Quarterfinals",112321,"Thursday, July 14th 10:35 AM PDT",Haven,FNATIC,13.0,FunPlus Phoenix,4.0,Boaster,FNC,omen,1.34,218.0,2.0,,129.0,14.0,7.0,7.0,Playoffs
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Lower Round 2",429395,"Thursday, January 30th 9:00 AM PST",Abyss,Gentle Mates,5.0,FNATIC,13.0,Boaster,FNC,astra,1.37,161.0,2.0,,99.0,10.0,5.0,10.0,Regular Season
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Lower Round 2",429395,"Thursday, January 30th 9:00 AM PST",Fracture,Gentle Mates,6.0,FNATIC,13.0,Boaster,FNC,brimstone,1.19,171.0,1.444,,113.0,13.0,9.0,8.0,Regular Season
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Lower Round 1",429392,"Thursday, January 23rd 12:30 PM PST",Pearl,FNATIC,13.0,Natus Vincere,9.0,Boaster,FNC,astra,0.8,153.0,0.75,,107.0,12.0,16.0,11.0,Regular Season
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Lower Round 1",429392,"Thursday, January 23rd 12:30 PM PST",Fracture,FNATIC,8.0,Natus Vincere,13.0,Boaster,FNC,brimstone,0.63,138.0,0.5,,78.0,8.0,16.0,13.0,Regular Season
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Lower Round 1",429392,"Thursday, January 23rd 12:30 PM PST",Haven,FNATIC,15.0,Natus Vincere,13.0,Boaster,FNC,omen,0.81,144.0,0.882,,94.0,15.0,17.0,11.0,Regular Season
+Champions Tour 2024: EMEA Kickoff,"Playoffs: 
+						Semifinals",303094,"Thursday, February 29th 10:20 AM PST",Lotus,FNATIC,10.0,Karmine Corp,13.0,Boaster,FNC,omen,0.75,147.0,1.067,,100.0,16.0,15.0,5.0,Playoffs
+Champions Tour 2024: EMEA Kickoff,"Playoffs: 
+						Semifinals",303094,"Thursday, February 29th 10:20 AM PST",Split,FNATIC,8.0,Karmine Corp,13.0,Boaster,FNC,omen,0.84,210.0,0.778,,150.0,14.0,18.0,9.0,Playoffs
+Valorant Champions 2021,"Playoffs: 
+						Quarterfinals",51293,"Thursday, December 9th 12:40 PM PST",Haven,FNATIC,13.0,KRÜ Esports,15.0,Boaster,FNC,sova,1.07,218.0,1.111,,152.0,20.0,18.0,11.0,Playoffs
+Valorant Champions 2021,"Playoffs: 
+						Quarterfinals",51293,"Thursday, December 9th 12:40 PM PST",Icebox,FNATIC,13.0,KRÜ Esports,6.0,Boaster,FNC,sova,1.27,171.0,1.375,,124.0,11.0,8.0,9.0,Playoffs
+Valorant Champions 2021,"Playoffs: 
+						Quarterfinals",51293,"Thursday, December 9th 12:40 PM PST",Split,FNATIC,8.0,KRÜ Esports,13.0,Boaster,FNC,astra,0.84,125.0,0.643,,98.0,9.0,14.0,6.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Lower Round 3",248282,"Thursday, August 24th 3:45 PM PDT",Split,FNATIC,4.0,LOUD,13.0,Boaster,FNC,omen,0.95,175.0,0.846,,117.0,11.0,13.0,6.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Lower Round 3",248282,"Thursday, August 24th 3:45 PM PDT",Ascent,FNATIC,13.0,LOUD,9.0,Boaster,FNC,omen,1.2,213.0,1.286,,119.0,18.0,14.0,11.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Lower Round 3",248282,"Thursday, August 24th 3:45 PM PDT",Haven,FNATIC,7.0,LOUD,13.0,Boaster,FNC,astra,0.58,152.0,0.421,,108.0,8.0,19.0,9.0,Playoffs
+Valorant Champions 2024,"Playoffs: 
+						Upper Quarterfinals",378825,"Thursday, August 15th 3:35 AM PDT",Lotus,Team Heretics,13.0,FNATIC,3.0,Boaster,FNC,omen,0.37,81.0,0.25,,54.0,3.0,12.0,6.0,Playoffs
+Valorant Champions 2024,"Playoffs: 
+						Upper Quarterfinals",378825,"Thursday, August 15th 3:35 AM PDT",Abyss,Team Heretics,14.0,FNATIC,12.0,Boaster,FNC,astra,0.28,65.0,0.316,,39.0,6.0,19.0,6.0,Playoffs
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Winner's (B)",16831,"Thursday, April 29th 10:15 AM PDT",Ascent,FNATIC,13.0,Guild Esports,10.0,Boaster,FNC,sova,1.08,228.0,1.062,,149.0,17.0,16.0,8.0,Regular Season
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Winner's (B)",16831,"Thursday, April 29th 10:15 AM PDT",Bind,FNATIC,15.0,Guild Esports,13.0,Boaster,FNC,brimstone,1.31,240.0,1.278,,167.0,23.0,18.0,7.0,Regular Season
+Champions Tour Europe Stage 2: Challengers 2,"Main Event: 
+						Quarterfinals",16478,"Thursday, April 15th 10:20 AM PDT",Bind,G2 Esports,5.0,FNATIC,13.0,Boaster,FNC,brimstone,1.13,184.0,1.1,,133.0,11.0,10.0,6.0,Playoffs
+Champions Tour Europe Stage 2: Challengers 2,"Main Event: 
+						Quarterfinals",16478,"Thursday, April 15th 10:20 AM PDT",Ascent,G2 Esports,11.0,FNATIC,13.0,Boaster,FNC,sova,1.24,217.0,1.5,,127.0,18.0,12.0,9.0,Playoffs
+LVP Rising Series #3,"Playoffs: 
+						Quarterfinals",35262,"Sunday, September 5th 10:05 AM PDT",Icebox,FNATIC,13.0,SAW,11.0,Boaster,FNC,sova,0.97,195.0,0.941,,141.0,16.0,17.0,8.0,Playoffs
+LVP Rising Series #3,"Playoffs: 
+						Quarterfinals",35262,"Sunday, September 5th 10:05 AM PDT",Haven,FNATIC,12.0,SAW,14.0,Boaster,FNC,sova,1.03,182.0,0.889,,128.0,16.0,18.0,9.0,Playoffs
+LVP Rising Series #3,"Playoffs: 
+						Quarterfinals",35262,"Sunday, September 5th 10:05 AM PDT",Split,FNATIC,13.0,SAW,7.0,Boaster,FNC,viper,1.86,357.0,2.6,,238.0,26.0,10.0,4.0,Playoffs
+Valorant Champions 2022,"Playoffs: 
+						Lower Round 1",130687,"Sunday, September 11th 9:55 AM PDT",Bind,Team Liquid,6.0,FNATIC,13.0,Boaster,FNC,brimstone,1.11,193.0,1.4,,117.0,14.0,10.0,5.0,Playoffs
+Valorant Champions 2022,"Playoffs: 
+						Lower Round 1",130687,"Sunday, September 11th 9:55 AM PDT",Haven,Team Liquid,7.0,FNATIC,13.0,Boaster,FNC,omen,1.23,210.0,1.5,,134.0,15.0,10.0,3.0,Playoffs
+Valorant Contenders Cup,"Double Elimination Stage: 
+						Grand Final",3413,"Sunday, October 4th 7:35 AM PDT",Bind,SUMN FC,9.0,FunPlus Phoenix,13.0,Boaster,SUMN,breach,,144.0,0.632,,97.0,12.0,19.0,8.0,Playoffs
+Valorant Contenders Cup,"Double Elimination Stage: 
+						Grand Final",3413,"Sunday, October 4th 7:35 AM PDT",Split,SUMN FC,9.0,FunPlus Phoenix,13.0,Boaster,SUMN,breach,,154.0,0.611,,88.0,11.0,18.0,11.0,Playoffs
+Valorant Contenders Cup,"Double Elimination Stage: 
+						Upper Final",3411,"Sunday, October 4th 3:00 AM PDT",Bind,need more DM,13.0,SUMN FC,15.0,Boaster,SUMN,breach,,148.0,0.6,,102.0,12.0,20.0,15.0,Playoffs
+Valorant Contenders Cup,"Double Elimination Stage: 
+						Upper Final",3411,"Sunday, October 4th 3:00 AM PDT",Split,need more DM,5.0,SUMN FC,13.0,Boaster,SUMN,breach,,147.0,1.0,,87.0,10.0,10.0,10.0,Playoffs
+epic31 Online,"Playoffs: 
+						Grand Final",3816,"Sunday, October 11th 11:00 AM PDT",Haven,SUMN FC,13.0,Oxygen Esports,11.0,Boaster,SUMN,breach,,202.0,1.067,,104.0,16.0,15.0,16.0,Playoffs
+epic31 Online,"Playoffs: 
+						Grand Final",3816,"Sunday, October 11th 11:00 AM PDT",TBD,SUMN FC,0.0,Oxygen Esports,0.0,Boaster,SUMN,,,,,,,,,,Playoffs
+epic31 Online,"Playoffs: 
+						Grand Final",3816,"Sunday, October 11th 11:00 AM PDT",Ascent,SUMN FC,13.0,Oxygen Esports,10.0,Boaster,SUMN,breach,,182.0,0.882,,120.0,15.0,17.0,6.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Grand Final",19089,"Sunday, May 30th 10:00 AM PDT",Split,Sentinels,14.0,FNATIC,12.0,Boaster,FNC,astra,0.84,203.0,0.905,,138.0,19.0,21.0,3.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Grand Final",19089,"Sunday, May 30th 10:00 AM PDT",Bind,Sentinels,16.0,FNATIC,14.0,Boaster,FNC,brimstone,0.99,216.0,0.958,,131.0,23.0,24.0,2.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Grand Final",19089,"Sunday, May 30th 10:00 AM PDT",Haven,Sentinels,13.0,FNATIC,11.0,Boaster,FNC,astra,0.67,124.0,0.625,,88.0,10.0,16.0,5.0,Playoffs
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Grand Finals",16836,"Sunday, May 2nd 8:00 AM PDT",Haven,Team Liquid,3.0,FNATIC,13.0,Boaster,FNC,astra,1.31,277.0,1.364,,166.0,15.0,11.0,10.0,Playoffs
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Grand Finals",16836,"Sunday, May 2nd 8:00 AM PDT",Icebox,Team Liquid,13.0,FNATIC,7.0,Boaster,FNC,sova,0.3,92.0,0.294,,74.0,5.0,17.0,3.0,Playoffs
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Grand Finals",16836,"Sunday, May 2nd 8:00 AM PDT",Ascent,Team Liquid,13.0,FNATIC,9.0,Boaster,FNC,sova,0.7,170.0,0.588,,114.0,10.0,17.0,9.0,Playoffs
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Grand Finals",16836,"Sunday, May 2nd 8:00 AM PDT",Bind,Team Liquid,7.0,FNATIC,13.0,Boaster,FNC,brimstone,1.17,271.0,1.5,,149.0,21.0,14.0,5.0,Playoffs
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Grand Finals",16836,"Sunday, May 2nd 8:00 AM PDT",Split,Team Liquid,13.0,FNATIC,7.0,Boaster,FNC,reyna,0.81,181.0,0.733,,112.0,11.0,15.0,1.0,Playoffs
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Grand Final",213198,"Sunday, May 28th 8:00 AM PDT",Lotus,FNATIC,13.0,Team Liquid,11.0,Boaster,FNC,astra,0.56,117.0,0.5,,75.0,9.0,18.0,5.0,Playoffs
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Grand Final",213198,"Sunday, May 28th 8:00 AM PDT",Ascent,FNATIC,12.0,Team Liquid,14.0,Boaster,FNC,omen,1.01,175.0,0.889,,100.0,16.0,18.0,18.0,Playoffs
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Grand Final",213198,"Sunday, May 28th 8:00 AM PDT",Haven,FNATIC,6.0,Team Liquid,13.0,Boaster,FNC,astra,0.98,187.0,0.929,,118.0,13.0,14.0,8.0,Playoffs
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Grand Final",213198,"Sunday, May 28th 8:00 AM PDT",Fracture,FNATIC,11.0,Team Liquid,13.0,Boaster,FNC,brimstone,0.96,173.0,1.062,,96.0,17.0,16.0,10.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Grand Final",482513,"Sunday, May 18th 9:00 AM PDT",Split,FNATIC,13.0,Team Heretics,4.0,Boaster,FNC,astra,0.71,100.0,0.778,,71.0,7.0,9.0,2.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Grand Final",482513,"Sunday, May 18th 9:00 AM PDT",Icebox,FNATIC,13.0,Team Heretics,9.0,Boaster,FNC,viper,1.16,232.0,1.286,,142.0,18.0,14.0,4.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Grand Final",482513,"Sunday, May 18th 9:00 AM PDT",Fracture,FNATIC,14.0,Team Heretics,12.0,Boaster,FNC,brimstone,0.79,168.0,0.833,,121.0,15.0,18.0,10.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Grand Final",341821,"Sunday, May 12th 8:00 AM PDT",Sunset,Team Heretics,13.0,FNATIC,7.0,Boaster,FNC,sova,0.83,166.0,0.857,,118.0,12.0,14.0,2.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Grand Final",341821,"Sunday, May 12th 8:00 AM PDT",Bind,Team Heretics,15.0,FNATIC,13.0,Boaster,FNC,brimstone,0.88,158.0,0.7,,105.0,14.0,20.0,10.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Grand Final",341821,"Sunday, May 12th 8:00 AM PDT",Lotus,Team Heretics,8.0,FNATIC,13.0,Boaster,FNC,omen,1.13,207.0,1.231,,117.0,16.0,13.0,10.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Grand Final",341821,"Sunday, May 12th 8:00 AM PDT",Split,Team Heretics,5.0,FNATIC,13.0,Boaster,FNC,omen,0.74,142.0,0.75,,84.0,9.0,12.0,7.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Grand Final",341821,"Sunday, May 12th 8:00 AM PDT",Breeze,Team Heretics,8.0,FNATIC,13.0,Boaster,FNC,viper,1.17,189.0,1.25,,122.0,15.0,12.0,8.0,Playoffs
+Champions Tour Europe Stage 1: Challengers 3,"Main Event: 
+						Quarterfinals",11600,"Sunday, March 7th 8:00 AM PST",Haven,FNATIC,8.0,Ballista,13.0,Boaster,FNC,breach,,144.0,0.562,,136.0,9.0,16.0,11.0,Playoffs
+Champions Tour Europe Stage 1: Challengers 3,"Main Event: 
+						Quarterfinals",11600,"Sunday, March 7th 8:00 AM PST",Bind,FNATIC,12.0,Ballista,14.0,Boaster,FNC,brimstone,,134.0,0.45,,100.0,9.0,20.0,10.0,Playoffs
+Champions Tour EMEA Stage 2: Challengers,"Playoffs: 
+						Grand Final",107525,"Sunday, June 26th 7:00 AM PDT",Split,FNATIC,15.0,FunPlus Phoenix,13.0,Boaster,FNC,omen,0.84,163.0,0.895,,95.0,17.0,19.0,5.0,Playoffs
+Champions Tour EMEA Stage 2: Challengers,"Playoffs: 
+						Grand Final",107525,"Sunday, June 26th 7:00 AM PDT",Icebox,FNATIC,13.0,FunPlus Phoenix,5.0,Boaster,FNC,viper,1.3,215.0,1.444,,129.0,13.0,9.0,8.0,Playoffs
+Champions Tour EMEA Stage 2: Challengers,"Playoffs: 
+						Grand Final",107525,"Sunday, June 26th 7:00 AM PDT",Haven,FNATIC,15.0,FunPlus Phoenix,13.0,Boaster,FNC,omen,1.22,200.0,1.267,,127.0,19.0,15.0,11.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Grand Final",498628,"Sunday, June 22nd 10:15 AM PDT",Sunset,Paper Rex,13.0,FNATIC,11.0,Boaster,FNC,omen,0.72,120.0,0.625,,77.0,10.0,16.0,10.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Grand Final",498628,"Sunday, June 22nd 10:15 AM PDT",Icebox,Paper Rex,15.0,FNATIC,17.0,Boaster,FNC,viper,0.76,124.0,0.5,,99.0,11.0,22.0,16.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Grand Final",498628,"Sunday, June 22nd 10:15 AM PDT",Pearl,Paper Rex,13.0,FNATIC,10.0,Boaster,FNC,astra,1.01,195.0,0.875,,128.0,14.0,16.0,11.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Grand Final",498628,"Sunday, June 22nd 10:15 AM PDT",Lotus,Paper Rex,14.0,FNATIC,12.0,Boaster,FNC,omen,0.48,77.0,0.353,,45.0,6.0,17.0,9.0,Playoffs
+G2 Esports Invitational,"Playoffs: 
+						Quarterfinals",657,"Sunday, June 21st 6:00 AM PDT",Ascent,Team ANGE1,13.0,Team Zerator,5.0,Boaster,TZ,jett,,294.0,1.0,,,17.0,17.0,1.0,Playoffs
+G2 Esports Invitational,"Playoffs: 
+						Quarterfinals",657,"Sunday, June 21st 6:00 AM PDT",Split,Team ANGE1,5.0,Team Zerator,13.0,Boaster,TZ,jett,,242.0,2.0,,,16.0,8.0,3.0,Playoffs
+G2 Esports Invitational,"Playoffs: 
+						Quarterfinals",657,"Sunday, June 21st 6:00 AM PDT",Bind,Team ANGE1,13.0,Team Zerator,8.0,Boaster,TZ,jett,,275.0,1.615,,,21.0,13.0,2.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Upper Semifinals",220445,"Sunday, June 18th 10:15 PM PDT",Lotus,Paper Rex,5.0,FNATIC,13.0,Boaster,FNC,astra,1.05,180.0,1.0,,131.0,11.0,11.0,7.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Upper Semifinals",220445,"Sunday, June 18th 10:15 PM PDT",Bind,Paper Rex,7.0,FNATIC,13.0,Boaster,FNC,brimstone,0.96,173.0,1.0,,116.0,12.0,12.0,12.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Round 1",498630,"Sunday, June 15th 11:10 AM PDT",Lotus,Rex Regum Qeon,5.0,FNATIC,13.0,Boaster,FNC,omen,0.91,143.0,1.0,,100.0,10.0,10.0,8.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Round 1",498630,"Sunday, June 15th 11:10 AM PDT",Haven,Rex Regum Qeon,13.0,FNATIC,6.0,Boaster,FNC,omen,0.41,71.0,0.286,,38.0,4.0,14.0,5.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Round 1",498630,"Sunday, June 15th 11:10 AM PDT",Ascent,Rex Regum Qeon,5.0,FNATIC,13.0,Boaster,FNC,omen,1.16,176.0,1.625,,119.0,13.0,8.0,5.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Upper Semifinals",112324,"Sunday, July 17th 8:00 AM PDT",Ascent,Paper Rex,13.0,FNATIC,11.0,Boaster,FNC,omen,1.09,243.0,1.053,,150.0,20.0,19.0,13.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Upper Semifinals",112324,"Sunday, July 17th 8:00 AM PDT",Bind,Paper Rex,13.0,FNATIC,10.0,Boaster,FNC,astra,0.94,165.0,0.8,,114.0,12.0,15.0,8.0,Playoffs
+Champions Tour Europe Stage 1: Challengers 1,"Main Event: 
+						Quarterfinals",9854,"Sunday, February 7th 8:00 AM PST",Bind,Wave Esports,6.0,FNATIC,13.0,Boaster,FNC,brimstone,,360.0,1.5,,242.0,21.0,14.0,5.0,Playoffs
+Champions Tour Europe Stage 1: Challengers 1,"Main Event: 
+						Quarterfinals",9854,"Sunday, February 7th 8:00 AM PST",Haven,Wave Esports,16.0,FNATIC,14.0,Boaster,FNC,breach,,197.0,0.952,,116.0,20.0,21.0,14.0,Playoffs
+Champions Tour Europe Stage 1: Challengers 1,"Main Event: 
+						Quarterfinals",9854,"Sunday, February 7th 8:00 AM PST",Split,Wave Esports,13.0,FNATIC,6.0,Boaster,FNC,viper,,201.0,0.857,,173.0,12.0,14.0,4.0,Playoffs
+Champions Tour Europe Stage 1: Challengers 2,"Main Event: 
+						Quarterfinals",11126,"Sunday, February 21st 8:00 AM PST",Bind,FunPlus Phoenix,6.0,FNATIC,13.0,Boaster,FNC,brimstone,,298.0,1.667,,183.0,20.0,12.0,4.0,Playoffs
+Champions Tour Europe Stage 1: Challengers 2,"Main Event: 
+						Quarterfinals",11126,"Sunday, February 21st 8:00 AM PST",Split,FunPlus Phoenix,13.0,FNATIC,3.0,Boaster,FNC,breach,,187.0,0.688,,97.0,11.0,16.0,3.0,Playoffs
+Champions Tour Europe Stage 1: Challengers 2,"Main Event: 
+						Quarterfinals",11126,"Sunday, February 21st 8:00 AM PST",Haven,FunPlus Phoenix,13.0,FNATIC,7.0,Boaster,FNC,breach,,151.0,0.389,,94.0,7.0,18.0,11.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Grand Final",7101,"Sunday, December 6th 7:30 AM PST",Ascent,Team Heretics,13.0,SUMN FC,1.0,Boaster,SUMN,breach,,97.0,0.308,,73.0,4.0,13.0,3.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Grand Final",7101,"Sunday, December 6th 7:30 AM PST",Icebox,Team Heretics,7.0,SUMN FC,13.0,Boaster,SUMN,sova,,340.0,1.6,,222.0,24.0,15.0,3.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Grand Final",7101,"Sunday, December 6th 7:30 AM PST",Haven,Team Heretics,13.0,SUMN FC,5.0,Boaster,SUMN,breach,,165.0,0.667,,99.0,10.0,15.0,13.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Grand Final",7101,"Sunday, December 6th 7:30 AM PST",Bind,Team Heretics,13.0,SUMN FC,11.0,Boaster,SUMN,omen,,210.0,0.842,,127.0,16.0,19.0,8.0,Playoffs
+Riot Games ONE 2024,"Pro Invitational: 
+						Day 2",423496,"Sunday, December 15th 2:25 AM PST",Unknown,Unknown,,Unknown,,Boaster,FNC,omen,0.97,174.0,,,114.0,14.0,17.0,9.0,Regular Season
+Riot Games ONE 2024,"Pro Invitational: 
+						Day 2",423495,"Sunday, December 15th 12:45 AM PST",Unknown,Unknown,,Unknown,,Boaster,FNC,omen,1.24,224.0,,,147.0,20.0,17.0,9.0,Regular Season
+LAVA Series,"#6: 
+						Grand Final",2199,"Sunday, August 30th 12:00 PM PDT",Bind,ROX TEAM,13.0,SUMN FC,8.0,Boaster,SUMN,sova,,192.0,0.824,,102.0,14.0,17.0,3.0,Playoffs
+LAVA Series,"#6: 
+						Grand Final",2199,"Sunday, August 30th 12:00 PM PDT",Ascent,ROX TEAM,11.0,SUMN FC,13.0,Boaster,SUMN,jett,,161.0,0.722,,98.0,13.0,18.0,3.0,Playoffs
+LAVA Series,"#6: 
+						Grand Final",2199,"Sunday, August 30th 12:00 PM PDT",TBD,ROX TEAM,0.0,SUMN FC,0.0,Boaster,SUMN,,,,,,,,,,Playoffs
+LAVA Series,"#6: 
+						Semifinals",2198,"Sunday, August 30th 10:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,jett,,188.0,,,124.0,17.0,19.0,6.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Lower Round 2",248280,"Sunday, August 20th 3:20 PM PDT",Bind,DRX,13.0,FNATIC,1.0,Boaster,FNC,brimstone,0.31,82.0,0.167,,66.0,2.0,12.0,6.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Lower Round 2",248280,"Sunday, August 20th 3:20 PM PDT",Haven,DRX,9.0,FNATIC,13.0,Boaster,FNC,astra,0.96,199.0,0.938,,122.0,15.0,16.0,8.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Lower Round 2",248280,"Sunday, August 20th 3:20 PM PDT",Split,DRX,6.0,FNATIC,13.0,Boaster,FNC,omen,1.14,242.0,1.154,,133.0,15.0,13.0,13.0,Playoffs
+Valorant Champions 2024,"Playoffs: 
+						Lower Round 2",378834,"Sunday, August 18th 1:00 AM PDT",Sunset,Sentinels,13.0,FNATIC,11.0,Boaster,FNC,astra,0.63,133.0,0.529,,81.0,9.0,17.0,9.0,Playoffs
+Valorant Champions 2024,"Playoffs: 
+						Lower Round 2",378834,"Sunday, August 18th 1:00 AM PDT",Bind,Sentinels,9.0,FNATIC,13.0,Boaster,FNC,astra,0.98,125.0,1.1,,75.0,11.0,10.0,3.0,Playoffs
+Valorant Champions 2024,"Playoffs: 
+						Lower Round 2",378834,"Sunday, August 18th 1:00 AM PDT",Lotus,Sentinels,13.0,FNATIC,6.0,Boaster,FNC,omen,0.5,110.0,0.467,,77.0,7.0,15.0,5.0,Playoffs
+Champions Tour Europe Stage 2: Challengers 2,"Main Event: 
+						Grand Finals",16483,"Sunday, April 18th 8:00 AM PDT",Icebox,FNATIC,13.0,Team Liquid,10.0,Boaster,FNC,sova,1.08,226.0,0.941,,140.0,16.0,17.0,9.0,Playoffs
+Champions Tour Europe Stage 2: Challengers 2,"Main Event: 
+						Grand Finals",16483,"Sunday, April 18th 8:00 AM PDT",Ascent,FNATIC,10.0,Team Liquid,13.0,Boaster,FNC,sova,0.69,142.0,0.471,,99.0,8.0,17.0,13.0,Playoffs
+Champions Tour Europe Stage 2: Challengers 2,"Main Event: 
+						Grand Finals",16483,"Sunday, April 18th 8:00 AM PDT",Bind,FNATIC,13.0,Team Liquid,6.0,Boaster,FNC,brimstone,0.61,139.0,0.714,,78.0,10.0,14.0,5.0,Playoffs
+Champions Tour Europe Stage 2: Challengers 2,"Main Event: 
+						Grand Finals",16483,"Sunday, April 18th 8:00 AM PDT",Split,FNATIC,13.0,Team Liquid,4.0,Boaster,FNC,reyna,0.71,154.0,0.667,,94.0,8.0,12.0,8.0,Playoffs
+Rix.GG Cup,"Main Event: 
+						Lower Round 2",3139,"Saturday, September 26th 8:30 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,209.0,,,122.0,17.0,13.0,10.0,Regular Season
+Rix.GG Cup,"Main Event: 
+						Lower Round 1",3135,"Saturday, September 26th 6:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,132.0,,,89.0,9.0,9.0,7.0,Regular Season
+Rix.GG Cup,"Main Event: 
+						Lower Round 4",3148,"Saturday, September 26th 11:15 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,163.0,,,101.0,10.0,17.0,3.0,Regular Season
+Rix.GG Cup,"Main Event: 
+						Lower Round 3",3146,"Saturday, September 26th 10:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,116.0,,,86.0,10.0,13.0,9.0,Regular Season
+Valorant Champions 2022,"Playoffs: 
+						Upper Quarterfinals",130681,"Saturday, September 10th 10:50 AM PDT",Pearl,XSET,13.0,FNATIC,8.0,Boaster,FNC,astra,1.04,208.0,0.857,,155.0,12.0,14.0,11.0,Playoffs
+Valorant Champions 2022,"Playoffs: 
+						Upper Quarterfinals",130681,"Saturday, September 10th 10:50 AM PDT",Fracture,XSET,13.0,FNATIC,11.0,Boaster,FNC,brimstone,0.61,146.0,0.5,,89.0,10.0,20.0,12.0,Playoffs
+Valorant Contenders Cup,"Double Elimination Stage: 
+						Upper Semifinals",3396,"Saturday, October 3rd 8:25 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,217.0,,,118.0,20.0,12.0,7.0,Playoffs
+Valorant Contenders Cup,"Double Elimination Stage: 
+						Upper Quarterfinals",3394,"Saturday, October 3rd 7:20 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,170.0,,,107.0,10.0,8.0,8.0,Playoffs
+Valorant Contenders Cup,"Double Elimination Stage: 
+						Upper Round of 16",3390,"Saturday, October 3rd 6:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,breach,,127.0,,,95.0,10.0,20.0,15.0,Playoffs
+Superdome 2022: Egypt,"Playoffs: 
+						Grand Final",151565,"Saturday, October 22nd 9:35 AM PDT",Icebox,Acend,4.0,FNATIC,13.0,Boaster,FNC,viper,1.17,216.0,1.4,,137.0,14.0,10.0,5.0,Playoffs
+Superdome 2022: Egypt,"Playoffs: 
+						Grand Final",151565,"Saturday, October 22nd 9:35 AM PDT",Bind,Acend,8.0,FNATIC,13.0,Boaster,FNC,brimstone,1.17,212.0,1.231,,121.0,16.0,13.0,10.0,Playoffs
+Superdome 2022: Egypt,"Playoffs: 
+						Semifinals",151564,"Saturday, October 22nd 4:15 AM PDT",Breeze,FNATIC,13.0,Geekay Esports,7.0,Boaster,FNC,viper,0.77,133.0,0.538,,87.0,7.0,13.0,11.0,Playoffs
+Superdome 2022: Egypt,"Playoffs: 
+						Semifinals",151564,"Saturday, October 22nd 4:15 AM PDT",Icebox,FNATIC,13.0,Geekay Esports,4.0,Boaster,FNC,viper,0.99,163.0,1.0,,105.0,9.0,9.0,5.0,Playoffs
+Ludwig x Tarik Invitational 3,"Main Event: 
+						Lower Round 1",413230,"Saturday, October 12th 5:00 PM PDT",Bind,EU Johns Cuties,1.0,NA Boostio & Piggies,13.0,Boaster,EU.JC,fade,0.4,150.0,0.5,,101.0,7.0,14.0,0.0,Regular Season
+Ludwig x Tarik Invitational 3,"Main Event: 
+						Lower Round 1",413230,"Saturday, October 12th 5:00 PM PDT",Haven,EU Johns Cuties,5.0,NA Boostio & Piggies,13.0,Boaster,EU.JC,astra,0.4,103.0,0.333,,72.0,5.0,15.0,8.0,Regular Season
+Ludwig x Tarik Invitational 3,"Main Event: 
+						Upper Semifinals",413189,"Saturday, October 12th 11:30 AM PDT",Sunset,NA Phoenix1,13.0,EU Johns Cuties,7.0,Boaster,EU.JC,sova,0.63,131.0,0.533,,93.0,8.0,15.0,4.0,Playoffs
+Ludwig x Tarik Invitational 3,"Main Event: 
+						Upper Semifinals",413189,"Saturday, October 12th 11:30 AM PDT",Abyss,NA Phoenix1,13.0,EU Johns Cuties,9.0,Boaster,EU.JC,yoru,0.35,104.0,0.444,,64.0,8.0,18.0,3.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Semifinals",3799,"Saturday, October 10th 7:20 AM PDT",Bind,SUMN FC,13.0,unsigned,4.0,Boaster,SUMN,breach,,250.0,1.889,,141.0,17.0,9.0,6.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Semifinals",3799,"Saturday, October 10th 7:20 AM PDT",Haven,SUMN FC,13.0,unsigned,7.0,Boaster,SUMN,breach,,202.0,1.231,,116.0,16.0,13.0,13.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Quarterfinals",3795,"Saturday, October 10th 4:00 AM PDT",Haven,SUMN FC,11.0,Finest,13.0,Boaster,SUMN,breach,,131.0,0.867,,119.0,13.0,15.0,11.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Quarterfinals",3795,"Saturday, October 10th 4:00 AM PDT",Split,SUMN FC,13.0,Finest,6.0,Boaster,SUMN,breach,,165.0,1.091,,95.0,12.0,11.0,6.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Quarterfinals",3795,"Saturday, October 10th 4:00 AM PDT",Bind,SUMN FC,13.0,Finest,11.0,Boaster,SUMN,breach,,157.0,0.632,,75.0,12.0,19.0,6.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Final",3801,"Saturday, October 10th 12:00 PM PDT",Haven,SUMN FC,13.0,Oxygen Esports,8.0,Boaster,SUMN,breach,,278.0,1.615,,177.0,21.0,13.0,6.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Final",3801,"Saturday, October 10th 12:00 PM PDT",Split,SUMN FC,10.0,Oxygen Esports,13.0,Boaster,SUMN,breach,,148.0,0.688,,102.0,11.0,16.0,10.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Final",3801,"Saturday, October 10th 12:00 PM PDT",Bind,SUMN FC,13.0,Oxygen Esports,8.0,Boaster,SUMN,breach,,201.0,1.167,,143.0,14.0,12.0,9.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Semifinals",283100,"Saturday, November 4th 8:15 PM PDT",Breeze,FNATIC,13.0,DRX,3.0,Boaster,FNC,viper,1.28,183.0,1.375,,118.0,11.0,8.0,4.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Semifinals",283100,"Saturday, November 4th 8:15 PM PDT",Ascent,FNATIC,13.0,DRX,4.0,Boaster,FNC,omen,0.72,140.0,0.909,,77.0,10.0,11.0,5.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Grand Final",283101,"Saturday, November 4th 11:25 PM PDT",Bind,Cloud9,7.0,FNATIC,13.0,Boaster,FNC,brimstone,0.62,81.0,0.545,,60.0,6.0,11.0,4.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Grand Final",283101,"Saturday, November 4th 11:25 PM PDT",Breeze,Cloud9,13.0,FNATIC,9.0,Boaster,FNC,viper,0.42,75.0,0.312,,46.0,5.0,16.0,7.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Grand Final",283101,"Saturday, November 4th 11:25 PM PDT",Ascent,Cloud9,13.0,FNATIC,9.0,Boaster,FNC,omen,0.54,108.0,0.389,,72.0,7.0,18.0,11.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Grand Final",283101,"Saturday, November 4th 11:25 PM PDT",Lotus,Cloud9,8.0,FNATIC,13.0,Boaster,FNC,astra,0.93,138.0,0.846,,89.0,11.0,13.0,10.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Grand Final",283101,"Saturday, November 4th 11:25 PM PDT",Haven,Cloud9,5.0,FNATIC,13.0,Boaster,FNC,astra,1.01,143.0,1.25,,91.0,10.0,8.0,11.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Final",19088,"Saturday, May 29th 12:30 PM PDT",Bind,NUTURN,8.0,FNATIC,13.0,Boaster,FNC,brimstone,0.9,137.0,1.077,,55.0,14.0,13.0,0.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Final",19088,"Saturday, May 29th 12:30 PM PDT",Ascent,NUTURN,13.0,FNATIC,8.0,Boaster,FNC,skye,0.48,101.0,0.471,,76.0,8.0,17.0,2.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Final",19088,"Saturday, May 29th 12:30 PM PDT",Haven,NUTURN,8.0,FNATIC,13.0,Boaster,FNC,astra,1.2,228.0,1.636,,120.0,18.0,11.0,3.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Round 4",19087,"Saturday, May 29th 10:00 AM PDT",Bind,FNATIC,13.0,Team Liquid,10.0,Boaster,FNC,brimstone,1.06,223.0,1.267,,123.0,19.0,15.0,2.0,Regular Season
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Round 4",19087,"Saturday, May 29th 10:00 AM PDT",Ascent,FNATIC,13.0,Team Liquid,10.0,Boaster,FNC,skye,1.12,222.0,1.133,,111.0,17.0,15.0,13.0,Regular Season
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Semifinals",16835,"Saturday, May 1st 9:40 AM PDT",Icebox,FNATIC,13.0,Gambit Esports,6.0,Boaster,FNC,sova,1.14,172.0,1.2,,118.0,12.0,10.0,7.0,Playoffs
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Semifinals",16835,"Saturday, May 1st 9:40 AM PDT",Bind,FNATIC,13.0,Gambit Esports,11.0,Boaster,FNC,brimstone,1.08,228.0,1.125,,133.0,18.0,16.0,4.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Lower Final",341823,"Saturday, May 11th 8:00 AM PDT",Icebox,FNATIC,11.0,FUT Esports,13.0,Boaster,FNC,viper,0.63,143.0,0.588,,103.0,10.0,17.0,6.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Lower Final",341823,"Saturday, May 11th 8:00 AM PDT",Bind,FNATIC,13.0,FUT Esports,6.0,Boaster,FNC,brimstone,1.4,241.0,2.0,,155.0,18.0,9.0,5.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Lower Final",341823,"Saturday, May 11th 8:00 AM PDT",Breeze,FNATIC,13.0,FUT Esports,11.0,Boaster,FNC,viper,1.0,189.0,0.875,,142.0,14.0,16.0,12.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Lower Final",341823,"Saturday, May 11th 8:00 AM PDT",Split,FNATIC,14.0,FUT Esports,12.0,Boaster,FNC,omen,0.94,163.0,0.938,,104.0,15.0,16.0,10.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Upper Semifinals",482508,"Saturday, May 10th 10:25 AM PDT",Split,Team Liquid,10.0,FNATIC,13.0,Boaster,FNC,astra,0.77,147.0,0.857,,82.0,12.0,14.0,6.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Upper Semifinals",482508,"Saturday, May 10th 10:25 AM PDT",Icebox,Team Liquid,13.0,FNATIC,11.0,Boaster,FNC,viper,0.88,174.0,0.75,,122.0,12.0,16.0,10.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Upper Semifinals",482508,"Saturday, May 10th 10:25 AM PDT",Fracture,Team Liquid,12.0,FNATIC,14.0,Boaster,FNC,brimstone,0.74,122.0,0.556,,85.0,10.0,18.0,10.0,Playoffs
+Champions Tour 2023: LOCK//IN São Paulo,"Playoffs: 
+						Grand Final",167393,"Saturday, March 4th 10:30 AM PST",Ascent,LOUD,8.0,FNATIC,13.0,Boaster,FNC,omen,1.18,198.0,1.077,,123.0,14.0,13.0,11.0,Playoffs
+Champions Tour 2023: LOCK//IN São Paulo,"Playoffs: 
+						Grand Final",167393,"Saturday, March 4th 10:30 AM PST",Fracture,LOUD,7.0,FNATIC,13.0,Boaster,FNC,brimstone,0.97,191.0,1.154,,110.0,15.0,13.0,7.0,Playoffs
+Champions Tour 2023: LOCK//IN São Paulo,"Playoffs: 
+						Grand Final",167393,"Saturday, March 4th 10:30 AM PST",Split,LOUD,13.0,FNATIC,9.0,Boaster,FNC,omen,0.79,158.0,0.688,,93.0,11.0,16.0,10.0,Playoffs
+Champions Tour 2023: LOCK//IN São Paulo,"Playoffs: 
+						Grand Final",167393,"Saturday, March 4th 10:30 AM PST",Lotus,LOUD,13.0,FNATIC,8.0,Boaster,FNC,astra,1.29,235.0,1.357,,131.0,19.0,14.0,5.0,Playoffs
+Champions Tour 2023: LOCK//IN São Paulo,"Playoffs: 
+						Grand Final",167393,"Saturday, March 4th 10:30 AM PST",Icebox,LOUD,12.0,FNATIC,14.0,Boaster,FNC,viper,0.99,180.0,0.889,,125.0,16.0,18.0,8.0,Playoffs
+Champions Tour Stage 1: EMEA Challengers,"Playoffs: 
+						Lower Final",79082,"Saturday, March 26th 8:00 AM PDT",Breeze,FNATIC,9.0,G2 Esports,13.0,Boaster,FNC,skye,1.07,225.0,1.214,,138.0,17.0,14.0,2.0,Playoffs
+Champions Tour Stage 1: EMEA Challengers,"Playoffs: 
+						Lower Final",79082,"Saturday, March 26th 8:00 AM PDT",Icebox,FNATIC,2.0,G2 Esports,13.0,Boaster,FNC,sage,0.29,134.0,0.333,,92.0,5.0,15.0,4.0,Playoffs
+Champions Tour Stage 1: EMEA Challengers,"Playoffs: 
+						Lower Final",79082,"Saturday, March 26th 8:00 AM PDT",Ascent,FNATIC,10.0,G2 Esports,13.0,Boaster,FNC,kayo,0.52,135.0,0.474,,88.0,9.0,19.0,8.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Grand Final",220448,"Saturday, June 24th 9:30 PM PDT",Lotus,FNATIC,13.0,Evil Geniuses,8.0,Boaster,FNC,astra,1.11,183.0,1.083,,106.0,13.0,12.0,6.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Grand Final",220448,"Saturday, June 24th 9:30 PM PDT",Split,FNATIC,13.0,Evil Geniuses,11.0,Boaster,FNC,omen,0.88,137.0,0.733,,75.0,11.0,15.0,13.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Grand Final",220448,"Saturday, June 24th 9:30 PM PDT",Bind,FNATIC,14.0,Evil Geniuses,12.0,Boaster,FNC,brimstone,0.85,140.0,0.625,,86.0,10.0,16.0,16.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Final",498634,"Saturday, June 21st 9:00 AM PDT",Split,Wolves Esports,9.0,FNATIC,13.0,Boaster,FNC,astra,0.75,139.0,0.769,,92.0,10.0,13.0,6.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Final",498634,"Saturday, June 21st 9:00 AM PDT",Icebox,Wolves Esports,4.0,FNATIC,13.0,Boaster,FNC,viper,1.34,254.0,1.778,,154.0,16.0,9.0,5.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Final",498634,"Saturday, June 21st 9:00 AM PDT",Lotus,Wolves Esports,13.0,FNATIC,10.0,Boaster,FNC,omen,0.78,101.0,0.538,,76.0,7.0,13.0,5.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Final",498634,"Saturday, June 21st 9:00 AM PDT",Ascent,Wolves Esports,5.0,FNATIC,13.0,Boaster,FNC,omen,1.43,232.0,2.286,,152.0,16.0,7.0,5.0,Playoffs
+Champions Tour 2024: Masters Shanghai,"Playoffs: 
+						Lower Round 1",348468,"Saturday, June 1st 1:00 AM PDT",Split,FUT Esports,5.0,FNATIC,13.0,Boaster,FNC,omen,,135.0,0.727,,88.0,8.0,11.0,9.0,Playoffs
+Champions Tour 2024: Masters Shanghai,"Playoffs: 
+						Lower Round 1",348468,"Saturday, June 1st 1:00 AM PDT",Lotus,FUT Esports,13.0,FNATIC,8.0,Boaster,FNC,omen,,192.0,0.933,,130.0,14.0,15.0,7.0,Playoffs
+Champions Tour 2024: Masters Shanghai,"Playoffs: 
+						Lower Round 1",348468,"Saturday, June 1st 1:00 AM PDT",Ascent,FUT Esports,13.0,FNATIC,3.0,Boaster,FNC,omen,,61.0,0.133,,47.0,2.0,15.0,4.0,Playoffs
+Champions Tour EMEA Stage 2: Challengers,"Playoffs: 
+						Upper Semifinals",107026,"Saturday, June 18th 9:10 AM PDT",Icebox,FNATIC,13.0,FunPlus Phoenix,6.0,Boaster,FNC,viper,1.12,177.0,1.375,,119.0,11.0,8.0,10.0,Playoffs
+Champions Tour EMEA Stage 2: Challengers,"Playoffs: 
+						Upper Semifinals",107026,"Saturday, June 18th 9:10 AM PDT",Ascent,FNATIC,12.0,FunPlus Phoenix,14.0,Boaster,FNC,omen,0.9,198.0,0.842,,131.0,16.0,19.0,12.0,Playoffs
+Champions Tour EMEA Stage 2: Challengers,"Playoffs: 
+						Upper Semifinals",107026,"Saturday, June 18th 9:10 AM PDT",Fracture,FNATIC,13.0,FunPlus Phoenix,9.0,Boaster,FNC,astra,0.77,184.0,0.65,,114.0,13.0,20.0,6.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Upper Quarterfinals",498624,"Saturday, June 14th 11:30 AM PDT",Haven,FNATIC,11.0,Gen.G,13.0,Boaster,FNC,omen,0.75,120.0,0.562,,79.0,9.0,16.0,8.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Upper Quarterfinals",498624,"Saturday, June 14th 11:30 AM PDT",Split,FNATIC,14.0,Gen.G,12.0,Boaster,FNC,astra,0.8,133.0,0.824,,91.0,14.0,17.0,7.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Upper Quarterfinals",498624,"Saturday, June 14th 11:30 AM PDT",Sunset,FNATIC,6.0,Gen.G,13.0,Boaster,FNC,omen,0.6,85.0,0.333,,66.0,4.0,12.0,5.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Final",28919,"Saturday, July 31st 6:00 AM PDT",Haven,Team Liquid,15.0,FNATIC,13.0,Boaster,FNC,sova,0.67,135.0,0.571,,95.0,12.0,21.0,9.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Final",28919,"Saturday, July 31st 6:00 AM PDT",Ascent,Team Liquid,7.0,FNATIC,13.0,Boaster,FNC,sova,0.84,132.0,0.9,,74.0,9.0,10.0,6.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Final",28919,"Saturday, July 31st 6:00 AM PDT",Breeze,Team Liquid,13.0,FNATIC,10.0,Boaster,FNC,astra,0.86,159.0,0.867,,93.0,13.0,15.0,6.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Final",28919,"Saturday, July 31st 6:00 AM PDT",Split,Team Liquid,11.0,FNATIC,13.0,Boaster,FNC,astra,0.88,142.0,0.857,,92.0,12.0,14.0,5.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Final",28919,"Saturday, July 31st 6:00 AM PDT",Bind,Team Liquid,13.0,FNATIC,10.0,Boaster,FNC,astra,0.85,205.0,0.842,,119.0,16.0,19.0,9.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Grand Final",371283,"Saturday, July 20th 9:00 AM PDT",Haven,FNATIC,13.0,Team Vitality,8.0,Boaster,FNC,omen,1.16,163.0,1.4,,118.0,14.0,10.0,9.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Grand Final",371283,"Saturday, July 20th 9:00 AM PDT",Ascent,FNATIC,9.0,Team Vitality,13.0,Boaster,FNC,astra,0.69,120.0,0.667,,77.0,10.0,15.0,6.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Grand Final",371283,"Saturday, July 20th 9:00 AM PDT",Lotus,FNATIC,13.0,Team Vitality,9.0,Boaster,FNC,omen,0.95,154.0,0.786,,89.0,11.0,14.0,16.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Grand Final",371283,"Saturday, July 20th 9:00 AM PDT",Bind,FNATIC,13.0,Team Vitality,3.0,Boaster,FNC,viper,1.54,320.0,2.25,,199.0,18.0,8.0,8.0,Playoffs
+Red Bull Home Ground,"Main Event: 
+						Semifinals",9311,"Saturday, January 30th 8:15 AM PST",Bind,Team Liquid,5.0,SUMN FC,13.0,Boaster,SUMN,brimstone,,253.0,1.167,,170.0,14.0,12.0,15.0,Playoffs
+Red Bull Home Ground,"Main Event: 
+						Semifinals",9311,"Saturday, January 30th 8:15 AM PST",Icebox,Team Liquid,13.0,SUMN FC,7.0,Boaster,SUMN,sova,,187.0,0.647,,138.0,11.0,17.0,5.0,Playoffs
+Red Bull Home Ground,"Main Event: 
+						Semifinals",9311,"Saturday, January 30th 8:15 AM PST",Haven,Team Liquid,12.0,SUMN FC,14.0,Boaster,SUMN,breach,,208.0,1.176,,113.0,20.0,17.0,12.0,Playoffs
+Red Bull Home Ground,"Main Event: 
+						Semifinals",9311,"Saturday, January 30th 8:15 AM PST",Split,Team Liquid,13.0,SUMN FC,8.0,Boaster,SUMN,breach,,115.0,0.4,,79.0,8.0,20.0,8.0,Playoffs
+Red Bull Home Ground,"Main Event: 
+						Semifinals",9311,"Saturday, January 30th 8:15 AM PST",Ascent,Team Liquid,13.0,SUMN FC,6.0,Boaster,SUMN,breach,,89.0,0.357,,64.0,5.0,14.0,1.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Semifinals",7100,"Saturday, December 5th 11:30 AM PST",Split,SUMN FC,4.0,FunPlus Phoenix,13.0,Boaster,SUMN,breach,,92.0,0.231,,64.0,3.0,13.0,11.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Semifinals",7100,"Saturday, December 5th 11:30 AM PST",Haven,SUMN FC,13.0,FunPlus Phoenix,8.0,Boaster,SUMN,breach,,163.0,0.923,,94.0,12.0,13.0,13.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Semifinals",7100,"Saturday, December 5th 11:30 AM PST",Bind,SUMN FC,13.0,FunPlus Phoenix,6.0,Boaster,SUMN,omen,,168.0,1.0,,95.0,12.0,12.0,6.0,Playoffs
+Riot Games ONE 2024,"Pro Invitational: 
+						Day 1",423494,"Saturday, December 14th 4:00 AM PST",Unknown,Unknown,,Unknown,,Boaster,FNC,astra,1.48,187.0,,,130.0,11.0,4.0,7.0,Regular Season
+LAVA Series,"#6: 
+						Round of 16",2189,"Saturday, August 29th 12:00 PM PDT",Unknown,Unknown,,Unknown,,Boaster,SUMN,jett,,194.0,,,124.0,15.0,15.0,5.0,Playoffs
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Opening (A)",16825,"Saturday, April 24th 8:00 AM PDT",Haven,FNATIC,13.0,Oxygen Esports,7.0,Boaster,FNC,astra,1.14,195.0,1.455,,110.0,16.0,11.0,5.0,Regular Season
+Champions Tour Stage 2: EMEA Challengers Playoffs,"Main Event: 
+						Opening (A)",16825,"Saturday, April 24th 8:00 AM PDT",Icebox,FNATIC,13.0,Oxygen Esports,7.0,Boaster,FNC,sova,0.92,176.0,0.692,,121.0,9.0,13.0,11.0,Regular Season
+Champions Tour Europe Stage 2: Challengers 2,"Main Event: 
+						Semifinals",16481,"Saturday, April 17th 8:00 AM PDT",Haven,Team Vitality,9.0,FNATIC,13.0,Boaster,FNC,astra,1.34,240.0,1.571,,137.0,22.0,14.0,8.0,Playoffs
+Champions Tour Europe Stage 2: Challengers 2,"Main Event: 
+						Semifinals",16481,"Saturday, April 17th 8:00 AM PDT",Icebox,Team Vitality,10.0,FNATIC,13.0,Boaster,FNC,sova,0.9,189.0,0.875,,121.0,14.0,16.0,10.0,Playoffs
+LVP Rising Series #3,"Playoffs: 
+						Semifinals",35264,"Monday, September 6th 9:45 AM PDT",Icebox,TENSTAR,9.0,FNATIC,13.0,Boaster,FNC,sova,1.28,268.0,1.462,,158.0,19.0,13.0,7.0,Playoffs
+LVP Rising Series #3,"Playoffs: 
+						Semifinals",35264,"Monday, September 6th 9:45 AM PDT",Split,TENSTAR,13.0,FNATIC,8.0,Boaster,FNC,viper,0.74,169.0,0.706,,120.0,12.0,17.0,2.0,Playoffs
+LVP Rising Series #3,"Playoffs: 
+						Semifinals",35264,"Monday, September 6th 9:45 AM PDT",Haven,TENSTAR,13.0,FNATIC,11.0,Boaster,FNC,sova,0.79,134.0,0.6,,107.0,9.0,15.0,10.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Upper Round 1",19071,"Monday, May 24th 8:00 AM PDT",Haven,FNATIC,13.0,KRÜ Esports,5.0,Boaster,FNC,astra,0.81,170.0,0.917,,111.0,11.0,12.0,2.0,Regular Season
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Upper Round 1",19071,"Monday, May 24th 8:00 AM PDT",Icebox,FNATIC,13.0,KRÜ Esports,4.0,Boaster,FNC,sova,1.12,206.0,1.2,,127.0,12.0,10.0,7.0,Regular Season
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Lower Round 2",112331,"Monday, July 18th 8:00 AM PDT",Fracture,FNATIC,14.0,LEVIATÁN,12.0,Boaster,FNC,brimstone,0.96,163.0,0.882,,94.0,15.0,17.0,14.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Lower Round 2",112331,"Monday, July 18th 8:00 AM PDT",Ascent,FNATIC,10.0,LEVIATÁN,13.0,Boaster,FNC,omen,0.52,158.0,0.4,,117.0,8.0,20.0,11.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Lower Round 2",112331,"Monday, July 18th 8:00 AM PDT",Bind,FNATIC,17.0,LEVIATÁN,15.0,Boaster,FNC,astra,1.44,296.0,1.55,,194.0,31.0,20.0,16.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Knockout Round",371279,"Monday, July 15th 11:50 AM PDT",Icebox,FNATIC,7.0,Karmine Corp,13.0,Boaster,FNC,viper,0.93,192.0,0.929,,137.0,13.0,14.0,5.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Knockout Round",371279,"Monday, July 15th 11:50 AM PDT",Sunset,FNATIC,15.0,Karmine Corp,13.0,Boaster,FNC,astra,0.73,160.0,0.667,,111.0,14.0,21.0,9.0,Playoffs
+Champions Tour 2024: EMEA Stage 2,"Playoffs: 
+						Knockout Round",371279,"Monday, July 15th 11:50 AM PDT",Lotus,FNATIC,13.0,Karmine Corp,6.0,Boaster,FNC,omen,1.08,189.0,1.154,,124.0,15.0,13.0,10.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Round of 16",3772,"Friday, October 9th 1:00 PM PDT",Bind,SUMN FC,13.0,Lucent Esports,4.0,Boaster,SUMN,breach,,207.0,1.091,,103.0,12.0,11.0,8.0,Playoffs
+epic31 Online,"Playoffs: 
+						Upper Round of 16",3772,"Friday, October 9th 1:00 PM PDT",Split,SUMN FC,13.0,Lucent Esports,3.0,Boaster,SUMN,breach,,146.0,1.5,,94.0,9.0,6.0,14.0,Playoffs
+BLAST Spike Nations #2,"Main Event: 
+						Quarterfinals",43851,"Friday, October 8th 12:15 PM PDT",Unknown,Unknown,,Unknown,,Boaster,UK,astra,1.12,300.0,,,189.0,21.0,17.0,4.0,Playoffs
+Red Bull Home Ground #2,"Playoffs: 
+						Quarterfinals",49276,"Friday, November 5th 6:30 AM PDT",Split,Team Liquid,13.0,FNATIC,6.0,Boaster,FNC,breach,0.29,107.0,0.312,,76.0,5.0,16.0,4.0,Playoffs
+Red Bull Home Ground #2,"Playoffs: 
+						Quarterfinals",49276,"Friday, November 5th 6:30 AM PDT",Icebox,Team Liquid,13.0,FNATIC,8.0,Boaster,FNC,sova,0.64,147.0,0.5,,109.0,8.0,16.0,11.0,Playoffs
+Red Bull Home Ground #4,"Main Event: 
+						Round 2",283093,"Friday, November 3rd 2:35 AM PDT",Unknown,Unknown,,Unknown,,Boaster,FNC,astra,1.22,259.0,,,144.0,17.0,12.0,8.0,Regular Season
+Red Bull Home Ground #5,"Main Event: 
+						Round 3",424022,"Friday, November 22nd 6:20 AM PST",Haven,FNATIC,9.0,G2 Esports,13.0,Boaster,FNC,omen,0.89,165.0,0.765,,122.0,13.0,17.0,13.0,Regular Season
+Red Bull Home Ground #5,"Main Event: 
+						Round 3",424022,"Friday, November 22nd 6:20 AM PST",Bind,FNATIC,2.0,G2 Esports,13.0,Boaster,FNC,astra,0.16,75.0,0.2,,59.0,3.0,15.0,2.0,Regular Season
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Round 3",19085,"Friday, May 28th 8:00 AM PDT",Icebox,Version1,12.0,FNATIC,14.0,Boaster,FNC,sova,0.85,178.0,0.882,,120.0,15.0,17.0,10.0,Regular Season
+Valorant Champions Tour Stage 2: Masters Reykjavík,"Main Event: 
+						Lower Round 3",19085,"Friday, May 28th 8:00 AM PDT",Ascent,Version1,6.0,FNATIC,13.0,Boaster,FNC,skye,1.13,222.0,1.5,,158.0,15.0,10.0,8.0,Regular Season
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Upper Final",213197,"Friday, May 26th 8:00 AM PDT",Lotus,FNATIC,14.0,Team Liquid,12.0,Boaster,FNC,astra,0.96,171.0,0.941,,99.0,16.0,17.0,7.0,Playoffs
+Champions Tour 2023: EMEA League,"Playoffs: 
+						Upper Final",213197,"Friday, May 26th 8:00 AM PDT",Bind,FNATIC,13.0,Team Liquid,6.0,Boaster,FNC,brimstone,1.09,154.0,1.2,,97.0,12.0,10.0,7.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Upper Final",482515,"Friday, May 16th 8:00 AM PDT",Fracture,Team Heretics,6.0,FNATIC,13.0,Boaster,FNC,brimstone,1.06,219.0,1.154,,146.0,15.0,13.0,8.0,Playoffs
+VCT 2025: EMEA Stage 1,"Playoffs: 
+						Upper Final",482515,"Friday, May 16th 8:00 AM PDT",Icebox,Team Heretics,8.0,FNATIC,13.0,Boaster,FNC,viper,1.17,199.0,1.364,,126.0,15.0,11.0,4.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Upper Final",341820,"Friday, May 10th 8:00 AM PDT",Lotus,FNATIC,13.0,Team Heretics,15.0,Boaster,FNC,omen,0.48,94.0,0.5,,53.0,9.0,18.0,9.0,Playoffs
+Champions Tour 2024: EMEA Stage 1,"Playoffs: 
+						Upper Final",341820,"Friday, May 10th 8:00 AM PDT",Breeze,FNATIC,4.0,Team Heretics,13.0,Boaster,FNC,viper,0.91,231.0,0.875,,132.0,14.0,16.0,5.0,Playoffs
+Champions Tour 2023: LOCK//IN São Paulo,"Playoffs: 
+						Semifinals",167392,"Friday, March 3rd 9:00 AM PST",Haven,Natus Vincere,11.0,FNATIC,13.0,Boaster,FNC,astra,0.88,195.0,0.824,,119.0,14.0,17.0,8.0,Playoffs
+Champions Tour 2023: LOCK//IN São Paulo,"Playoffs: 
+						Semifinals",167392,"Friday, March 3rd 9:00 AM PST",Lotus,Natus Vincere,4.0,FNATIC,13.0,Boaster,FNC,astra,1.31,229.0,1.667,,131.0,15.0,9.0,3.0,Playoffs
+Champions Tour 2023: LOCK//IN São Paulo,"Playoffs: 
+						Semifinals",167392,"Friday, March 3rd 9:00 AM PST",Fracture,Natus Vincere,11.0,FNATIC,13.0,Boaster,FNC,brimstone,1.01,179.0,0.938,,119.0,15.0,16.0,9.0,Playoffs
+Champions Tour Stage 1: EMEA Challengers,"Playoffs: 
+						Upper Final",79077,"Friday, March 25th 8:00 AM PDT",Split,FNATIC,0.0,FunPlus Phoenix,13.0,Boaster,FNC,kayo,0.67,163.0,0.385,,119.0,5.0,13.0,8.0,Playoffs
+Champions Tour Stage 1: EMEA Challengers,"Playoffs: 
+						Upper Final",79077,"Friday, March 25th 8:00 AM PDT",Haven,FNATIC,10.0,FunPlus Phoenix,13.0,Boaster,FNC,breach,1.04,213.0,1.0,,148.0,16.0,16.0,11.0,Playoffs
+Twitch Rivals: VALORANT Launch Showdown,"Europe 1: 
+						Group C",280,"Friday, June 5th 6:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,CYA,,,0.0,,,,0.0,0.0,0.0,Regular Season
+Twitch Rivals: VALORANT Launch Showdown,"Europe 1: 
+						Group C",279,"Friday, June 5th 5:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,CYA,,,0.0,,,,0.0,0.0,0.0,Regular Season
+Twitch Rivals: VALORANT Launch Showdown,"Europe 1: 
+						Group C",277,"Friday, June 5th 4:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,CYA,,,0.0,,,,0.0,0.0,0.0,Regular Season
+Champions Tour EMEA Stage 2: Challengers,"Playoffs: 
+						Upper Final",107529,"Friday, June 24th 7:05 AM PDT",Bind,Guild Esports,9.0,FNATIC,13.0,Boaster,FNC,astra,1.34,222.0,1.308,,138.0,17.0,13.0,10.0,Playoffs
+Champions Tour EMEA Stage 2: Challengers,"Playoffs: 
+						Upper Final",107529,"Friday, June 24th 7:05 AM PDT",Haven,Guild Esports,11.0,FNATIC,13.0,Boaster,FNC,omen,0.56,120.0,0.562,,66.0,9.0,16.0,10.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Round 3",498633,"Friday, June 20th 11:40 AM PDT",Lotus,G2 Esports,10.0,FNATIC,13.0,Boaster,FNC,omen,0.6,105.0,0.438,,76.0,7.0,16.0,10.0,Playoffs
+Valorant Masters Toronto 2025,"Playoffs: 
+						Lower Round 3",498633,"Friday, June 20th 11:40 AM PDT",Split,G2 Esports,10.0,FNATIC,13.0,Boaster,FNC,astra,1.43,241.0,1.5,,170.0,21.0,14.0,10.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Upper Quarterfinals",220442,"Friday, June 16th 8:00 PM PDT",Fracture,FNATIC,13.0,NRG,9.0,Boaster,FNC,brimstone,0.91,211.0,1.0,,115.0,15.0,15.0,9.0,Playoffs
+Champions Tour 2023: Masters Tokyo,"Playoffs: 
+						Upper Quarterfinals",220442,"Friday, June 16th 8:00 PM PDT",Bind,FNATIC,13.0,NRG,4.0,Boaster,FNC,brimstone,1.12,162.0,1.125,,104.0,9.0,8.0,10.0,Playoffs
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Round 3",28918,"Friday, July 30th 10:45 AM PDT",Icebox,FNATIC,13.0,TENSTAR,3.0,Boaster,FNC,sova,1.0,149.0,1.25,,98.0,10.0,8.0,3.0,Regular Season
+Champions Tour Europe Stage 3: Challengers 2,"Main Event: 
+						Lower Round 3",28918,"Friday, July 30th 10:45 AM PDT",Breeze,FNATIC,13.0,TENSTAR,9.0,Boaster,FNC,astra,0.96,198.0,1.071,,100.0,15.0,14.0,6.0,Regular Season
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 2",511554,"Friday, July 25th 11:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,FNC,,,,,,,,,,Regular Season
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 2",511554,"Friday, July 25th 11:00 AM PDT",TBD,KOI,0.0,FNATIC,0.0,Boaster,FNC,,,,,,,,,,Regular Season
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Lower Round 3",112332,"Friday, July 22nd 11:15 AM PDT",Split,FunPlus Phoenix,13.0,FNATIC,15.0,Boaster,FNC,omen,1.02,168.0,1.062,,105.0,17.0,16.0,6.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Lower Round 3",112332,"Friday, July 22nd 11:15 AM PDT",Bind,FunPlus Phoenix,13.0,FNATIC,7.0,Boaster,FNC,astra,0.57,149.0,0.588,,102.0,10.0,17.0,4.0,Playoffs
+Valorant Champions Tour Stage 2: Masters Copenhagen,"Playoffs: 
+						Lower Round 3",112332,"Friday, July 22nd 11:15 AM PDT",Fracture,FunPlus Phoenix,13.0,FNATIC,5.0,Boaster,FNC,brimstone,0.48,125.0,0.438,,73.0,7.0,16.0,5.0,Playoffs
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 1",511548,"Friday, July 18th 11:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,FNC,,,,,,,,,,Regular Season
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 1",511548,"Friday, July 18th 11:00 AM PDT",TBD,FNATIC,0.0,Karmine Corp,0.0,Boaster,FNC,,,,,,,,,,Regular Season
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Lower Round 3",429397,"Friday, January 31st 9:00 AM PST",Abyss,FUT Esports,13.0,FNATIC,10.0,Boaster,FNC,astra,0.83,151.0,0.688,,105.0,11.0,16.0,7.0,Regular Season
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Lower Round 3",429397,"Friday, January 31st 9:00 AM PST",Fracture,FUT Esports,13.0,FNATIC,6.0,Boaster,FNC,brimstone,0.52,118.0,0.5,,87.0,8.0,16.0,8.0,Regular Season
+Red Bull Home Ground,"Main Event: 
+						Quarterfinals",9108,"Friday, January 29th 6:30 AM PST",Ascent,SUMN FC,13.0,Monkey Business,6.0,Boaster,SUMN,breach,,224.0,1.25,,132.0,15.0,12.0,10.0,Playoffs
+Red Bull Home Ground,"Main Event: 
+						Quarterfinals",9108,"Friday, January 29th 6:30 AM PST",Haven,SUMN FC,13.0,Monkey Business,5.0,Boaster,SUMN,breach,,252.0,1.778,,157.0,16.0,9.0,14.0,Playoffs
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Upper Quarterfinals",429385,"Friday, January 17th 9:00 AM PST",Abyss,FNATIC,8.0,BBL Esports,13.0,Boaster,FNC,omen,1.07,228.0,1.133,,142.0,17.0,15.0,8.0,Playoffs
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Upper Quarterfinals",429385,"Friday, January 17th 9:00 AM PST",Fracture,FNATIC,13.0,BBL Esports,8.0,Boaster,FNC,brimstone,1.43,260.0,1.538,,158.0,20.0,13.0,15.0,Playoffs
+VCT 2025: EMEA Kickoff,"Main Event: 
+						Upper Quarterfinals",429385,"Friday, January 17th 9:00 AM PST",Split,FNATIC,10.0,BBL Esports,13.0,Boaster,FNC,omen,0.92,175.0,0.765,,125.0,13.0,17.0,9.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Quarterfinals",6871,"Friday, December 4th 8:00 AM PST",Bind,SUMN FC,13.0,Purple Cobras,4.0,Boaster,SUMN,breach,,211.0,1.0,,121.0,11.0,11.0,11.0,Playoffs
+First Strike: Europe,"Main Event: 
+						Quarterfinals",6871,"Friday, December 4th 8:00 AM PST",Haven,SUMN FC,13.0,Purple Cobras,8.0,Boaster,SUMN,breach,,138.0,0.727,,103.0,8.0,11.0,10.0,Playoffs
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 4",511573,"Friday, August 8th 11:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,FNC,,,,,,,,,,Regular Season
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 4",511573,"Friday, August 8th 11:00 AM PDT",TBD,Team Liquid,0.0,FNATIC,0.0,Boaster,FNC,,,,,,,,,,Regular Season
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 3",511566,"Friday, August 1st 8:00 AM PDT",Unknown,Unknown,,Unknown,,Boaster,FNC,,,,,,,,,,Regular Season
+VCT 2025: EMEA Stage 2,"Group Stage: 
+						Week 3",511566,"Friday, August 1st 8:00 AM PDT",TBD,Natus Vincere,0.0,FNATIC,0.0,Boaster,FNC,,,,,,,,,,Regular Season
+Valorant Champions 2023,"Playoffs: 
+						Lower Round 1",248278,"Friday, August 18th 12:00 PM PDT",Split,FNATIC,13.0,FUT Esports,5.0,Boaster,FNC,omen,0.92,147.0,0.818,,84.0,9.0,11.0,7.0,Playoffs
+Valorant Champions 2023,"Playoffs: 
+						Lower Round 1",248278,"Friday, August 18th 12:00 PM PDT",Haven,FNATIC,13.0,FUT Esports,9.0,Boaster,FNC,astra,0.83,144.0,0.846,,85.0,11.0,13.0,7.0,Playoffs
+Valorant Champions 2024,"Playoffs: 
+						Lower Round 1",378832,"Friday, August 16th 2:50 AM PDT",Haven,G2 Esports,3.0,FNATIC,13.0,Boaster,FNC,omen,0.36,58.0,0.3,,37.0,3.0,10.0,4.0,Playoffs
+Valorant Champions 2024,"Playoffs: 
+						Lower Round 1",378832,"Friday, August 16th 2:50 AM PDT",Bind,G2 Esports,11.0,FNATIC,13.0,Boaster,FNC,astra,0.66,106.0,0.692,,66.0,9.0,13.0,12.0,Playoffs

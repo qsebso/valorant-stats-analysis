@@ -1,0 +1,338 @@
+# Enhanced Valorant Tournament Classification Rules
+# ===============================================
+# This file contains the definitive rules for classifying Valorant tournament matches
+# as Playoffs, Regular Season, or Special Cases. Updated based on audit findings
+# to address false positives and false negatives.
+
+## CLASSIFICATION SYSTEM OVERVIEW
+================================
+
+The enhanced classification system uses a tiered approach to categorize tournament stages:
+
+1. **TIER 1**: Excluded matches (showmatches, exhibitions)
+2. **TIER 2**: Group stage detection (veto playoff keywords)
+3. **TIER 3**: Direct playoff keyword matching
+4. **TIER 4**: Direct regular season keyword matching
+5. **TIER 5**: Context-dependent analysis
+6. **TIER 6**: Default classification for ambiguous cases
+
+## PLAYOFF CLASSIFICATION RULES
+==============================
+
+### DEFINITE PLAYOFF KEYWORDS
+These keywords ALWAYS indicate playoff matches (unless vetoed by group context):
+
+```python
+PLAYOFF_KEYWORDS = [
+    # Finals and Championship matches
+    'grand final', 'grand finals', 'final', 'finals', 'championship',
+    
+    # Bracket stages (more specific to avoid false positives)
+    'upper bracket final', 'lower bracket final',
+    'upper bracket semifinal', 'lower bracket semifinal',
+    'upper bracket quarterfinal', 'lower bracket quarterfinal',
+    'upper bracket round', 'lower bracket round',
+    
+    # Elimination stages
+    'semifinal', 'semifinals', 'quarterfinal', 'quarterfinals',
+    'round of 16', 'round of 32', 'round of 8', 'round of 4',
+    'elimination', 'knockout',
+    
+    # Placement matches (NEW - fixes false negatives)
+    'consolation final', 'bronze final', '3rd place match', 'bronze match',
+    'third place match', 'gold medal match', 'silver medal match', 'bronze medal match',
+    'bronze', 'third place', '3rd place', 'medal match', 'place match',
+    'consolation', 'placement final', '5th place match', 'fourth place match'
+]
+```
+
+### CONTEXT-DEPENDENT PLAYOFF ANALYSIS
+For stages with "Main Event:" or "Tournament:" prefixes:
+
+```python
+PLAYOFF_AFTER_COLON_KEYWORDS = [
+    'grand final', 'semifinal', 'quarterfinal', 'upper bracket', 'lower bracket',
+    'final', 'finals', 'round of', 'elimination', 'knockout',
+    'bronze', 'third place', 'medal'
+]
+```
+
+## REGULAR SEASON CLASSIFICATION RULES
+=====================================
+
+### DEFINITE REGULAR SEASON KEYWORDS
+These keywords ALWAYS indicate regular season matches:
+
+```python
+REGULAR_SEASON_KEYWORDS = [
+    # Group stages
+    'group stage', 'group a', 'group b', 'group c', 'group d',
+    'group a -', 'group b -', 'group c -', 'group d -',
+    
+    # Swiss stages
+    'swiss stage', 'swiss round', 'swiss phase',
+    
+    # Qualifying matches
+    'opening matches', 'winners\' match', 'losers\' match',
+    'qualification', 'qualifying',
+    
+    # Round robin and league
+    'round robin', 'league stage', 'regular season',
+    
+    # Generic rounds (not elimination)
+    'round 1', 'round 2', 'round 3', 'round 4', 'round 5', 'round 6'
+]
+```
+
+### CONTEXT-DEPENDENT REGULAR SEASON ANALYSIS
+For stages with "Main Event:" or "Tournament:" prefixes:
+
+```python
+REGULAR_AFTER_COLON_KEYWORDS = [
+    'group', 'round 1', 'round 2', 'round 3', 'round 4',
+    'opening', 'winners', 'losers', 'swiss'
+]
+```
+
+## GROUP STAGE DETECTION RULES
+==============================
+
+### GROUP STAGE INDICATORS (VETO PLAYOFF KEYWORDS)
+These indicators override playoff keywords and force regular season classification:
+
+```python
+GROUP_STAGE_INDICATORS = [
+    # Group identifiers
+    'group a', 'group b', 'group c', 'group d', 'group e', 'group f',
+    'group stage', 'group phase',
+    
+    # Swiss format
+    'swiss', 'swiss stage', 'swiss phase',
+    
+    # League indicators
+    'league', 'regular season', 'season',
+    
+    # Qualifying phases
+    'qualification', 'qualifying', 'play-in', 'play ins',
+    
+    # Week/Day indicators
+    'week', 'day', 'matchday'
+]
+```
+
+## SPECIAL CASES CLASSIFICATION RULES
+====================================
+
+### PLAY-INS CLASSIFICATION
+Play-Ins are qualifying matches and should be classified as Regular Season:
+
+```python
+PLAY_INS_KEYWORDS = [
+    'play-ins', 'play ins', 'playin', 'play-in'
+]
+```
+
+### SHOWMATCHES AND EXHIBITION MATCHES
+These should be excluded from analysis entirely:
+
+```python
+EXCLUDED_KEYWORDS = [
+    'showmatch', 'show match', 'exhibition', 'all-star', 'all star',
+    'charity match', 'fun match', 'demonstration', 'showcase'
+]
+```
+
+### INTERNATIONAL COMPETITIONS
+Special handling for international events:
+
+```python
+INTERNATIONAL_EVENT_KEYWORDS = [
+    'olympics', 'olympic', 'asian games', 'sea games', 'commonwealth games',
+    'world cup', 'continental championship'
+]
+
+# For international events, medal matches are playoffs, group stages are regular season
+INTERNATIONAL_PLAYOFF_KEYWORDS = [
+    'gold medal', 'silver medal', 'bronze medal', 'final', 'semifinal'
+]
+```
+
+## HIERARCHICAL STAGE ANALYSIS RULES
+====================================
+
+### STAGE PREFIX ANALYSIS
+Trust tournament stage labeling hierarchy:
+
+```python
+# Definite playoff prefixes
+PLAYOFF_PREFIXES = [
+    'playoffs:', 'playoff:', 'knockout:', 'elimination:'
+]
+
+# Definite regular season prefixes
+REGULAR_PREFIXES = [
+    'group stage:', 'group:', 'swiss:', 'qualification:', 'play-in:'
+]
+
+# Context prefixes that need sub-analysis
+CONTEXT_PREFIXES = [
+    'main event:', 'tournament:', 'championship:'
+]
+```
+
+## IMPLEMENTATION RULES
+======================
+
+### 1. CLASSIFICATION FUNCTION SIGNATURE
+```python
+def classify_tournament_stage(bracket_stage: str, event_name: str = None) -> str:
+    """
+    Classify a tournament stage as 'Playoffs', 'Regular Season', or 'Excluded'.
+    
+    Args:
+        bracket_stage: The bracket stage string from the database
+        event_name: Optional event name for context-dependent classification
+    
+    Returns:
+        'Playoffs', 'Regular Season', or 'Excluded'
+    """
+```
+
+### 2. ENHANCED CLASSIFICATION LOGIC FLOW
+1. Check for excluded keywords first
+2. Check for group stage indicators (veto playoff keywords)
+3. Check for Play-Ins keywords (classify as Regular Season)
+4. Check for direct playoff keywords
+5. Check for direct regular season keywords
+6. Apply hierarchical stage analysis
+7. Apply context-dependent analysis for "Main Event:" and "Tournament:" prefixes
+8. Handle international competitions
+9. Default to Regular Season for ambiguous cases
+
+### 3. DATABASE QUERY EXCLUSIONS
+Always exclude these from analysis:
+```sql
+WHERE map_name != 'All Maps'
+AND bracket_stage NOT LIKE '%Showmatch%'
+AND bracket_stage NOT LIKE '%showmatch%'
+AND bracket_stage NOT LIKE '%Exhibition%'
+AND bracket_stage NOT LIKE '%exhibition%'
+AND bracket_stage NOT LIKE '%All-Star%'
+AND bracket_stage NOT LIKE '%all-star%'
+AND bracket_stage NOT LIKE '%Charity%'
+AND bracket_stage NOT LIKE '%charity%'
+AND bracket_stage NOT LIKE '%Fun Match%'
+AND bracket_stage NOT LIKE '%fun match%'
+AND bracket_stage NOT LIKE '%Showcase%'
+AND bracket_stage NOT LIKE '%showcase%'
+```
+
+## VALIDATION AND TESTING RULES
+==============================
+
+### 1. REQUIRED TEST CASES
+All classification functions must pass these test cases:
+
+```python
+TEST_CASES = {
+    # Playoff cases
+    'Main Event: Grand Final': 'Playoffs',
+    'Upper Bracket Final': 'Playoffs',
+    'Lower Bracket Semifinal': 'Playoffs',
+    'Round of 16': 'Playoffs',
+    'Consolation Final': 'Playoffs',
+    'Bronze Match': 'Playoffs',
+    '3rd Place Match': 'Playoffs',
+    'Gold Medal Match': 'Playoffs',
+    
+    # Regular season cases
+    'Group Stage: Group A': 'Regular Season',
+    'Swiss Stage: Round 1': 'Regular Season',
+    'Main Event: Group A': 'Regular Season',
+    'Play-Ins: Round 1': 'Regular Season',
+    'Group A: Lower Bracket Final': 'Regular Season',  # Group context vetoes playoff
+    'Swiss Phase: Lower Round 2': 'Regular Season',    # Swiss context vetoes playoff
+    
+    # Excluded cases
+    'Showmatch': 'Excluded',
+    'Exhibition Match': 'Excluded',
+    'All-Star Game': 'Excluded'
+}
+```
+
+### 2. VALIDATION CHECKS
+- Ensure playoff percentage is reasonable (typically 10-30% of total matches)
+- Flag unusual distributions for manual review
+- Log all ambiguous classifications for future refinement
+- Validate against known problematic cases from audit
+
+## MAINTENANCE AND UPDATES
+==========================
+
+### 1. NEW TOURNAMENT FORMATS
+When new tournament formats are encountered:
+1. Add new keywords to appropriate lists
+2. Update test cases
+3. Document the reasoning in this file
+4. Validate against existing data
+
+### 2. EDGE CASES FROM AUDIT
+Documented edge cases to handle:
+- "Group A: Lower Bracket Final" → Regular Season (group context)
+- "Playoffs: Bronze Medal Match" → Playoffs (playoff prefix + medal)
+- "Lower Swiss Phase: Round 3" → Regular Season (Swiss context)
+- "3th Place" (typo) → Playoffs (place match pattern)
+
+### 3. REGULAR REVIEW
+- Monthly review of classification accuracy
+- Quarterly validation against known tournament structures
+- Annual comprehensive audit of classification rules
+- Monitor for new tournament formats and naming conventions
+
+## USAGE IN ANALYSIS SCRIPTS
+============================
+
+### 1. IMPORT STATEMENT
+```python
+from queries.classification import classify_tournament_stage
+```
+
+### 2. APPLICATION
+```python
+df['game_type'] = df['bracket_stage'].apply(
+    lambda x: classify_tournament_stage(x, df['event_name'])
+)
+```
+
+### 3. VALIDATION
+```python
+# Check distribution
+playoff_pct = len(df[df['game_type'] == 'Playoffs']) / len(df) * 100
+if playoff_pct > 50:
+    print(f"WARNING: High playoff percentage ({playoff_pct:.1f}%) - review classification")
+```
+
+## VERSION HISTORY
+==================
+
+- v1.0: Initial classification system based on keyword matching
+- v1.1: Added tiered approach with context-dependent analysis
+- v1.2: Added special cases handling (Play-Ins, Showmatches)
+- v1.3: Added international competition handling
+- v2.0: Centralized rules file with comprehensive documentation
+- v2.1: Enhanced system based on audit findings
+  - Added placement match keywords (bronze, medal, etc.)
+  - Added group stage detection with veto logic
+  - Added hierarchical stage analysis
+  - Fixed false positives and false negatives
+
+## CONTACT AND MAINTENANCE
+==========================
+
+This file should be updated whenever:
+- New tournament formats are encountered
+- Classification errors are discovered
+- Tournament structures change significantly
+- Audit findings reveal new edge cases
+
+For questions or updates, refer to the project documentation and maintain consistency across all analysis scripts. 

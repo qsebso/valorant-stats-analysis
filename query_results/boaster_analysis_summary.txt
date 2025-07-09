@@ -1,0 +1,17 @@
+BOASTER PERFORMANCE ANALYSIS SUMMARY
+==================================================
+
+Total Games: 321
+Playoff Games: 261
+Regular Season Games: 60
+Excluded Games: 0
+
+CLASSIFICATION VALIDATION:
+Playoff Percentage: 81.3%
+Regular Season Percentage: 18.7%
+Excluded Percentage: 0.0%
+
+WARNINGS:
+- WARNING: High playoff percentage (81.3%) - review classification
+- WARNING: Low regular season percentage (18.7%) - review classification
+

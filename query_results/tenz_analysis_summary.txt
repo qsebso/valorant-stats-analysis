@@ -1,0 +1,17 @@
+TENZ PERFORMANCE ANALYSIS SUMMARY
+==================================================
+
+Total Games: 355
+Playoff Games: 275
+Regular Season Games: 80
+Excluded Games: 0
+
+CLASSIFICATION VALIDATION:
+Playoff Percentage: 77.5%
+Regular Season Percentage: 22.5%
+Excluded Percentage: 0.0%
+
+WARNINGS:
+- WARNING: High playoff percentage (77.5%) - review classification
+- WARNING: Low regular season percentage (22.5%) - review classification
+
