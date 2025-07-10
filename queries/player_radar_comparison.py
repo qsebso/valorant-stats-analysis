@@ -16,9 +16,8 @@ from classification import (
     get_database_exclusion_filters
 )
 
-# Database paths
-ORIGINAL_DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "map_stats.db")
-CLEAN_DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "valorant_stats_clean.db")
+# Path to the cleaned SQLite database
+DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "valorant_stats_clean.db")
 
 # Output directory
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "query_results")
@@ -51,7 +50,7 @@ STATS_LABELS = [
     'First Deaths'
 ]
 
-def get_player_games(player_names: List[str], event_names: Optional[List[str]] = None, db_path: str = ORIGINAL_DB_PATH) -> pd.DataFrame:
+def get_player_games(player_names: List[str], event_names: Optional[List[str]] = None, db_path: str = DB_PATH) -> pd.DataFrame:
     """
     Get games for the specified players from the database.
     
@@ -67,11 +66,7 @@ def get_player_games(player_names: List[str], event_names: Optional[List[str]] =
     conn = sqlite3.connect(db_path)
     
     # For clean database, we don't need exclusion filters since data is already cleaned
-    if db_path == CLEAN_DB_PATH:
-        exclusion_filters = ""
-    else:
-        # Use the centralized exclusion filters for original database
-        exclusion_filters = get_database_exclusion_filters()
+    exclusion_filters = ""
     
     # Create the WHERE clause for multiple players
     player_conditions = " OR ".join([f"player_name LIKE '%{name}%'" for name in player_names])
@@ -368,7 +363,7 @@ def print_player_summary(player_stats: List[Dict]):
                 print(f"  First Kills: {stats['total_first_kills']:.1f}")
                 print(f"  First Deaths: {stats['total_first_deaths']:.1f}")
 
-def analyze_players(player_names: List[str], event_names: Optional[List[str]] = None, db_path: str = ORIGINAL_DB_PATH) -> List[Dict]:
+def analyze_players(player_names: List[str], event_names: Optional[List[str]] = None) -> List[Dict]:
     """
     Main function to analyze multiple players.
     
@@ -376,23 +371,19 @@ def analyze_players(player_names: List[str], event_names: Optional[List[str]] = 
         player_names: List of player names to analyze
         event_names: Optional list of specific event names to filter by.
                     If None, includes all events.
-        db_path: Path to the database to query
         
     Returns:
         List of player statistics dictionaries
     """
-    db_name = "Original" if db_path == ORIGINAL_DB_PATH else "Clean"
-    
-    if event_names:
-        print(f"Loading data for players: {', '.join(player_names)}")
+    print(f"Loading data for players: {', '.join(player_names)}")
+    if event_names is not None:
         print(f"Filtering by events: {', '.join(event_names)}")
-        print(f"Using {db_name} database")
     else:
-        print(f"Loading data for players: {', '.join(player_names)} (all events)")
-        print(f"Using {db_name} database")
+        print("Using all events.")
+    print(f"Using Clean database at {DB_PATH}")
     
     # Get player games
-    df = get_player_games(player_names, event_names, db_path)
+    df = get_player_games(player_names, event_names, DB_PATH)
     
     if df.empty:
         print("No games found for the specified players!")
@@ -418,136 +409,15 @@ def analyze_players(player_names: List[str], event_names: Optional[List[str]] = 
     
     return player_stats
 
-def compare_databases(player_names: List[str], event_names: Optional[List[str]] = None) -> Tuple[List[Dict], List[Dict]]:
+def create_radar_charts(player_names: List[str], event_names: Optional[List[str]] = None):
     """
-    Compare player performance between original and cleaned databases.
+    Create radar charts comparing regular season vs playoff performance for all players.
     
     Args:
         player_names: List of player names to analyze
         event_names: Optional list of specific event names to filter by.
                     If None, includes all events.
-        
-    Returns:
-        Tuple of (original_stats, clean_stats)
     """
-    print("=" * 80)
-    print("DATABASE COMPARISON ANALYSIS")
-    print("=" * 80)
-    
-    # Check if clean database exists
-    if not os.path.exists(CLEAN_DB_PATH):
-        print(f"Warning: Clean database not found at {CLEAN_DB_PATH}")
-        print("Please run the data cleaning script first.")
-        return [], []
-    
-    # Analyze with original database
-    print("\n1. ANALYZING WITH ORIGINAL DATABASE")
-    print("-" * 50)
-    original_stats = analyze_players(player_names, event_names, ORIGINAL_DB_PATH)
-    
-    # Analyze with clean database
-    print("\n2. ANALYZING WITH CLEAN DATABASE")
-    print("-" * 50)
-    clean_stats = analyze_players(player_names, event_names, CLEAN_DB_PATH)
-    
-    return original_stats, clean_stats
-
-def print_database_comparison(original_stats: List[Dict], clean_stats: List[Dict]):
-    """
-    Print a comparison between original and clean database results.
-    
-    Args:
-        original_stats: Player statistics from original database
-        clean_stats: Player statistics from clean database
-    """
-    print("\n" + "=" * 80)
-    print("DATABASE COMPARISON SUMMARY")
-    print("=" * 80)
-    
-    for i, player_name in enumerate([stat['player_name'] for stat in original_stats if stat]):
-        print(f"\n{player_name.upper()}")
-        print("-" * 40)
-        
-        orig_stat = original_stats[i] if i < len(original_stats) else None
-        clean_stat = clean_stats[i] if i < len(clean_stats) else None
-        
-        if orig_stat and clean_stat:
-            print("ORIGINAL DATABASE:")
-            print(f"  Total Games: {orig_stat['total_games']}")
-            print(f"  Regular Season: {orig_stat['regular_season']['games_count']} games")
-            print(f"  Playoffs: {orig_stat['playoffs']['games_count']} games")
-            
-            print("\nCLEAN DATABASE:")
-            print(f"  Total Games: {clean_stat['total_games']}")
-            print(f"  Regular Season: {clean_stat['regular_season']['games_count']} games")
-            print(f"  Playoffs: {clean_stat['playoffs']['games_count']} games")
-            
-            # Calculate differences
-            total_diff = clean_stat['total_games'] - orig_stat['total_games']
-            reg_diff = clean_stat['regular_season']['games_count'] - orig_stat['regular_season']['games_count']
-            play_diff = clean_stat['playoffs']['games_count'] - orig_stat['playoffs']['games_count']
-            
-            print(f"\nDIFFERENCES (Clean - Original):")
-            print(f"  Total Games: {total_diff:+d}")
-            print(f"  Regular Season: {reg_diff:+d}")
-            print(f"  Playoffs: {play_diff:+d}")
-            
-            # Show stat differences for regular season
-            if orig_stat['regular_season']['games_count'] > 0 and clean_stat['regular_season']['games_count'] > 0:
-                print(f"\nREGULAR SEASON STAT DIFFERENCES:")
-                orig_reg = orig_stat['regular_season']['stats']
-                clean_reg = clean_stat['regular_season']['stats']
-                for stat in STATS_COLUMNS:
-                    if stat in orig_reg and stat in clean_reg:
-                        diff = clean_reg[stat] - orig_reg[stat]
-                        print(f"  {stat}: {diff:+.3f}")
-            
-            # Show stat differences for playoffs
-            if orig_stat['playoffs']['games_count'] > 0 and clean_stat['playoffs']['games_count'] > 0:
-                print(f"\nPLAYOFFS STAT DIFFERENCES:")
-                orig_play = orig_stat['playoffs']['stats']
-                clean_play = clean_stat['playoffs']['stats']
-                for stat in STATS_COLUMNS:
-                    if stat in orig_play and stat in clean_play:
-                        diff = clean_play[stat] - orig_play[stat]
-                        print(f"  {stat}: {diff:+.3f}")
-        else:
-            print("Data not available for comparison")
-
-def main():
-    """
-    Main function - create 4 comparisons: 2 with original database, 2 with cleaned database.
-    """
-    # Add player names here for analysis
-    player_names = [
-        "TenZ",
-        "Boaster"
-    ]
-    
-    # OPTIONAL: Add specific event names to filter by
-    # If you want to analyze only specific events, uncomment and modify the line below:
-    # event_names = ["VCT Champions", "VCT Masters"]
-    # If you want all events (default), leave this as None:
-    event_names = None
-    
-    # UNCOMMENT THE LINE BELOW TO SEE ALL AVAILABLE EVENTS:
-    # print_available_events()
-    
-    print("=" * 80)
-    print("PLAYER RADAR COMPARISON - ORIGINAL vs CLEAN DATABASE")
-    print("=" * 80)
-    
-    # First, compare databases and show differences
-    original_stats, clean_stats = compare_databases(player_names, event_names)
-    
-    if not original_stats and not clean_stats:
-        print("No data found for any players!")
-        return
-    
-    # Print database comparison summary
-    print_database_comparison(original_stats, clean_stats)
-    
-    # Create 4 radar charts: 2 with original, 2 with cleaned
     print("\n" + "=" * 80)
     print("CREATING RADAR CHARTS")
     print("=" * 80)
@@ -560,36 +430,27 @@ def main():
     else:
         event_suffix = ""
     
-    # 1. Original database radar chart
-    if original_stats:
-        print("\n1. Creating radar chart with ORIGINAL database...")
-        orig_chart_filename = f'player_radar_comparison_original{event_suffix}.png'
-        create_radar_chart(original_stats, orig_chart_filename)
-        
-        # Save original database results to CSV
-        orig_csv_filename = f'player_comparison_data_original{event_suffix}.csv'
-        save_results_to_csv(original_stats, orig_csv_filename)
+    # Analyze players
+    player_stats = analyze_players(player_names, event_names)
     
-    # 2. Clean database radar chart
-    if clean_stats:
-        print("\n2. Creating radar chart with CLEAN database...")
-        clean_chart_filename = f'player_radar_comparison_clean{event_suffix}.png'
-        create_radar_chart(clean_stats, clean_chart_filename)
-        
-        # Save clean database results to CSV
-        clean_csv_filename = f'player_comparison_data_clean{event_suffix}.csv'
-        save_results_to_csv(clean_stats, clean_csv_filename)
+    if not player_stats:
+        print("No data found for any players!")
+        return
+    
+    # Create radar chart
+    chart_filename = f'player_radar_comparison_clean{event_suffix}.png'
+    create_radar_chart(player_stats, chart_filename)
+    
+    # Save results to CSV
+    csv_filename = f'player_comparison_data_clean{event_suffix}.csv'
+    save_results_to_csv(player_stats, csv_filename)
     
     print("\n" + "=" * 80)
     print("ANALYSIS COMPLETE!")
     print("=" * 80)
-    print("Created 4 files:")
-    if original_stats:
-        print(f"  - Original database radar chart: {orig_chart_filename}")
-        print(f"  - Original database CSV data: {orig_csv_filename}")
-    if clean_stats:
-        print(f"  - Clean database radar chart: {clean_chart_filename}")
-        print(f"  - Clean database CSV data: {clean_csv_filename}")
+    print("Created 2 files:")
+    print(f"  - Clean database radar chart: {chart_filename}")
+    print(f"  - Clean database CSV data: {csv_filename}")
     print("\nCompare the results to see the impact of data cleaning!")
 
 def save_results_to_csv(player_stats: List[Dict], filename: str):
@@ -628,4 +489,19 @@ def save_results_to_csv(player_stats: List[Dict], filename: str):
         print(f"  No data to save for {filename}")
 
 if __name__ == "__main__":
-    main() 
+    # Add player names here for analysis
+    player_names = [
+        "TenZ",
+        "chronicle"
+    ]
+    
+    # OPTIONAL: Add specific event names to filter by
+    # If you want to analyze only specific events, uncomment and modify the line below:
+    # event_names = ["VCT Champions", "VCT Masters"]
+    # If you want all events (default), leave this as None:
+    event_names = None
+    
+    # UNCOMMENT THE LINE BELOW TO SEE ALL AVAILABLE EVENTS:
+    # print_available_events()
+    
+    create_radar_charts(player_names, event_names) 
