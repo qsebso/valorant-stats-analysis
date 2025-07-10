@@ -1,0 +1,120 @@
+DETAILED DATA QUALITY REPORT
+==================================================
+
+DATABASE SUMMARY
+--------------------
+Tables: ['map_stats']
+Total rows: 0
+Total columns: 0
+
+NULL VALUE ANALYSIS
+--------------------
+match_datetime: 943 (0.1%)
+patch: 45,311 (5.1%)
+team1_score: 66,391 (7.5%)
+team2_score: 66,391 (7.5%)
+team1_attacker_rounds: 350,136 (39.8%)
+team1_defender_rounds: 350,136 (39.8%)
+team2_attacker_rounds: 350,136 (39.8%)
+team2_defender_rounds: 350,136 (39.8%)
+map_duration: 343,307 (39.0%)
+winner: 71,428 (8.1%)
+agent_played: 18,033 (2.0%)
+KDRatio: 76,063 (8.6%)
+KDARatio: 76,063 (8.6%)
+KPR: 71,276 (8.1%)
+APR: 71,276 (8.1%)
+FKPR: 71,276 (8.1%)
+FDPR: 71,276 (8.1%)
+
+OUTLIER ANALYSIS
+--------------------
+Rating 2.0:
+  Range: 0.00 - 3.34
+  Expected: 0.0 - 5.0
+  Outliers: 2198 (lower) + 8489 (upper)
+  Range violations: 0
+
+ACS:
+  Range: 0.00 - 637.00
+  Expected: 0 - 500
+  Outliers: 3890 (lower) + 11777 (upper)
+  Range violations: 165
+
+K/D Ratio:
+  Range: 0.00 - 29.00
+  Expected: 0.0 - 10.0
+  Outliers: 0 (lower) + 32954 (upper)
+  Range violations: 102
+
+ADR:
+  Range: 0.00 - 405.00
+  Expected: 0 - 300
+  Outliers: 2425 (lower) + 11675 (upper)
+  Range violations: 278
+
+Total Kills:
+  Range: 0.00 - 139.00
+  Expected: 0 - 50
+  Outliers: 0 (lower) + 60423 (upper)
+  Range violations: 30542
+
+Total Deaths:
+  Range: 0.00 - 110.00
+  Expected: 0 - 30
+  Outliers: 4741 (lower) + 129716 (upper)
+  Range violations: 140799
+
+Total Assists:
+  Range: 0.00 - 114.00
+  Expected: 0 - 20
+  Outliers: 0 (lower) + 48079 (upper)
+  Range violations: 41242
+
+First Kills:
+  Range: 0.00 - 36.00
+  Expected: 0 - 15
+  Outliers: 0 (lower) + 36275 (upper)
+  Range violations: 3769
+
+First Deaths:
+  Range: 0.00 - 32.00
+  Expected: 0 - 12
+  Outliers: 0 (lower) + 31595 (upper)
+  Range violations: 7248
+
+Rounds Played:
+  Range: 0.00 - 48.00
+  Expected: 1 - 50
+  Outliers: 0 (lower) + 0 (upper)
+  Range violations: 71276
+
+CONSISTENCY ISSUES
+--------------------
+No consistency issues found.
+
+EVENT DATA QUALITY
+--------------------
+Total events: 2371
+
+All events:
+  Challengers League: North America Qualifiers: 2,162 rows
+  College VALORANT East: Fall 2022: 2,160 rows
+  Knights Monthly Gauntlet 2023: June: 2,152 rows
+  Game Changers 2022 EMEA: Series III: 2,152 rows
+  The Funhaver Invitational - Resurgence 2: 2,148 rows
+  Knights VALORANT Freezeout: 2,143 rows
+  Game Changers EMEA Contenders Series 3: 2,107 rows
+  Challengers League 2024 MENA Resilience: Split 1: 2,076 rows
+  Valorant Open Tour France: Spring Qualifier: 2,071 rows
+  Valorant Open Tour France: Summer Qualifier: 2,061 rows
+  The Funhaver Invitational - Resurgence: 2,061 rows
+  Knights Circuit Weekly #2: 2,058 rows
+  Knights Circuit Weekly #5: 2,057 rows
+  Knights Circuit Weekly #1: 2,050 rows
+  Game Changers 2022 EMEA: Series I: 2,042 rows
+  Challengers League 2024 North America: Qualifiers: 2,031 rows
+  Game Changers EMEA Contenders Series 2: 2,026 rows
+  Game Changers 2022 EMEA: Series II: 2,021 rows
+  Game Changers EMEA Contenders Series 1: 2,016 rows
+  Champions Tour Game Changers Series III: EMEA: 2,011 rows

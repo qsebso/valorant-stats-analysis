@@ -1,0 +1,17 @@
+CLEAN DATABASE CREATION SUMMARY
+========================================
+Created: 2025-07-09 17:06:35
+Original database: data/map_stats.db
+Clean database: data/valorant_stats_clean.db
+Original rows: 880,721
+Clean rows: 808,183
+Removed rows: 72,538
+Removal percentage: 8.2%
+File size: 262.9 MB
+
+Cleaning filters applied:
+- team1_score IS NOT NULL
+- team2_score IS NOT NULL
+- rounds_played > 0
+- player_name IS NOT NULL AND player_name != ''
+- event_name IS NOT NULL AND event_name != ''
