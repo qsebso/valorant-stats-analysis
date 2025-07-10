@@ -173,7 +173,11 @@ def calculate_player_stats(df: pd.DataFrame, player_name: str) -> Dict:
     # Calculate stats for each game type
     for game_type in ['Regular Season', 'Playoffs']:
         subset = player_df[player_df['game_type'] == game_type]
-        
+        unique_matches = subset['match_id'].nunique() if not subset.empty else 0
+        if game_type == 'Regular Season':
+            stats['regular_season_unique_matches'] = unique_matches
+        else:
+            stats['playoffs_unique_matches'] = unique_matches
         if len(subset) > 0:
             game_stats = {}
             for col in STATS_COLUMNS:
@@ -300,8 +304,15 @@ def create_radar_chart(player_stats: List[Dict], output_filename: str = None):
         player_name = player_stat['player_name']
         reg_games = player_stat['regular_season']['games_count']
         play_games = player_stat['playoffs']['games_count']
-        ax.set_title(f'{player_name}\nRegular: {reg_games} games | Playoffs: {play_games} games', 
-                    pad=20, fontsize=12, fontweight='bold')
+        # Calculate unique match counts for each game type
+        reg_matches = player_stat.get('regular_season_unique_matches', 0)
+        play_matches = player_stat.get('playoffs_unique_matches', 0)
+        # Fallback: just show map counts if match counts are not available
+        title = f'{player_name}\nRegular: {reg_games} maps | Playoffs: {play_games} maps'
+        if reg_matches and play_matches:
+            title = (f'{player_name}\nRegular: {reg_games} maps ({reg_matches} matches) | '
+                     f'Playoffs: {play_games} maps ({play_matches} matches)')
+        ax.set_title(title, pad=20, fontsize=12, fontweight='bold')
         
         # Add legend
         ax.legend(loc='upper right', bbox_to_anchor=(1.3, 1.0))
