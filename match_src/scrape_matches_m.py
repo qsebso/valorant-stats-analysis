@@ -8,7 +8,7 @@ import re
 
 # Allow import from src/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
-from parser import parse_vlr_match
+from parser import parse_vlr_match # type: ignore
 
 DB_PATH = os.path.join('data', 'valorant_stats_matchcentric.db')
 BASE_URL = 'https://www.vlr.gg/matches/results/?page={}'
