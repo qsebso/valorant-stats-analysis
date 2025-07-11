@@ -152,15 +152,30 @@ MAP_STATS_COLUMNS = [
 
 def scrape_match_details(match_url):
     print(f"Scraping details for: {match_url}")
-    resp = requests.get(match_url)
-    if resp.status_code != 200:
-        print(f"Failed to fetch {match_url}")
+    import random
+    max_retries = 5
+    for attempt in range(max_retries):
+        try:
+            resp = requests.get(match_url, timeout=15)
+            if resp.status_code == 200:
+                break
+            else:
+                print(f"Failed to fetch {match_url} (status {resp.status_code})")
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching {match_url} (attempt {attempt+1}/{max_retries}): {e}")
+        time.sleep(2 + random.uniform(0, 3))  # Polite randomized delay
+    else:
+        print(f"Giving up on {match_url} after {max_retries} attempts.")
+        with open('skipped_matches.log', 'a', encoding='utf-8') as logf:
+            logf.write(match_url + '\n')
         return
     html = resp.text
     try:
         match_result = parse_vlr_match(html)
     except Exception as e:
         print(f"Failed to parse match: {match_url} | Error: {e}")
+        with open('skipped_matches.log', 'a', encoding='utf-8') as logf:
+            logf.write(match_url + '\n')
         return
     # Extract match_id from URL if not present
     match_id = match_result.get('match_id')
