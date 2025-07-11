@@ -9,7 +9,7 @@ import os
 from typing import Dict, Any
 
 # Database path
-DB_PATH = os.path.join(os.path.dirname(__file__), os.pardir, "data", "valorant_stats_clean.db")
+DB_PATH = os.path.join(os.path.dirname(__file__), os.pardir, "data", "valorant_stats_matchcentric_clean.db")
 
 def get_tenz_data() -> pd.DataFrame:
     """Get all TenZ data from the database."""

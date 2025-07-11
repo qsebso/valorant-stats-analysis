@@ -17,7 +17,7 @@ from classification import (
 )
 
 # Path to the cleaned SQLite database
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "valorant_stats_clean.db")
+DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "valorant_stats_matchcentric_clean.db")
 
 # Output directory
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "query_results")
@@ -69,7 +69,7 @@ def get_player_games(player_names: List[str], event_names: Optional[List[str]] =
     exclusion_filters = ""
     
     # Create the WHERE clause for multiple players
-    player_conditions = " OR ".join([f"player_name LIKE '%{name}%'" for name in player_names])
+    player_conditions = " OR ".join([f"lower(player_name) = '{name.lower()}'" for name in player_names])
     
     # Add event filtering if specified
     event_filter = ""
@@ -157,8 +157,8 @@ def calculate_player_stats(df: pd.DataFrame, player_name: str) -> Dict:
     Returns:
         Dictionary with regular season and playoff stats
     """
-    # Filter for the specific player
-    player_df = df[df['player_name'].str.contains(player_name, case=False, na=False)]
+    # Filter for the specific player (exact match, case-insensitive)
+    player_df = df[df['player_name'].str.lower() == player_name.lower()]
     
     if player_df.empty:
         return None
