@@ -502,8 +502,8 @@ def save_results_to_csv(player_stats: List[Dict], filename: str):
 if __name__ == "__main__":
     # Add player names here for analysis
     player_names = [
-        "TenZ",
-        "chronicle"
+        "N4RRATE",
+        "FiNESSE"
     ]
     
     # OPTIONAL: Add specific event names to filter by
