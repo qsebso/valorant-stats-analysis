@@ -8,7 +8,8 @@ from typing import Dict, List, Tuple, Optional
 sys.path.append(os.path.dirname(__file__))
 
 # Path to the SQLite database
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "map_stats.db")
+DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "valorant_stats_matchcentric.db")
+CLEAN_DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "valorant_stats_matchcentric_clean.db")
 
 # Output directory
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "query_results")
@@ -429,9 +430,23 @@ def save_cleaning_report(analysis: Dict):
     
     print(f"\nCleaning report saved to: {output_path}")
 
+def save_cleaned_db():
+    """
+    Save a new cleaned database with only rows passing the recommended filters.
+    """
+    conn = sqlite3.connect(DB_PATH)
+    filters = create_cleaned_query_filters()
+    df = pd.read_sql_query(f"SELECT * FROM map_stats WHERE {filters}", conn)
+    conn.close()
+    print(f"Saving {len(df)} cleaned rows to {CLEAN_DB_PATH} ...")
+    conn_clean = sqlite3.connect(CLEAN_DB_PATH)
+    df.to_sql('map_stats', conn_clean, if_exists='replace', index=False)
+    conn_clean.close()
+    print(f"Cleaned DB written to {CLEAN_DB_PATH}.")
+
 def main():
     """
-    Main function to run the data cleaning analysis.
+    Main function to run the data cleaning analysis and save cleaned DB.
     """
     print("Starting data cleaning analysis...")
     
@@ -440,6 +455,9 @@ def main():
     
     # Save report
     save_cleaning_report(analysis)
+    
+    # Save cleaned DB
+    save_cleaned_db()
     
     print("\nData cleaning analysis complete!")
     print("Use the recommended SQL filters in your analysis scripts for cleaner data.")

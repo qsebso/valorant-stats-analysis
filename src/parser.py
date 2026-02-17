@@ -12,7 +12,7 @@ import requests
 from typing import Dict, List, Any, Optional
 from bs4 import BeautifulSoup
 
-from .utils import rate_limit
+from utils import rate_limit
 
 # Set up module-level logger for consistent logging across functions
 logger = logging.getLogger(__name__)
@@ -211,7 +211,27 @@ def parse_vlr_match(html: str) -> dict[str, Any]:
     match_header_div = soup.select_one('.match-header')
     if not match_header_div:
         raise ValueError("No match header found")
-        
+    
+    # --- Event name and event_id extraction ---
+    event_elem = match_header_div.select_one('.match-header-event')
+    event_name = None
+    if event_elem:
+        # Try to find a child div with bold font (the event name)
+        bold_div = event_elem.find('div', style=lambda s: s and 'font-weight: 700' in s)
+        if bold_div:
+            event_name = bold_div.get_text(strip=True)
+        else:
+            # Fallback: join all text nodes (including children)
+            event_name = event_elem.get_text(strip=True)
+    event_id = None
+    if event_elem and event_elem.has_attr('href'):
+        import re
+        m = re.search(r'/event/(\d+)', event_elem['href'])
+        if m:
+            event_id = m.group(1)
+    # Bracket stage extraction
+    bracket_stage_elem = match_header_div.select_one('.match-header-event-series')
+    bracket_stage = bracket_stage_elem.get_text(strip=True) if bracket_stage_elem else None
     # Team names
     team1_elem = match_header_div.select_one('.match-header-link.mod-1 .wf-title-med')
     team2_elem = match_header_div.select_one('.match-header-link.mod-2 .wf-title-med')
@@ -426,5 +446,7 @@ def parse_vlr_match(html: str) -> dict[str, Any]:
         'bracket_stage': bracket_stage,
         'match_header': match_header_data,
         'map_links': map_links,
-        'maps': maps
+        'maps': maps,
+        'event_name': event_name,
+        'event_id': event_id
     }

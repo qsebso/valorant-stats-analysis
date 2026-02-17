@@ -3,21 +3,21 @@ DATA CLEANING ANALYSIS REPORT
 
 DATA ISSUES FOUND
 --------------------
-281129 'All Maps' entries across 27989 matches
-146276 'All Maps' entries with extreme values
-66391 entries with missing team scores
-71276 entries with zero or missing rounds played
+291146 'All Maps' entries across 29016 matches
+139293 'All Maps' entries with extreme values
+76877 entries with missing team scores
+78336 entries with zero or missing rounds played
 
 CLEANING RECOMMENDATIONS
 -------------------------
 1. HIGH PRIORITY - EXCLUDE
    Target: Entries with missing team scores
-   Reason: Found 66391 entries with missing team scores
+   Reason: Found 76877 entries with missing team scores
    Impact: Will ensure we have complete match context
 
 2. HIGH PRIORITY - EXCLUDE
    Target: Entries with zero rounds played
-   Reason: Found 71276 entries with zero or missing rounds played
+   Reason: Found 78336 entries with zero or missing rounds played
    Impact: Will ensure we only analyze actual gameplay data
 
 3. HIGH PRIORITY - EXCLUDE
@@ -32,10 +32,10 @@ CLEANING RECOMMENDATIONS
 
 CLEANED DATA IMPACT
 --------------------
-Original rows: 880,721
-Cleaned rows: 808,183
-Removed rows: 72,538
-Removal percentage: 8.2%
+Original rows: 893,232
+Cleaned rows: 814,896
+Removed rows: 78,336
+Removal percentage: 8.8%
 
 RECOMMENDED SQL FILTER
 -------------------------
