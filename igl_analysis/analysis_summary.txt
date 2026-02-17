@@ -1,0 +1,34 @@
+IGL Performance Analysis — Summary
+==================================================
+
+Data: cohort from igl_non_igl_player.txt; is_igl from crossrefference_list.txt.
+
+Row deduplication: one row per (match_id, map_name, player_name); duplicates removed.
+
+Comparison uses ONLY known IGL vs known non-IGL (no unknown labels):
+  - IGL = explicitly labeled IGL in crossrefference_list.txt.
+  - Non-IGL = labeled non-IGL in crossreference OR main name in igl_non_igl_player.txt.
+  - Teammates not in either list are excluded (is_igl unknown).
+
+Sample sizes (map-level rows; same player appears many times, one row per map per match):
+  IGL: 5,107  |  Non-IGL: 39,383
+  (Unequal n is fine for t-test/Mann-Whitney; with large n, prefer effect size over p-value.)
+
+Step 1 — ACS distribution
+  n = 44351
+  Shapiro-Wilk p = 2.18e-49
+  Normality (p>=0.05): False
+  Use parametric test: False
+
+Step 2 — IGL vs non-IGL
+  Test: mannwhitney
+  Statistic: 8.722e+07
+  p-value: 4.94e-49
+  n_IGL: 5087, n_non_IGL: 39264
+
+Step 3 — Effect size
+  Cohen's d: -0.2229
+  Interpretation: small
+  Mean ACS IGL: 192.70, Non-IGL: 206.58
+
+Deliverables: step1_acs_histogram.png, step5_acs_delta_vs_win_rate.png, acs_delta_winrate_table.csv

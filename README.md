@@ -1,48 +1,42 @@
-# VALORANT Map Stats Scraper
+# Raise and Fall — VALORANT Analysis
 
-A long-term data collection project for analyzing VALORANT player performance across tournament phases. This scraper collects per-map scoreboard data from VLR.gg, focusing on comparing player statistics between regular season and playoff matches.
+Data collection and analysis for **VALORANT** esports: per-map scoreboard data from VLR.gg, tournament phase classification (regular season vs playoffs), and analysis of **in-game leader (IGL) performance** vs non-IGLs.
 
-## Project Structure
+## What’s in this repo
+
+- **Scraping & DB** — Collect per-map player stats (ACS, rating, K/D, etc.) into SQLite; clean and deduplicate for analysis.
+- **Classification** — Label bracket stages as Playoffs vs Regular Season (see `queries/classification.py`).
+- **IGL analysis** — Compare IGL vs non-IGL ACS, effect size (Cohen’s d), and “brain vs fragger” (ACS delta vs team win rate). See **`igl_analysis/`** and [IGL findings](igl_analysis/findings.txt).
+
+## Project structure
 
 ```
 .
-├── .cursor/rules/     # Project rules and guidelines
-├── .ignore/          # Ignored files and directories
-├── config/           # Configuration files
-│   └── events.yaml   # Tournament and match configurations
-├── src/              # Source code
-│   ├── scraper.py    # Data collection
-│   ├── parser.py     # Data processing
-│   ├── db.py         # Database operations
-│   └── scheduler.py  # Automated scheduling
-├── docs/             # Documentation
-│   └── schema.md     # Database schema
-├── migrations/       # Database migrations
-├── requirements.txt  # Python dependencies
-└── README.md        # This file
+├── config/           # Tournament and match config (e.g. events.yaml)
+├── data/             # SQLite DBs (map_stats, cleaned)
+├── docs/             # Schema and docs
+├── igl_analysis/      # IGL vs non-IGL analysis (data prep, stats, plots, findings)
+├── queries/          # Classification, player/event queries, Boaster/TenZ-style analyses
+├── src/              # Scraper, parser, DB, scheduler
+├── requirements.txt
+└── README.md
 ```
 
-## Getting Started
+## Getting started
 
-1. **Configure Events**
-   - Populate `config/events.yaml` with tournament IDs and match URLs
-   - Add event names and identifiers for tracking
+1. **Environment** — Python 3.8+. Install deps: `pip install -r requirements.txt`
+2. **Database** — See `docs/schema.md`. Analysis uses cleaned DBs in `data/` (e.g. `valorant_stats_matchcentric_clean.db` with table `map_stats`).
+3. **Config** — Populate `config/events.yaml` with tournament IDs and match URLs for scraping.
+4. **Run IGL analysis** (no scraping required if you have the clean DB):
+   ```bash
+   python igl_analysis/run_analysis.py
+   ```
+   Outputs and findings: `igl_analysis/analysis_summary.txt`, `igl_analysis/findings.txt`, and plots in that folder.
 
-2. **Database Setup**
-   - Review `docs/schema.md` for the complete table structure
-   - Create the SQLite database using the provided schema
+## IGL analysis summary
 
-3. **Environment Setup**
-   - Install dependencies: `pip install -r requirements.txt`
-   - Verify Python 3.8+ is installed
+Using only **known** IGL vs non-IGL labels (no contamination):
 
-4. **First Steps for Quinn**
-   - Scraper will use the `bracket_stage` field from each match header as the phase; no manual phase file needed.
-
-5. **Run the Scraper**
-   - Initial data collection can begin after configuration
-   - Monitor the database for successful data insertion
-
-## Development Status
-
-This project is in initial setup phase. Core functionality for data collection and analysis will be implemented incrementally. 
+- **Result:** IGLs have slightly lower ACS on average than non-IGLs (Cohen’s d ≈ −0.22, small effect).
+- **Methods:** Mann–Whitney (ACS not normal); one row per (match_id, map_name, player_name).
+- **Details:** [igl_analysis/findings.txt](igl_analysis/findings.txt) and [igl_analysis/README.md](igl_analysis/README.md). 

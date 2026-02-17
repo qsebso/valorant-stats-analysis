@@ -4,10 +4,15 @@ A step-by-step checklist for analyzing IGL performance using the Valorant player
 
 ---
 
+## Data Source
+- **Player list:** `igl_non_igl_player.txt` — lists non-IGL players and their team rosters (teammates). Use this file to define the analysis cohort: each line is one non-IGL player plus their teammates; IGLs are either teammates or from a separate reference and will be flagged with `is_igl`.
+
+---
+
 ## Data Preparation
 - [ ] Connect to SQLite database
 - [ ] Load match and player data into a Pandas DataFrame
-- [ ] Manually flag known IGLs with a new `is_igl` column
+- [ ] Use `igl_non_igl_player.txt` to build player set; manually flag known IGLs with a new `is_igl` column (listed players in the file are non-IGL; flag IGLs from roster/teammate context or external list)
 - [ ] Filter to valid player rounds only (e.g., `rounds_played > 0`)
 
 ---
@@ -21,7 +26,7 @@ A step-by-step checklist for analyzing IGL performance using the Valorant player
 ---
 
 ## Step 2 — Compare IGLs vs Non-IGLs
-- [ ] Create two groups: IGL ACS and non-IGL ACS
+- [ ] Create two groups: IGL ACS and non-IGL ACS (non-IGL roster from `igl_non_igl_player.txt`)
 - [ ] Run t-test if normal, else Mann-Whitney U test
 - [ ] Record p-value and determine if performance difference is significant
 

@@ -1,0 +1,15 @@
+Copy-paste for your repo "About" / description (short description box and "About" section):
+
+--- SHORT DESCRIPTION (for the repo tagline, ~1 line) ---
+VALORANT esports data: VLR.gg scraping, playoff/regular classification, and IGL vs non-IGL performance analysis.
+
+--- ABOUT (for the longer "About" / description on the main page) ---
+Raise and Fall — VALORANT Analysis
+
+Scraping and analysis for VALORANT competitive: per-map scoreboard data from VLR.gg, tournament phase classification (playoffs vs regular season), and in-game leader (IGL) performance analysis.
+
+• Scraper + SQLite DB (map_stats, cleaned datasets)
+• Bracket-stage classification (queries/classification.py)
+• IGL analysis: known IGL vs non-IGL ACS comparison, Cohen's d, brain-vs-fragger (ACS delta vs win rate). See igl_analysis/ and findings.
+
+Run IGL analysis (with cleaned DB): python igl_analysis/run_analysis.py
