@@ -33,10 +33,6 @@ Data collection and analysis for **VALORANT** esports: per-map scoreboard data f
    ```
    Outputs and findings: `igl_analysis/analysis_summary.txt`, `igl_analysis/findings.txt`, and plots in that folder.
 
-## IGL analysis summary
-
-Using only **known** IGL vs non-IGL labels (no contamination):
-
-- **Result:** IGLs have slightly lower ACS on average than non-IGLs (Cohen’s d ≈ −0.22, small effect).
-- **Methods:** Mann–Whitney (ACS not normal); one row per (match_id, map_name, player_name).
-- **Details:** [igl_analysis/findings.txt](igl_analysis/findings.txt) and [igl_analysis/README.md](igl_analysis/README.md). 
+5. **Run the Scraper**
+   - Initial data collection can begin after configuration
+   - Monitor the database for successful data insertion
