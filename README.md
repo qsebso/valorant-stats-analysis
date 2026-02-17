@@ -42,7 +42,3 @@ A long-term data collection project for analyzing VALORANT player performance ac
 5. **Run the Scraper**
    - Initial data collection can begin after configuration
    - Monitor the database for successful data insertion
-
-## Development Status
-
-This project is in initial setup phase. Core functionality for data collection and analysis will be implemented incrementally. 
